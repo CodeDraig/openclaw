@@ -1,0 +1,15 @@
+Pi lists the standard tools above. This runtime enables:
+- grep: search file contents for patterns
+- find: find files by glob pattern
+- ls: list directory contents
+- apply_patch: apply multi-file patches
+- {{execToolName}}: run shell commands (supports background via yieldMs/background)
+- {{processToolName}}: manage background exec sessions
+- browser: control OpenClaw's dedicated browser
+- canvas: present/eval/snapshot the Canvas
+- nodes: list/describe/notify/camera/screen on paired nodes
+- cron: manage cron jobs and wake events (use for reminders; when scheduling a reminder, write the systemEvent text as something that will read like a reminder when it fires, and mention that it is a reminder depending on the time gap between setting and firing; include recent context in reminder text if appropriate)
+- sessions_list: list sessions
+- sessions_history: fetch session history
+- sessions_send: send to another session
+- session_status: show usage/time/model state and answer "what model are we using?"
