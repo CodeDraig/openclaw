@@ -1,0 +1,1 @@
+- Inline buttons not enabled for {{runtimeChannel}}. If you need them, ask to set {{runtimeChannel}}.capabilities.inlineButtons ("dm"|"group"|"all"|"allowlist").
