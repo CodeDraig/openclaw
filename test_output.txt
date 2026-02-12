@@ -1,0 +1,348 @@
+
+> openclaw@2026.2.10 test /srv/data/code/openclaw
+> node scripts/test-parallel.mjs
+
+
+
+[1m[46m RUN [49m[22m [36mv4.0.18 [39m[90m/srv/data/code/openclaw[39m
+
+[1m[46m RUN [49m[22m [36mv4.0.18 [39m[90m/srv/data/code/openclaw[39m
+
+ [32m✓[39m extensions/nostr/src/nostr-bus.integration.test.ts [2m([22m[2m26 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m extensions/twitch/src/twitch-client.test.ts [2m([22m[2m30 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32m✓[39m extensions/msteams/src/attachments.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 72[2mms[22m[39m
+ [32m✓[39m extensions/twitch/src/access-control.test.ts [2m([22m[2m31 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m extensions/bluebubbles/src/chat.test.ts [2m([22m[2m31 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32m✓[39m src/agents/openai-responses.reasoning-replay.test.ts [2m([22m[2m2 tests[22m[2m)[22m[33m 2788[2mms[22m[39m
+     [33m[2m✓[22m[39m replays reasoning for tool-call-only turns (OpenAI requires it) [33m 1394[2mms[22m[39m
+     [33m[2m✓[22m[39m still replays reasoning when paired with an assistant message [33m 1392[2mms[22m[39m
+ [32m✓[39m src/config/config.legacy-config-detection.rejects-routing-allowfrom.test.ts [2m([22m[2m33 tests[22m[2m)[22m[33m 3218[2mms[22m[39m
+[90mstderr[2m | extensions/voice-call/src/webhook-security.test.ts[2m > [22m[2mverifyTwilioWebhook[2m > [22m[2mallows invalid signatures for ngrok free tier only on loopback
+[22m[39m[voice-call] Twilio signature validation failed (ngrok free tier compatibility, loopback only)
+
+ [32m✓[39m extensions/voice-call/src/webhook-security.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+[90mstderr[2m | src/agents/pi-embedded-runner.test.ts[2m > [22m[2mrunEmbeddedPiAgent[2m > [22m[2mfalls back to per-agent workspace when runtime workspaceDir is missing
+[22m[39m[33m[agent/embedded][39m [33m[workspace-fallback] caller=runEmbeddedPiAgent reason=missing run=run-fallback-workspace session=sha256:fea8aefc758d sessionKey=sha256:e77fc8cb017d agent=main workspace=sha256:f50b7a2d068c[39m
+
+[90mstderr[2m | src/agents/pi-embedded-runner.test.ts[2m > [22m[2mrunEmbeddedPiAgent[2m > [22m[2mfalls back to per-agent workspace when runtime workspaceDir is missing
+[22m[39m[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+[90mstderr[2m | src/agents/pi-embedded-runner.test.ts[2m > [22m[2mrunEmbeddedPiAgent[2m > [22m[2mfalls back to per-agent workspace when runtime workspaceDir is missing
+[22m[39mWarning: Could not read /CLAUDE.md: Error: EACCES: permission denied, open '/CLAUDE.md'
+
+[90mstderr[2m | src/agents/pi-embedded-runner.test.ts[2m > [22m[2mrunEmbeddedPiAgent[2m > [22m[2mpersists the first user message before assistant output
+[22m[39m[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+[90mstderr[2m | src/agents/pi-embedded-runner.test.ts[2m > [22m[2mrunEmbeddedPiAgent[2m > [22m[2mpersists the first user message before assistant output
+[22m[39mWarning: Could not read /CLAUDE.md: Error: EACCES: permission denied, open '/CLAUDE.md'
+
+[90mstderr[2m | src/agents/pi-embedded-runner.test.ts[2m > [22m[2mrunEmbeddedPiAgent[2m > [22m[2mpersists the user message when prompt fails before assistant output
+[22m[39m[33m[agent/embedded][39m [33mlow context window: openai/mock-error ctx=16000 (warn<32000) source=modelsConfig[39m
+
+[90mstderr[2m | src/agents/pi-embedded-runner.test.ts[2m > [22m[2mrunEmbeddedPiAgent[2m > [22m[2mpersists the user message when prompt fails before assistant output
+[22m[39mWarning: Could not read /CLAUDE.md: Error: EACCES: permission denied, open '/CLAUDE.md'
+
+[90mstdout[2m | src/telegram/bot.media.downloads-media-file-path-no-file-download.test.ts[2m > [22m[2mtelegram inbound media[2m > [22m[2mdownloads media via file_path (no file.download)
+[22m[39m[34m[telegram][39m [36mautoSelectFamily=false (default-node22)[39m
+
+[90mstderr[2m | src/agents/pi-embedded-runner.test.ts[2m > [22m[2mrunEmbeddedPiAgent[2m > [22m[2mappends new user + assistant after existing transcript entries
+[22m[39m[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+ [32m✓[39m src/telegram/bot.media.downloads-media-file-path-no-file-download.test.ts [2m([22m[2m10 tests[22m[2m)[22m[33m 5016[2mms[22m[39m
+     [33m[2m✓[22m[39m downloads media via file_path (no file.download) [33m 4972[2mms[22m[39m
+[90mstderr[2m | src/agents/pi-embedded-runner.test.ts[2m > [22m[2mrunEmbeddedPiAgent[2m > [22m[2mappends new user + assistant after existing transcript entries
+[22m[39mWarning: Could not read /CLAUDE.md: Error: EACCES: permission denied, open '/CLAUDE.md'
+
+ [32m✓[39m src/discord/monitor.tool-result.accepts-guild-messages-mentionpatterns-match.test.ts [2m([22m[2m7 tests[22m[2m)[22m[33m 5112[2mms[22m[39m
+     [33m[2m✓[22m[39m accepts guild messages when mentionPatterns match [33m 5088[2mms[22m[39m
+[90mstderr[2m | src/agents/pi-embedded-runner.test.ts[2m > [22m[2mrunEmbeddedPiAgent[2m > [22m[2mpersists multi-turn user/assistant ordering across runs
+[22m[39m[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+ [32m✓[39m extensions/bluebubbles/src/reactions.test.ts [2m([22m[2m46 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+[90mstderr[2m | src/agents/pi-embedded-runner.run-embedded-pi-agent.auth-profile-rotation.test.ts[2m > [22m[2mrunEmbeddedPiAgent auth profile rotation[2m > [22m[2mrotates for auto-pinned profiles
+[22m[39m[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+[90mstderr[2m | src/agents/pi-embedded-runner.run-embedded-pi-agent.auth-profile-rotation.test.ts[2m > [22m[2mrunEmbeddedPiAgent auth profile rotation[2m > [22m[2mdoes not rotate for user-pinned profiles
+[22m[39m[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+[90mstderr[2m | src/agents/pi-embedded-runner.test.ts[2m > [22m[2mrunEmbeddedPiAgent[2m > [22m[2mpersists multi-turn user/assistant ordering across runs
+[22m[39mWarning: Could not read /CLAUDE.md: Error: EACCES: permission denied, open '/CLAUDE.md'
+
+[90mstderr[2m | src/agents/pi-embedded-runner.run-embedded-pi-agent.auth-profile-rotation.test.ts[2m > [22m[2mrunEmbeddedPiAgent auth profile rotation[2m > [22m[2mhonors user-pinned profiles even when in cooldown
+[22m[39m[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+[90mstderr[2m | src/agents/pi-embedded-runner.run-embedded-pi-agent.auth-profile-rotation.test.ts[2m > [22m[2mrunEmbeddedPiAgent auth profile rotation[2m > [22m[2mignores user-locked profile when provider mismatches
+[22m[39m[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+[90mstderr[2m | src/agents/pi-embedded-runner.test.ts[2m > [22m[2mrunEmbeddedPiAgent[2m > [22m[2mpersists multi-turn user/assistant ordering across runs
+[22m[39m[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+[90mstderr[2m | src/agents/pi-embedded-runner.run-embedded-pi-agent.auth-profile-rotation.test.ts[2m > [22m[2mrunEmbeddedPiAgent auth profile rotation[2m > [22m[2mskips profiles in cooldown during initial selection
+[22m[39m[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+[90mstderr[2m | src/agents/pi-embedded-runner.run-embedded-pi-agent.auth-profile-rotation.test.ts[2m > [22m[2mrunEmbeddedPiAgent auth profile rotation[2m > [22m[2mfails over when all profiles are in cooldown and fallbacks are configured
+[22m[39m[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+[90mstderr[2m | src/agents/pi-embedded-runner.run-embedded-pi-agent.auth-profile-rotation.test.ts[2m > [22m[2mrunEmbeddedPiAgent auth profile rotation[2m > [22m[2mfails over when all profiles are in cooldown and fallbacks are configured
+[22m[39m[31m[diagnostic][39m [31mlane task error: lane=main durationMs=0 error="FailoverError: No available auth profile for openai (all in cooldown or unavailable)."[39m
+
+[90mstderr[2m | src/agents/pi-embedded-runner.run-embedded-pi-agent.auth-profile-rotation.test.ts[2m > [22m[2mrunEmbeddedPiAgent auth profile rotation[2m > [22m[2mfails over when all profiles are in cooldown and fallbacks are configured
+[22m[39m[31m[diagnostic][39m [31mlane task error: lane=session:agent:test:cooldown-failover durationMs=0 error="FailoverError: No available auth profile for openai (all in cooldown or unavailable)."[39m
+
+[90mstderr[2m | src/agents/pi-embedded-runner.run-embedded-pi-agent.auth-profile-rotation.test.ts[2m > [22m[2mrunEmbeddedPiAgent auth profile rotation[2m > [22m[2mfails over when auth is unavailable and fallbacks are configured
+[22m[39m[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+[90mstderr[2m | src/agents/pi-embedded-runner.run-embedded-pi-agent.auth-profile-rotation.test.ts[2m > [22m[2mrunEmbeddedPiAgent auth profile rotation[2m > [22m[2mfails over when auth is unavailable and fallbacks are configured
+[22m[39m[31m[diagnostic][39m [31mlane task error: lane=main durationMs=23 error="FailoverError: No API key found for provider "openai". Auth store: /tmp/openclaw-agent-KSzmuR/auth-profiles.json (agentDir: /tmp/openclaw-agent-KSzmuR). Configure auth for this agent (openclaw agents add <id>) or copy auth-profiles.json from the main agentDir."[39m
+
+[90mstderr[2m | src/agents/pi-embedded-runner.run-embedded-pi-agent.auth-profile-rotation.test.ts[2m > [22m[2mrunEmbeddedPiAgent auth profile rotation[2m > [22m[2mfails over when auth is unavailable and fallbacks are configured
+[22m[39m[31m[diagnostic][39m [31mlane task error: lane=session:agent:test:auth-unavailable durationMs=27 error="FailoverError: No API key found for provider "openai". Auth store: /tmp/openclaw-agent-KSzmuR/auth-profiles.json (agentDir: /tmp/openclaw-agent-KSzmuR). Configure auth for this agent (openclaw agents add <id>) or copy auth-profiles.json from the main agentDir."[39m
+
+[90mstderr[2m | src/agents/pi-embedded-runner.run-embedded-pi-agent.auth-profile-rotation.test.ts[2m > [22m[2mrunEmbeddedPiAgent auth profile rotation[2m > [22m[2mskips profiles in cooldown when rotating after failure
+[22m[39m[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+ [32m✓[39m src/agents/pi-embedded-runner.run-embedded-pi-agent.auth-profile-rotation.test.ts [2m([22m[2m8 tests[22m[2m)[22m[33m 5806[2mms[22m[39m
+[90mstderr[2m | src/agents/pi-embedded-runner.test.ts[2m > [22m[2mrunEmbeddedPiAgent[2m > [22m[2mpersists multi-turn user/assistant ordering across runs
+[22m[39mWarning: Could not read /CLAUDE.md: Error: EACCES: permission denied, open '/CLAUDE.md'
+
+[90mstderr[2m | src/agents/pi-embedded-runner.test.ts[2m > [22m[2mrunEmbeddedPiAgent[2m > [22m[2mrepairs orphaned user messages and continues
+[22m[39m[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+[90mstderr[2m | src/agents/pi-embedded-runner.test.ts[2m > [22m[2mrunEmbeddedPiAgent[2m > [22m[2mrepairs orphaned user messages and continues
+[22m[39mWarning: Could not read /CLAUDE.md: Error: EACCES: permission denied, open '/CLAUDE.md'
+
+[90mstderr[2m | src/agents/pi-embedded-runner.test.ts[2m > [22m[2mrunEmbeddedPiAgent[2m > [22m[2mrepairs orphaned single-user sessions and continues
+[22m[39m[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+[90mstderr[2m | src/agents/pi-embedded-runner.test.ts[2m > [22m[2mrunEmbeddedPiAgent[2m > [22m[2mrepairs orphaned single-user sessions and continues
+[22m[39mWarning: Could not read /CLAUDE.md: Error: EACCES: permission denied, open '/CLAUDE.md'
+
+ [32m✓[39m src/agents/pi-embedded-runner.test.ts [2m([22m[2m9 tests[22m[2m)[22m[33m 6311[2mms[22m[39m
+     [33m[2m✓[22m[39m falls back to per-agent workspace when runtime workspaceDir is missing [33m 469[2mms[22m[39m
+     [33m[2m✓[22m[39m appends new user + assistant after existing transcript entries [33m 386[2mms[22m[39m
+     [33m[2m✓[22m[39m persists multi-turn user/assistant ordering across runs [33m 530[2mms[22m[39m
+ [32m✓[39m src/plugins/install.test.ts [2m([22m[2m11 tests[22m[2m)[22m[33m 2766[2mms[22m[39m
+     [33m[2m✓[22m[39m installs into ~/.openclaw/extensions and uses unscoped id [33m 469[2mms[22m[39m
+     [33m[2m✓[22m[39m rejects installing when plugin already exists [33m 374[2mms[22m[39m
+     [33m[2m✓[22m[39m allows updates when mode is update [33m 756[2mms[22m[39m
+     [33m[2m✓[22m[39m rejects traversal-like plugin names [33m 395[2mms[22m[39m
+     [33m[2m✓[22m[39m rejects reserved plugin ids [33m 383[2mms[22m[39m
+     [33m[2m✓[22m[39m rejects packages without openclaw.extensions [33m 340[2mms[22m[39m
+ [32m✓[39m src/commands/agent.test.ts [2m([22m[2m16 tests[22m[2m)[22m[33m 2765[2mms[22m[39m
+ [32m✓[39m src/cron/isolated-agent.uses-last-non-empty-agent-text-as.test.ts [2m([22m[2m14 tests[22m[2m)[22m[33m 2359[2mms[22m[39m
+ [32m✓[39m src/commands/onboard-non-interactive.provider-auth.test.ts [2m([22m[2m13 tests[22m[2m)[22m[33m 9414[2mms[22m[39m
+     [33m[2m✓[22m[39m stores xAI API key and sets default model [33m 5654[2mms[22m[39m
+     [33m[2m✓[22m[39m stores Vercel AI Gateway API key and sets default model [33m 352[2mms[22m[39m
+     [33m[2m✓[22m[39m stores token auth profile [33m 335[2mms[22m[39m
+     [33m[2m✓[22m[39m stores OpenAI API key and sets OpenAI default model [33m 341[2mms[22m[39m
+     [33m[2m✓[22m[39m stores Cloudflare AI Gateway API key and metadata [33m 342[2mms[22m[39m
+     [33m[2m✓[22m[39m infers Cloudflare auth choice from API key flags [33m 317[2mms[22m[39m
+     [33m[2m✓[22m[39m configures a custom provider from non-interactive flags [33m 358[2mms[22m[39m
+     [33m[2m✓[22m[39m infers custom provider auth choice from custom flags [33m 325[2mms[22m[39m
+     [33m[2m✓[22m[39m uses CUSTOM_API_KEY env fallback for non-interactive custom provider auth [33m 317[2mms[22m[39m
+     [33m[2m✓[22m[39m uses matching profile fallback for non-interactive custom provider auth [33m 333[2mms[22m[39m
+ [32m✓[39m extensions/nostr/src/nostr-profile-http.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 30[2mms[22m[39m
+ [32m✓[39m extensions/bluebubbles/src/send.test.ts [2m([22m[2m33 tests[22m[2m)[22m[32m 34[2mms[22m[39m
+ [32m✓[39m extensions/nostr/src/nostr-profile.test.ts [2m([22m[2m31 tests[22m[2m)[22m[32m 59[2mms[22m[39m
+ [32m✓[39m extensions/bluebubbles/src/actions.test.ts [2m([22m[2m27 tests[22m[2m)[22m[32m 31[2mms[22m[39m
+ [32m✓[39m extensions/nostr/src/nostr-bus.fuzz.test.ts [2m([22m[2m76 tests[22m[2m)[22m[32m 44[2mms[22m[39m
+[90mstderr[2m | extensions/bluebubbles/src/monitor.test.ts[2m > [22m[2mBlueBubbles webhook monitor[2m > [22m[2mwebhook parsing + auth handling[2m > [22m[2mrejects requests with invalid JSON
+[22m[39m[bluebubbles] webhook rejected: invalid json
+
+[90mstderr[2m | extensions/bluebubbles/src/monitor.test.ts[2m > [22m[2mBlueBubbles webhook monitor[2m > [22m[2mwebhook parsing + auth handling[2m > [22m[2mreturns 400 when request body times out (Slow-Loris protection)
+[22m[39m[bluebubbles] webhook rejected: request body timeout
+
+[90mstderr[2m | extensions/bluebubbles/src/monitor.test.ts[2m > [22m[2mBlueBubbles webhook monitor[2m > [22m[2mwebhook parsing + auth handling[2m > [22m[2mrejects unauthorized requests with wrong password
+[22m[39m[bluebubbles] webhook rejected: unauthorized guid=wr***en
+
+ [32m✓[39m src/config/config.legacy-config-detection.accepts-imessage-dmpolicy.test.ts [2m([22m[2m24 tests[22m[2m)[22m[33m 2630[2mms[22m[39m
+ [32m✓[39m extensions/bluebubbles/src/monitor.test.ts [2m([22m[2m51 tests[22m[2m)[22m[32m 117[2mms[22m[39m
+ [32m✓[39m extensions/nostr/src/nostr-profile.fuzz.test.ts [2m([22m[2m51 tests[22m[2m)[22m[33m 443[2mms[22m[39m
+     [33m[2m✓[22m[39m handles rapid sequential events with monotonic timestamps [33m 368[2mms[22m[39m
+ [32m✓[39m src/media-understanding/apply.test.ts [2m([22m[2m22 tests[22m[2m)[22m[33m 1227[2mms[22m[39m
+     [33m[2m✓[22m[39m sets Transcript and replaces Body when audio transcription succeeds [33m 1148[2mms[22m[39m
+ [32m✓[39m src/agents/subagent-announce.format.test.ts [2m([22m[2m14 tests[22m[2m)[22m[33m 2291[2mms[22m[39m
+     [33m[2m✓[22m[39m sends instructional message to main agent with status and findings [33m 1052[2mms[22m[39m
+     [33m[2m✓[22m[39m retries reading subagent output when early lifecycle completion had no text [33m 1105[2mms[22m[39m
+ [32m✓[39m extensions/bluebubbles/src/attachments.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32m✓[39m src/cli/gateway-cli.coverage.test.ts [2m([22m[2m9 tests[22m[2m)[22m[33m 4212[2mms[22m[39m
+     [33m[2m✓[22m[39m registers call/health commands and routes to callGateway [33m 3649[2mms[22m[39m
+     [33m[2m✓[22m[39m uses env/config port when --port is omitted [33m 355[2mms[22m[39m
+ [32m✓[39m src/commands/onboard-non-interactive.gateway.test.ts [2m([22m[2m3 tests[22m[2m)[22m[33m 3750[2mms[22m[39m
+     [33m[2m✓[22m[39m writes gateway token auth into config and gateway enforces it [33m 3278[2mms[22m[39m
+     [33m[2m✓[22m[39m auto-generates token auth when binding LAN and persists the token [33m 430[2mms[22m[39m
+ [32m✓[39m extensions/twitch/src/send.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m extensions/twitch/src/outbound.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32m✓[39m extensions/memory-lancedb/index.test.ts [2m([22m[2m7 tests[22m[2m | [22m[33m1 skipped[39m[2m)[22m[32m 214[2mms[22m[39m
+ [32m✓[39m extensions/voice-call/src/config.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m extensions/lobster/src/lobster-tool.test.ts [2m([22m[2m9 tests[22m[2m)[22m[33m 379[2mms[22m[39m
+Usage: program models auth [options] [command]
+
+Manage model auth profiles
+
+Options:
+  --agent <id>                    Agent id for auth order get/set/clear
+  -h, --help                      display help for command
+
+Commands:
+  add                             Interactive auth helper (setup-token or paste
+                                  token)
+  login [options]                 Run a provider plugin auth flow (OAuth/API
+                                  key)
+  setup-token [options]           Run a provider CLI to create/sync a token (TTY
+                                  required)
+  paste-token [options]           Paste a token into auth-profiles.json and
+                                  update config
+  login-github-copilot [options]  Login to GitHub Copilot via GitHub device flow
+                                  (TTY required)
+  order                           Manage per-agent auth profile order overrides
+ [32m✓[39m src/cli/models-cli.test.ts [2m([22m[2m4 tests[22m[2m)[22m[33m 4039[2mms[22m[39m
+     [33m[2m✓[22m[39m registers github-copilot login command [33m 4029[2mms[22m[39m
+ [32m✓[39m extensions/twitch/src/status.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+[90mstdout[2m | extensions/voice-call/src/manager.test.ts[2m > [22m[2mCallManager[2m > [22m[2mupgrades providerCallId mapping when provider ID changes
+[22m[39m[voice-call] Starting max duration timer (300s) for call 6fac5a51-00fa-4a50-a28d-d46b3968116a
+
+[90mstdout[2m | extensions/voice-call/src/manager.test.ts[2m > [22m[2mCallManager[2m > [22m[2mspeaks initial message on answered for notify mode (non-Twilio)
+[22m[39m[voice-call] Using inline TwiML for notify mode (voice: Polly.Joanna)
+
+[90mstdout[2m | extensions/voice-call/src/manager.test.ts[2m > [22m[2mCallManager[2m > [22m[2mspeaks initial message on answered for notify mode (non-Twilio)
+[22m[39m[voice-call] Starting max duration timer (300s) for call 2853c5aa-9ef8-4291-83e0-14b74712d180
+[voice-call] Speaking initial message for call 2853c5aa-9ef8-4291-83e0-14b74712d180 (mode: notify)
+
+[90mstdout[2m | extensions/voice-call/src/manager.test.ts[2m > [22m[2mCallManager[2m > [22m[2mspeaks initial message on answered for notify mode (non-Twilio)
+[22m[39m[voice-call] Notify mode: auto-hangup in 3s for call 2853c5aa-9ef8-4291-83e0-14b74712d180
+
+[90mstdout[2m | extensions/voice-call/src/manager.test.ts[2m > [22m[2mCallManager[2m > [22m[2mrejects inbound calls with missing caller ID when allowlist enabled
+[22m[39m[voice-call] Inbound call rejected: missing caller ID
+
+[90mstdout[2m | extensions/voice-call/src/manager.test.ts[2m > [22m[2mCallManager[2m > [22m[2mrejects inbound calls with anonymous caller ID when allowlist enabled
+[22m[39m[voice-call] Inbound call rejected: missing caller ID
+
+[90mstdout[2m | extensions/voice-call/src/manager.test.ts[2m > [22m[2mCallManager[2m > [22m[2mrejects inbound calls that only match allowlist suffixes
+[22m[39m[voice-call] Inbound call rejected: +99915550001234 not in allowlist
+
+[90mstdout[2m | extensions/voice-call/src/manager.test.ts[2m > [22m[2mCallManager[2m > [22m[2maccepts inbound calls that exactly match the allowlist
+[22m[39m[voice-call] Inbound call accepted: +15550001234 is in allowlist
+[voice-call] Created inbound call record: 0cb1138e-16f4-4519-a4dc-07f99faef9cb from +15550001234
+
+ [32m✓[39m extensions/voice-call/src/manager.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32m✓[39m src/commands/onboard-non-interactive.litellm.test.ts [2m([22m[2m1 test[22m[2m)[22m[33m 3933[2mms[22m[39m
+     [33m[2m✓[22m[39m stores the API key and configures the default model [33m 3932[2mms[22m[39m
+ [32m✓[39m src/commands/onboard-non-interactive.token.test.ts [2m([22m[2m1 test[22m[2m)[22m[33m 4119[2mms[22m[39m
+     [33m[2m✓[22m[39m writes token profile config and stores the token [33m 4115[2mms[22m[39m
+ [32m✓[39m extensions/twitch/src/onboarding.test.ts [2m([22m[2m15 tests[22m[2m)[22m[33m 3865[2mms[22m[39m
+       [33m[2m✓[22m[39m should return existing token when user confirms to keep it [33m 3854[2mms[22m[39m
+ [32m✓[39m extensions/line/src/channel.sendPayload.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32m✓[39m src/signal/monitor.event-handler.typing-read-receipts.test.ts [2m([22m[2m1 test[22m[2m)[22m[33m 3903[2mms[22m[39m
+     [33m[2m✓[22m[39m sends typing + read receipt for allowed DMs [33m 3901[2mms[22m[39m
+ [32m✓[39m extensions/msteams/src/messenger.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+[90mstdout[2m | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts[2m > [22m[2mweb auto-reply[2m > [22m[2mcompresses common formats to jpeg under the cap
+[22m[39m[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+[90mstdout[2m | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts[2m > [22m[2mweb auto-reply[2m > [22m[2mcompresses common formats to jpeg under the cap
+[22m[39m[35m[whatsapp][39m [36mInbound message +1 -> +2 (undefined, 30 chars)[39m
+
+ [32m✓[39m src/commands/onboard-non-interactive.xai.test.ts [2m([22m[2m1 test[22m[2m)[22m[33m 4034[2mms[22m[39m
+     [33m[2m✓[22m[39m stores the API key and configures the default model [33m 4031[2mms[22m[39m
+ [32m✓[39m extensions/msteams/src/file-consent-helpers.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+[90mstdout[2m | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts[2m > [22m[2mweb auto-reply[2m > [22m[2mcompresses common formats to jpeg under the cap
+[22m[39m[35m[whatsapp][39m [36mSent media reply to +1 (0.74MB)[39m
+
+[90mstdout[2m | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts[2m > [22m[2mweb auto-reply[2m > [22m[2mcompresses common formats to jpeg under the cap
+[22m[39m[35m[whatsapp][39m [36mAuto-replied to +1 (media)[39m
+
+[90mstdout[2m | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts[2m > [22m[2mweb auto-reply[2m > [22m[2mcompresses common formats to jpeg under the cap
+[22m[39m[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+[90mstdout[2m | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts[2m > [22m[2mweb auto-reply[2m > [22m[2mcompresses common formats to jpeg under the cap
+[22m[39m[35m[whatsapp][39m [36mInbound message +1 -> +2 (undefined, 30 chars)[39m
+
+ [32m✓[39m src/signal/monitor.event-handler.sender-prefix.test.ts [2m([22m[2m1 test[22m[2m)[22m[33m 3738[2mms[22m[39m
+     [33m[2m✓[22m[39m prefixes group bodies with sender label [33m 3736[2mms[22m[39m
+[90mstdout[2m | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts[2m > [22m[2mweb auto-reply[2m > [22m[2mcompresses common formats to jpeg under the cap
+[22m[39m[35m[whatsapp][39m [36mSent media reply to +1 (0.69MB)[39m
+
+[90mstdout[2m | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts[2m > [22m[2mweb auto-reply[2m > [22m[2mcompresses common formats to jpeg under the cap
+[22m[39m[35m[whatsapp][39m [36mAuto-replied to +1 (media)[39m
+
+ [32m✓[39m src/cli/gateway.sigterm.test.ts [2m([22m[2m1 test[22m[2m)[22m[33m 4051[2mms[22m[39m
+     [33m[2m✓[22m[39m exits 0 on SIGTERM [33m 4049[2mms[22m[39m
+[90mstdout[2m | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts[2m > [22m[2mweb auto-reply[2m > [22m[2mcompresses common formats to jpeg under the cap
+[22m[39m[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+[90mstdout[2m | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts[2m > [22m[2mweb auto-reply[2m > [22m[2mcompresses common formats to jpeg under the cap
+[22m[39m[35m[whatsapp][39m [36mInbound message +1 -> +2 (undefined, 30 chars)[39m
+
+ [32m✓[39m extensions/bluebubbles/src/targets.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m extensions/twitch/src/probe.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 130[2mms[22m[39m
+ [32m✓[39m extensions/msteams/src/media-helpers.test.ts [2m([22m[2m36 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+[90mstdout[2m | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts[2m > [22m[2mweb auto-reply[2m > [22m[2mcompresses common formats to jpeg under the cap
+[22m[39m[35m[whatsapp][39m [36mSent media reply to +1 (0.69MB)[39m
+
+[90mstdout[2m | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts[2m > [22m[2mweb auto-reply[2m > [22m[2mcompresses common formats to jpeg under the cap
+[22m[39m[35m[whatsapp][39m [36mAuto-replied to +1 (media)[39m
+
+[90mstdout[2m | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts[2m > [22m[2mweb auto-reply[2m > [22m[2mhonors mediaMaxMb from config
+[22m[39m[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+[90mstdout[2m | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts[2m > [22m[2mweb auto-reply[2m > [22m[2mhonors mediaMaxMb from config
+[22m[39m[35m[whatsapp][39m [36mInbound message +1 -> +2 (undefined, 30 chars)[39m
+
+[90mstdout[2m | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts[2m > [22m[2mweb auto-reply[2m > [22m[2mhonors mediaMaxMb from config
+[22m[39m[35m[whatsapp][39m [36mSent media reply to +1 (0.01MB)[39m
+
+[90mstdout[2m | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts[2m > [22m[2mweb auto-reply[2m > [22m[2mhonors mediaMaxMb from config
+[22m[39m[35m[whatsapp][39m [36mAuto-replied to +1 (media)[39m
+
+[90mstdout[2m | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts[2m > [22m[2mweb auto-reply[2m > [22m[2mfalls back to text when media is unsupported
+[22m[39m[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+[90mstdout[2m | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts[2m > [22m[2mweb auto-reply[2m > [22m[2mfalls back to text when media is unsupported
+[22m[39m[35m[whatsapp][39m [36mInbound message +1 -> +2 (undefined, 19 chars)[39m
+
+[90mstdout[2m | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts[2m > [22m[2mweb auto-reply[2m > [22m[2mfalls back to text when media is unsupported
+[22m[39m[35m[whatsapp][39m [36mSent media reply to +1 (0.01MB)[39m
+
+[90mstdout[2m | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts[2m > [22m[2mweb auto-reply[2m > [22m[2mfalls back to text when media is unsupported
+[22m[39m[35m[whatsapp][39m [36mAuto-replied to +1 (media)[39m
+
+ [32m✓[39m src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts [2m([22m[2m3 tests[22m[2m)[22m[33m 2598[2mms[22m[39m
+     [33m[2m✓[22m[39m compresses common formats to jpeg under the cap [33m 2284[2mms[22m[39m
+ [32m✓[39m extensions/llm-task/src/llm-task-tool.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 57[2mms[22m[39m
+ [32m✓[39m extensions/google-gemini-cli-auth/oauth.test.ts [2m([22m[2m5 tests[22m[2m)[22m[33m 5266[2mms[22m[39m
+     [33m[2m✓[22m[39m returns null when gemini binary is not in PATH [33m 3996[2mms[22m[39m
+     [33m[2m✓[22m[39m extracts credentials from oauth2.js in known path [33m 321[2mms[22m[39m
+     [33m[2m✓[22m[39m returns null when oauth2.js cannot be found [33m 344[2mms[22m[39m
+     [33m[2m✓[22m[39m returns null when oauth2.js lacks credentials [33m 320[2mms[22m[39m
+ [32m✓[39m extensions/nostr/src/nostr-bus.test.ts [2m([22m[2m32 tests[22m[2m)[22m[32m 45[2mms[22m[39m
+ [32m✓[39m src/agents/sandbox-agent-config.agent-specific-sandbox-config.should-allow-agent-specific-docker-settings-beyond.test.ts [2m([22m[2m4 tests[22m[2m)[22m[33m 3044[2mms[22m[39m
+     [33m[2m✓[22m[39m should allow agent-specific docker settings beyond setupCommand [33m 1931[2mms[22m[39m
+     [33m[2m✓[22m[39m should use agent-specific sandbox mode 'all' [33m 493[2mms[22m[39m
+     [33m[2m✓[22m[39m should use agent-specific scope [33m 423[2mms[22m[39m
+[90mstdout[2m | src/telegram/bot.media.includes-location-text-ctx-fields-pins.test.ts[2m > [22m[2mtelegram inbound media[2m > [22m[2mincludes location text and ctx fields for pins
+[22m[39m[34m[telegram][39m [36mautoSelectFamily=false (default-node22)[39m
+
+ [32m✓[39m src/commands/doctor.runs-legacy-state-migrations-yes-mode-without.test.ts [2m([22m[2m3 tests[22m[2m)[22m[33m 2355[2mms[22m[39m
+     [33m[2m✓[22m[39m runs legacy state migrations in yes mode without prompting [33m 2331[2mms[22m[39m
+ [32m✓[39m src/config/config.nix-integration-u3-u5-u9.test.ts [2m([22m[2m19 tests[22m[2m)[22m[33m 2277[2mms[22m[39m
+ [32m✓[39m src/telegram/bot.media.includes-location-text-ctx-fields-pins.test.ts [2m([22m[2m2 tests[22m[2m)[22m[33m 3809[2mms[22m[39m
+     [33m[2m✓[22m[39m includes location text and ctx fields for pins [33m 3803[2mms[22m[39m
+ [32m✓[39m extensions/diagnostics-otel/src/service.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m extensions/twitch/src/token.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m extensions/matrix/src/matrix/send.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 282[2mms[22m[39m
+ [32m✓[39m src/commands/models.list.test.ts [2m([22m[2m8 tests[22m[2m)[22m[33m 3245[2mms[22m[39m
+     [33m[2m✓[22m[39m models status resolves z.ai alias to canonical zai [33m 3229[2mms[22m[39m
+ [32m✓[39m extensions/msteams/src/policy.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m extensions/irc/src/policy.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m src/agents/sandbox-agent-config.agent-specific-sandbox-config.should-use-agent-specific-workspaceroot.test.ts [2m([22m[2m3 tests[22m[2m)[22m[33m 2743[2mms[22m[39m
+     [33m[2m✓[22m[39m should use agent-specific workspaceRoot [33m 1776[2mms[22m[39m
+     [33m[2m✓[22m[39m should prefer agent config over global for multiple agents [33m 525[2mms[22m[39m
+     [33m[2m✓[22m[39m should prefer agent-specific sandbox tool policy [33m 436[2mms[22m[39m
+ [32m✓[39m src/agents/bash-tools.test.ts [2m([22m[2m17 tests[22m[2m)[22m[33m 1437[2mms[22m[39m
+     [33m[2m✓[22m[39m uses default timeout when timeout is omitted [33m 1015[2mms[22m[39m
+ [32m✓[39m src/agents/sandbox-agent-config.agent-specific-sandbox-config.should-use-global-sandbox-config-no-agent.test.ts [2m([22m[2m3 tests[22m[2m)[22m[33m 2836[2mms[22m[39m
+     [33m[2m✓[22m[39m should use global sandbox config when no agent-specific config exists [33m 1836[2mms[22m[39m
+     [33m[2m✓[22m[39m should allow agent-specific docker setupCommand overrides [33m 598[2mms[22m[39m
+     [33m[2m✓[22m[39m should ignore agent-specific docker overrides when scope is shared [33m 395[2mms[22m[39m
+ [32m✓[39m extensions/nostr/src/nostr-state-store.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ ELIFECYCLE  Test failed. See above for more details.

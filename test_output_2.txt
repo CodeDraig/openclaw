@@ -1,0 +1,2626 @@
+
+> openclaw@2026.2.10 test /srv/data/code/openclaw
+> node scripts/test-parallel.mjs
+
+
+ RUN  v4.0.18 /srv/data/code/openclaw
+
+
+ RUN  v4.0.18 /srv/data/code/openclaw
+
+ ✓ extensions/nostr/src/nostr-bus.integration.test.ts (26 tests) 15ms
+ ✓ extensions/twitch/src/twitch-client.test.ts (30 tests) 26ms
+ ✓ extensions/msteams/src/attachments.test.ts (19 tests) 84ms
+ ✓ extensions/twitch/src/access-control.test.ts (31 tests) 11ms
+ ✓ extensions/bluebubbles/src/chat.test.ts (31 tests) 34ms
+ ✓ src/agents/openai-responses.reasoning-replay.test.ts (2 tests) 2686ms
+     ✓ replays reasoning for tool-call-only turns (OpenAI requires it)  1410ms
+     ✓ still replays reasoning when paired with an assistant message  1274ms
+ ✓ src/config/config.legacy-config-detection.rejects-routing-allowfrom.test.ts (33 tests) 3184ms
+stderr | extensions/voice-call/src/webhook-security.test.ts > verifyTwilioWebhook > allows invalid signatures for ngrok free tier only on loopback
+[voice-call] Twilio signature validation failed (ngrok free tier compatibility, loopback only)
+
+ ✓ extensions/voice-call/src/webhook-security.test.ts (11 tests) 14ms
+stderr | src/agents/pi-embedded-runner.test.ts > runEmbeddedPiAgent > falls back to per-agent workspace when runtime workspaceDir is missing
+[33m[agent/embedded][39m [33m[workspace-fallback] caller=runEmbeddedPiAgent reason=missing run=run-fallback-workspace session=sha256:fea8aefc758d sessionKey=sha256:e77fc8cb017d agent=main workspace=sha256:045c0626c868[39m
+
+stderr | src/agents/pi-embedded-runner.test.ts > runEmbeddedPiAgent > falls back to per-agent workspace when runtime workspaceDir is missing
+[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+stderr | src/agents/pi-embedded-runner.test.ts > runEmbeddedPiAgent > falls back to per-agent workspace when runtime workspaceDir is missing
+Warning: Could not read /CLAUDE.md: Error: EACCES: permission denied, open '/CLAUDE.md'
+
+stderr | src/agents/pi-embedded-runner.test.ts > runEmbeddedPiAgent > persists the first user message before assistant output
+[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+stderr | src/agents/pi-embedded-runner.test.ts > runEmbeddedPiAgent > persists the first user message before assistant output
+Warning: Could not read /CLAUDE.md: Error: EACCES: permission denied, open '/CLAUDE.md'
+
+stderr | src/agents/pi-embedded-runner.test.ts > runEmbeddedPiAgent > persists the user message when prompt fails before assistant output
+[33m[agent/embedded][39m [33mlow context window: openai/mock-error ctx=16000 (warn<32000) source=modelsConfig[39m
+
+stderr | src/agents/pi-embedded-runner.test.ts > runEmbeddedPiAgent > persists the user message when prompt fails before assistant output
+Warning: Could not read /CLAUDE.md: Error: EACCES: permission denied, open '/CLAUDE.md'
+
+stderr | src/agents/pi-embedded-runner.test.ts > runEmbeddedPiAgent > appends new user + assistant after existing transcript entries
+[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+stdout | src/telegram/bot.media.downloads-media-file-path-no-file-download.test.ts > telegram inbound media > downloads media via file_path (no file.download)
+[34m[telegram][39m [36mautoSelectFamily=false (default-node22)[39m
+
+ ✓ src/telegram/bot.media.downloads-media-file-path-no-file-download.test.ts (10 tests) 5065ms
+     ✓ downloads media via file_path (no file.download)  5019ms
+stderr | src/agents/pi-embedded-runner.test.ts > runEmbeddedPiAgent > appends new user + assistant after existing transcript entries
+Warning: Could not read /CLAUDE.md: Error: EACCES: permission denied, open '/CLAUDE.md'
+
+ ✓ src/discord/monitor.tool-result.accepts-guild-messages-mentionpatterns-match.test.ts (7 tests) 4997ms
+     ✓ accepts guild messages when mentionPatterns match  4972ms
+stderr | src/agents/pi-embedded-runner.test.ts > runEmbeddedPiAgent > persists multi-turn user/assistant ordering across runs
+[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+ ✓ extensions/bluebubbles/src/reactions.test.ts (46 tests) 25ms
+stderr | src/agents/pi-embedded-runner.run-embedded-pi-agent.auth-profile-rotation.test.ts > runEmbeddedPiAgent auth profile rotation > rotates for auto-pinned profiles
+[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+stderr | src/agents/pi-embedded-runner.run-embedded-pi-agent.auth-profile-rotation.test.ts > runEmbeddedPiAgent auth profile rotation > does not rotate for user-pinned profiles
+[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+stderr | src/agents/pi-embedded-runner.run-embedded-pi-agent.auth-profile-rotation.test.ts > runEmbeddedPiAgent auth profile rotation > honors user-pinned profiles even when in cooldown
+[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+stderr | src/agents/pi-embedded-runner.test.ts > runEmbeddedPiAgent > persists multi-turn user/assistant ordering across runs
+Warning: Could not read /CLAUDE.md: Error: EACCES: permission denied, open '/CLAUDE.md'
+
+stderr | src/agents/pi-embedded-runner.run-embedded-pi-agent.auth-profile-rotation.test.ts > runEmbeddedPiAgent auth profile rotation > ignores user-locked profile when provider mismatches
+[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+stderr | src/agents/pi-embedded-runner.run-embedded-pi-agent.auth-profile-rotation.test.ts > runEmbeddedPiAgent auth profile rotation > skips profiles in cooldown during initial selection
+[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+stderr | src/agents/pi-embedded-runner.test.ts > runEmbeddedPiAgent > persists multi-turn user/assistant ordering across runs
+[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+stderr | src/agents/pi-embedded-runner.run-embedded-pi-agent.auth-profile-rotation.test.ts > runEmbeddedPiAgent auth profile rotation > fails over when all profiles are in cooldown and fallbacks are configured
+[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+stderr | src/agents/pi-embedded-runner.run-embedded-pi-agent.auth-profile-rotation.test.ts > runEmbeddedPiAgent auth profile rotation > fails over when all profiles are in cooldown and fallbacks are configured
+[31m[diagnostic][39m [31mlane task error: lane=main durationMs=0 error="FailoverError: No available auth profile for openai (all in cooldown or unavailable)."[39m
+
+stderr | src/agents/pi-embedded-runner.run-embedded-pi-agent.auth-profile-rotation.test.ts > runEmbeddedPiAgent auth profile rotation > fails over when all profiles are in cooldown and fallbacks are configured
+[31m[diagnostic][39m [31mlane task error: lane=session:agent:test:cooldown-failover durationMs=0 error="FailoverError: No available auth profile for openai (all in cooldown or unavailable)."[39m
+
+stderr | src/agents/pi-embedded-runner.run-embedded-pi-agent.auth-profile-rotation.test.ts > runEmbeddedPiAgent auth profile rotation > fails over when auth is unavailable and fallbacks are configured
+[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+stderr | src/agents/pi-embedded-runner.run-embedded-pi-agent.auth-profile-rotation.test.ts > runEmbeddedPiAgent auth profile rotation > fails over when auth is unavailable and fallbacks are configured
+[31m[diagnostic][39m [31mlane task error: lane=main durationMs=22 error="FailoverError: No API key found for provider "openai". Auth store: /tmp/openclaw-agent-cfwHp6/auth-profiles.json (agentDir: /tmp/openclaw-agent-cfwHp6). Configure auth for this agent (openclaw agents add <id>) or copy auth-profiles.json from the main agentDir."[39m
+
+stderr | src/agents/pi-embedded-runner.run-embedded-pi-agent.auth-profile-rotation.test.ts > runEmbeddedPiAgent auth profile rotation > fails over when auth is unavailable and fallbacks are configured
+[31m[diagnostic][39m [31mlane task error: lane=session:agent:test:auth-unavailable durationMs=25 error="FailoverError: No API key found for provider "openai". Auth store: /tmp/openclaw-agent-cfwHp6/auth-profiles.json (agentDir: /tmp/openclaw-agent-cfwHp6). Configure auth for this agent (openclaw agents add <id>) or copy auth-profiles.json from the main agentDir."[39m
+
+stderr | src/agents/pi-embedded-runner.run-embedded-pi-agent.auth-profile-rotation.test.ts > runEmbeddedPiAgent auth profile rotation > skips profiles in cooldown when rotating after failure
+[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+ ✓ src/agents/pi-embedded-runner.run-embedded-pi-agent.auth-profile-rotation.test.ts (8 tests) 5651ms
+stderr | src/agents/pi-embedded-runner.test.ts > runEmbeddedPiAgent > persists multi-turn user/assistant ordering across runs
+Warning: Could not read /CLAUDE.md: Error: EACCES: permission denied, open '/CLAUDE.md'
+
+stderr | src/agents/pi-embedded-runner.test.ts > runEmbeddedPiAgent > repairs orphaned user messages and continues
+[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+stderr | src/agents/pi-embedded-runner.test.ts > runEmbeddedPiAgent > repairs orphaned user messages and continues
+Warning: Could not read /CLAUDE.md: Error: EACCES: permission denied, open '/CLAUDE.md'
+
+stderr | src/agents/pi-embedded-runner.test.ts > runEmbeddedPiAgent > repairs orphaned single-user sessions and continues
+[33m[agent/embedded][39m [33mlow context window: openai/mock-1 ctx=16000 (warn<32000) source=modelsConfig[39m
+
+stderr | src/agents/pi-embedded-runner.test.ts > runEmbeddedPiAgent > repairs orphaned single-user sessions and continues
+Warning: Could not read /CLAUDE.md: Error: EACCES: permission denied, open '/CLAUDE.md'
+
+ ✓ src/agents/pi-embedded-runner.test.ts (9 tests) 6111ms
+     ✓ falls back to per-agent workspace when runtime workspaceDir is missing  483ms
+     ✓ persists multi-turn user/assistant ordering across runs  532ms
+ ✓ src/plugins/install.test.ts (11 tests) 2724ms
+     ✓ installs into ~/.openclaw/extensions and uses unscoped id  493ms
+     ✓ rejects installing when plugin already exists  356ms
+     ✓ allows updates when mode is update  768ms
+     ✓ rejects traversal-like plugin names  405ms
+     ✓ rejects reserved plugin ids  377ms
+ ✓ src/commands/agent.test.ts (16 tests) 2407ms
+ ✓ src/cron/isolated-agent.uses-last-non-empty-agent-text-as.test.ts (14 tests) 2167ms
+     ✓ treats blank model overrides as unset  339ms
+ ✓ extensions/nostr/src/nostr-profile-http.test.ts (12 tests) 22ms
+ ✓ extensions/bluebubbles/src/send.test.ts (33 tests) 26ms
+ ✓ extensions/nostr/src/nostr-profile.test.ts (31 tests) 58ms
+ ✓ extensions/bluebubbles/src/actions.test.ts (27 tests) 24ms
+ ✓ extensions/nostr/src/nostr-bus.fuzz.test.ts (76 tests) 30ms
+stderr | extensions/bluebubbles/src/monitor.test.ts > BlueBubbles webhook monitor > webhook parsing + auth handling > rejects requests with invalid JSON
+[bluebubbles] webhook rejected: invalid json
+
+stderr | extensions/bluebubbles/src/monitor.test.ts > BlueBubbles webhook monitor > webhook parsing + auth handling > returns 400 when request body times out (Slow-Loris protection)
+[bluebubbles] webhook rejected: request body timeout
+
+stderr | extensions/bluebubbles/src/monitor.test.ts > BlueBubbles webhook monitor > webhook parsing + auth handling > rejects unauthorized requests with wrong password
+[bluebubbles] webhook rejected: unauthorized guid=wr***en
+
+ ✓ extensions/bluebubbles/src/monitor.test.ts (51 tests) 89ms
+ ✓ extensions/nostr/src/nostr-profile.fuzz.test.ts (51 tests) 382ms
+     ✓ handles rapid sequential events with monotonic timestamps  332ms
+ ✓ src/commands/onboard-non-interactive.provider-auth.test.ts (13 tests) 9227ms
+     ✓ stores xAI API key and sets default model  5627ms
+     ✓ stores Vercel AI Gateway API key and sets default model  343ms
+     ✓ stores token auth profile  338ms
+     ✓ stores OpenAI API key and sets OpenAI default model  358ms
+     ✓ infers Cloudflare auth choice from API key flags  303ms
+     ✓ configures a custom provider from non-interactive flags  328ms
+     ✓ infers custom provider auth choice from custom flags  320ms
+     ✓ uses matching profile fallback for non-interactive custom provider auth  314ms
+ ✓ src/config/config.legacy-config-detection.accepts-imessage-dmpolicy.test.ts (24 tests) 2557ms
+ ✓ src/agents/subagent-announce.format.test.ts (14 tests) 2179ms
+     ✓ sends instructional message to main agent with status and findings  941ms
+     ✓ retries reading subagent output when early lifecycle completion had no text  1104ms
+ ✓ src/media-understanding/apply.test.ts (22 tests) 1183ms
+     ✓ sets Transcript and replaces Body when audio transcription succeeds  1152ms
+ ✓ extensions/bluebubbles/src/attachments.test.ts (18 tests) 19ms
+ ✓ extensions/twitch/src/outbound.test.ts (21 tests) 16ms
+ ✓ src/commands/onboard-non-interactive.gateway.test.ts (3 tests) 3626ms
+     ✓ writes gateway token auth into config and gateway enforces it  3116ms
+     ✓ auto-generates token auth when binding LAN and persists the token  460ms
+ ✓ extensions/twitch/src/send.test.ts (9 tests) 10ms
+ ✓ src/cli/gateway-cli.coverage.test.ts (9 tests) 4011ms
+     ✓ registers call/health commands and routes to callGateway  3470ms
+ ✓ extensions/memory-lancedb/index.test.ts (7 tests | 1 skipped) 242ms
+ ✓ extensions/voice-call/src/config.test.ts (14 tests) 12ms
+ ✓ extensions/lobster/src/lobster-tool.test.ts (9 tests) 370ms
+stdout | extensions/voice-call/src/manager.test.ts > CallManager > upgrades providerCallId mapping when provider ID changes
+[voice-call] Starting max duration timer (300s) for call 740d9f21-65b3-4c75-aca2-a294e716cd67
+
+stdout | extensions/voice-call/src/manager.test.ts > CallManager > speaks initial message on answered for notify mode (non-Twilio)
+[voice-call] Using inline TwiML for notify mode (voice: Polly.Joanna)
+
+stdout | extensions/voice-call/src/manager.test.ts > CallManager > speaks initial message on answered for notify mode (non-Twilio)
+[voice-call] Starting max duration timer (300s) for call 05d48626-12e0-443f-852b-7c70488b407b
+[voice-call] Speaking initial message for call 05d48626-12e0-443f-852b-7c70488b407b (mode: notify)
+
+stdout | extensions/voice-call/src/manager.test.ts > CallManager > speaks initial message on answered for notify mode (non-Twilio)
+[voice-call] Notify mode: auto-hangup in 3s for call 05d48626-12e0-443f-852b-7c70488b407b
+
+stdout | extensions/voice-call/src/manager.test.ts > CallManager > rejects inbound calls with missing caller ID when allowlist enabled
+[voice-call] Inbound call rejected: missing caller ID
+
+stdout | extensions/voice-call/src/manager.test.ts > CallManager > rejects inbound calls with anonymous caller ID when allowlist enabled
+[voice-call] Inbound call rejected: missing caller ID
+
+stdout | extensions/voice-call/src/manager.test.ts > CallManager > rejects inbound calls that only match allowlist suffixes
+[voice-call] Inbound call rejected: +99915550001234 not in allowlist
+
+stdout | extensions/voice-call/src/manager.test.ts > CallManager > accepts inbound calls that exactly match the allowlist
+[voice-call] Inbound call accepted: +15550001234 is in allowlist
+[voice-call] Created inbound call record: ba369999-9f62-467d-946e-b7cd1e3262f7 from +15550001234
+
+ ✓ extensions/voice-call/src/manager.test.ts (6 tests) 15ms
+ ✓ extensions/twitch/src/status.test.ts (12 tests) 7ms
+Usage: program models auth [options] [command]
+
+Manage model auth profiles
+
+Options:
+  --agent <id>                    Agent id for auth order get/set/clear
+  -h, --help                      display help for command
+
+Commands:
+  add                             Interactive auth helper (setup-token or paste
+                                  token)
+  login [options]                 Run a provider plugin auth flow (OAuth/API
+                                  key)
+  setup-token [options]           Run a provider CLI to create/sync a token (TTY
+                                  required)
+  paste-token [options]           Paste a token into auth-profiles.json and
+                                  update config
+  login-github-copilot [options]  Login to GitHub Copilot via GitHub device flow
+                                  (TTY required)
+  order                           Manage per-agent auth profile order overrides
+ ✓ src/cli/models-cli.test.ts (4 tests) 3551ms
+     ✓ registers github-copilot login command  3542ms
+ ✓ src/commands/onboard-non-interactive.litellm.test.ts (1 test) 3499ms
+     ✓ stores the API key and configures the default model  3496ms
+ ✓ extensions/twitch/src/onboarding.test.ts (15 tests) 3278ms
+       ✓ should return existing token when user confirms to keep it  3269ms
+ ✓ extensions/line/src/channel.sendPayload.test.ts (7 tests) 12ms
+ ✓ extensions/msteams/src/messenger.test.ts (10 tests) 13ms
+ ✓ src/commands/onboard-non-interactive.token.test.ts (1 test) 3420ms
+     ✓ writes token profile config and stores the token  3418ms
+ ✓ src/signal/monitor.event-handler.typing-read-receipts.test.ts (1 test) 3222ms
+     ✓ sends typing + read receipt for allowed DMs  3220ms
+stdout | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts > web auto-reply > compresses common formats to jpeg under the cap
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts > web auto-reply > compresses common formats to jpeg under the cap
+[35m[whatsapp][39m [36mInbound message +1 -> +2 (undefined, 30 chars)[39m
+
+ ✓ extensions/msteams/src/file-consent-helpers.test.ts (16 tests) 11ms
+ ✓ src/commands/onboard-non-interactive.xai.test.ts (1 test) 3398ms
+     ✓ stores the API key and configures the default model  3397ms
+stdout | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts > web auto-reply > compresses common formats to jpeg under the cap
+[35m[whatsapp][39m [36mSent media reply to +1 (0.74MB)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts > web auto-reply > compresses common formats to jpeg under the cap
+[35m[whatsapp][39m [36mAuto-replied to +1 (media)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts > web auto-reply > compresses common formats to jpeg under the cap
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts > web auto-reply > compresses common formats to jpeg under the cap
+[35m[whatsapp][39m [36mInbound message +1 -> +2 (undefined, 30 chars)[39m
+
+ ✓ src/signal/monitor.event-handler.sender-prefix.test.ts (1 test) 3156ms
+     ✓ prefixes group bodies with sender label  3154ms
+stdout | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts > web auto-reply > compresses common formats to jpeg under the cap
+[35m[whatsapp][39m [36mSent media reply to +1 (0.69MB)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts > web auto-reply > compresses common formats to jpeg under the cap
+[35m[whatsapp][39m [36mAuto-replied to +1 (media)[39m
+
+ ✓ extensions/msteams/src/media-helpers.test.ts (36 tests) 12ms
+ ✓ extensions/bluebubbles/src/targets.test.ts (24 tests) 16ms
+stdout | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts > web auto-reply > compresses common formats to jpeg under the cap
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts > web auto-reply > compresses common formats to jpeg under the cap
+[35m[whatsapp][39m [36mInbound message +1 -> +2 (undefined, 30 chars)[39m
+
+ ✓ extensions/twitch/src/probe.test.ts (10 tests) 135ms
+ ✓ extensions/llm-task/src/llm-task-tool.test.ts (8 tests) 53ms
+stdout | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts > web auto-reply > compresses common formats to jpeg under the cap
+[35m[whatsapp][39m [36mSent media reply to +1 (0.69MB)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts > web auto-reply > compresses common formats to jpeg under the cap
+[35m[whatsapp][39m [36mAuto-replied to +1 (media)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts > web auto-reply > honors mediaMaxMb from config
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts > web auto-reply > honors mediaMaxMb from config
+[35m[whatsapp][39m [36mInbound message +1 -> +2 (undefined, 30 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts > web auto-reply > honors mediaMaxMb from config
+[35m[whatsapp][39m [36mSent media reply to +1 (0.01MB)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts > web auto-reply > honors mediaMaxMb from config
+[35m[whatsapp][39m [36mAuto-replied to +1 (media)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts > web auto-reply > falls back to text when media is unsupported
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts > web auto-reply > falls back to text when media is unsupported
+[35m[whatsapp][39m [36mInbound message +1 -> +2 (undefined, 19 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts > web auto-reply > falls back to text when media is unsupported
+[35m[whatsapp][39m [36mSent media reply to +1 (0.01MB)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts > web auto-reply > falls back to text when media is unsupported
+[35m[whatsapp][39m [36mAuto-replied to +1 (media)[39m
+
+ ✓ src/web/auto-reply.web-auto-reply.compresses-common-formats-jpeg-cap.test.ts (3 tests) 2542ms
+     ✓ compresses common formats to jpeg under the cap  2233ms
+ ✓ extensions/google-gemini-cli-auth/oauth.test.ts (5 tests) 4882ms
+     ✓ returns null when gemini binary is not in PATH  3395ms
+     ✓ extracts credentials from oauth2.js in known path  389ms
+     ✓ returns null when oauth2.js cannot be found  387ms
+     ✓ returns null when oauth2.js lacks credentials  408ms
+     ✓ caches credentials after first extraction  301ms
+ ✓ src/agents/sandbox-agent-config.agent-specific-sandbox-config.should-allow-agent-specific-docker-settings-beyond.test.ts (4 tests) 3237ms
+     ✓ should allow agent-specific docker settings beyond setupCommand  1692ms
+     ✓ should use agent-specific sandbox mode 'all'  649ms
+     ✓ should use agent-specific scope  724ms
+ ✓ extensions/nostr/src/nostr-bus.test.ts (32 tests) 53ms
+ ✓ src/commands/doctor.runs-legacy-state-migrations-yes-mode-without.test.ts (3 tests) 2534ms
+     ✓ runs legacy state migrations in yes mode without prompting  2511ms
+ ✓ src/config/config.nix-integration-u3-u5-u9.test.ts (19 tests) 2342ms
+ ✓ extensions/diagnostics-otel/src/service.test.ts (1 test) 9ms
+ ✓ extensions/twitch/src/token.test.ts (9 tests) 8ms
+stdout | src/telegram/bot.media.includes-location-text-ctx-fields-pins.test.ts > telegram inbound media > includes location text and ctx fields for pins
+[34m[telegram][39m [36mautoSelectFamily=false (default-node22)[39m
+
+ ✓ src/telegram/bot.media.includes-location-text-ctx-fields-pins.test.ts (2 tests) 4131ms
+     ✓ includes location text and ctx fields for pins  4124ms
+ ✓ extensions/matrix/src/matrix/send.test.ts (3 tests) 726ms
+ ✓ extensions/msteams/src/policy.test.ts (15 tests) 9ms
+ ✓ src/commands/models.list.test.ts (8 tests) 3171ms
+     ✓ models status resolves z.ai alias to canonical zai  3152ms
+ ✓ extensions/irc/src/policy.test.ts (6 tests) 7ms
+ ✓ extensions/nostr/src/nostr-state-store.test.ts (7 tests) 13ms
+ ✓ src/agents/sandbox-agent-config.agent-specific-sandbox-config.should-use-agent-specific-workspaceroot.test.ts (3 tests) 2989ms
+     ✓ should use agent-specific workspaceRoot  1934ms
+     ✓ should prefer agent config over global for multiple agents  478ms
+     ✓ should prefer agent-specific sandbox tool policy  572ms
+ ✓ extensions/matrix/src/matrix/send/targets.test.ts (5 tests) 12ms
+ ✓ src/cli/gateway.sigterm.test.ts (1 test) 9619ms
+     ✓ exits 0 on SIGTERM  9617ms
+ ✓ src/agents/bash-tools.test.ts (17 tests) 1465ms
+     ✓ uses default timeout when timeout is omitted  1021ms
+ ✓ src/agents/sandbox-agent-config.agent-specific-sandbox-config.should-use-global-sandbox-config-no-agent.test.ts (3 tests) 2771ms
+     ✓ should use global sandbox config when no agent-specific config exists  1875ms
+     ✓ should allow agent-specific docker setupCommand overrides  487ms
+     ✓ should ignore agent-specific docker overrides when scope is shared  401ms
+ ✓ src/browser/screenshot.test.ts (2 tests) 1646ms
+     ✓ shrinks oversized images to <=2000x2000 and <=5MB  1624ms
+ ✓ extensions/nostr/src/channel.test.ts (21 tests) 11ms
+ ✓ extensions/nostr/src/types.test.ts (12 tests) 42ms
+ ✓ extensions/matrix/src/matrix/monitor/media.test.ts (2 tests) 9ms
+ ✓ extensions/irc/src/onboarding.test.ts (2 tests) 10ms
+ ✓ extensions/voice-call/src/media-stream.test.ts (2 tests) 8ms
+ ✓ src/config/config.identity-defaults.test.ts (9 tests) 1520ms
+ ✓ extensions/nostr/src/nostr-profile-import.test.ts (7 tests) 8ms
+ ✓ src/discord/monitor.slash.test.ts (1 test) 2583ms
+     ✓ skips tool results for native slash commands  2582ms
+stdout | src/telegram/bot.test.ts > createTelegramBot > installs grammY throttler
+[34m[telegram][39m [36mautoSelectFamily=false (default-node22)[39m
+
+ ✓ extensions/twitch/src/config.test.ts (9 tests) 6ms
+ ✓ src/infra/outbound/message.test.ts (3 tests) 2017ms
+     ✓ normalizes Teams alias  1671ms
+ ✓ extensions/msteams/src/inbound.test.ts (8 tests) 12ms
+ ✓ src/commands/message.test.ts (4 tests) 1952ms
+     ✓ defaults channel when only one configured  1857ms
+ ✓ src/telegram/bot.test.ts (84 tests) 1649ms
+     ✓ dedupes duplicate message updates by update_id  361ms
+ ✓ src/agents/pi-tools.safe-bins.test.ts (1 test) 2150ms
+     ✓ threads tools.exec.safeBins into exec allowlist checks  2148ms
+ ✓ extensions/msteams/src/conversation-store-fs.test.ts (1 test) 16ms
+ ✓ extensions/line/src/channel.logout.test.ts (2 tests) 7ms
+ ✓ src/agents/sandbox.resolveSandboxContext.test.ts (3 tests) 1920ms
+     ✓ does not sandbox the agent main session in non-main mode  1611ms
+ ✓ extensions/voice-call/src/providers/twilio.test.ts (3 tests) 7ms
+ ✓ src/commands/doctor.migrates-routing-allowfrom-channels-whatsapp-allowfrom.test.ts (3 tests) 1806ms
+     ✓ migrates routing.allowFrom to channels.whatsapp.allowFrom  1795ms
+stdout | src/signal/monitor.tool-result.pairs-uuid-only-senders-uuid-allowlist-entry.test.ts > monitorSignalProvider tool results > reconnects after stream errors until aborted
+Signal SSE connection lost, reconnecting in 1s...
+
+stderr | src/signal/monitor.tool-result.pairs-uuid-only-senders-uuid-allowlist-entry.test.ts > monitorSignalProvider tool results > reconnects after stream errors until aborted
+Signal SSE stream error: Error: stream dropped
+
+ ✓ src/commands/doctor.warns-state-directory-is-missing.test.ts (3 tests) 1798ms
+     ✓ warns when the state directory is missing  1777ms
+ ✓ src/cli/daemon-cli.coverage.test.ts (7 tests) 1807ms
+     ✓ probes gateway status by default  1257ms
+ ✓ extensions/googlechat/src/api.test.ts (2 tests) 8ms
+ ✓ src/signal/monitor.tool-result.pairs-uuid-only-senders-uuid-allowlist-entry.test.ts (2 tests) 1024ms
+     ✓ reconnects after stream errors until aborted  1011ms
+ ✓ extensions/msteams/src/polls.test.ts (3 tests) 21ms
+ ✓ extensions/zalouser/src/status-issues.test.ts (4 tests) 13ms
+ ✓ extensions/zalo/src/monitor.webhook.test.ts (1 test) 37ms
+ ✓ extensions/mattermost/src/channel.test.ts (5 tests) 10ms
+ ✓ src/commands/doctor.warns-per-agent-sandbox-docker-browser-prune.test.ts (2 tests) 1899ms
+     ✓ warns when per-agent sandbox docker/browser/prune overrides are ignored under shared scope  1886ms
+ ✓ src/agents/sandbox-skills.test.ts (2 tests) 2023ms
+     ✓ copies skills into the sandbox when workspaceAccess is ro  1858ms
+ ✓ src/hooks/gmail-setup-utils.test.ts (3 tests) 1817ms
+     ✓ resolves a working python path and caches the result  1493ms
+ ✓ extensions/matrix/src/matrix/client.test.ts (2 tests) 7ms
+ ✓ extensions/matrix/src/matrix/accounts.test.ts (3 tests) 7ms
+ ✓ extensions/matrix/src/resolve-targets.test.ts (2 tests) 7ms
+ ✓ extensions/msteams/src/probe.test.ts (3 tests) 72ms
+ ✓ src/daemon/launchd.test.ts (14 tests) 1057ms
+     ✓ enables service before bootstrap (clears persisted disabled state)  560ms
+ ✓ src/commands/doctor.falls-back-legacy-sandbox-image-missing.test.ts (1 test) 1631ms
+     ✓ runs legacy state migrations in non-interactive mode without prompting  1627ms
+stdout | src/cron/isolated-agent.skips-delivery-without-whatsapp-recipient-besteffortdeliver-true.test.ts > runCronIsolatedAgentTurn > ignores shared announce flow failures when best-effort is enabled
+[cron:job-1] cron announce delivery failed
+
+ ✓ src/cron/isolated-agent.skips-delivery-without-whatsapp-recipient-besteffortdeliver-true.test.ts (7 tests) 1806ms
+     ✓ passes final payload text into shared subagent announce flow  340ms
+     ✓ ignores shared announce flow failures when best-effort is enabled  362ms
+ ✓ extensions/irc/src/protocol.test.ts (4 tests) 12ms
+ ✓ extensions/matrix/src/matrix/monitor/allowlist.test.ts (3 tests) 4ms
+ ✓ src/agents/bash-tools.exec.background-abort.test.ts (4 tests) 803ms
+ ✓ src/config/config.plugin-validation.test.ts (7 tests) 1196ms
+ ✓ extensions/matrix/src/channel.directory.test.ts (1 test) 7ms
+ ✓ src/web/media.test.ts (13 tests) 947ms
+     ✓ falls back to JPEG when PNG alpha cannot fit under cap  753ms
+ ✓ src/commands/sandbox-explain.test.ts (1 test) 1303ms
+     ✓ prints JSON shape + fix-it keys  1301ms
+ ✓ extensions/msteams/src/errors.test.ts (6 tests) 5ms
+ ✓ extensions/irc/src/normalize.test.ts (3 tests) 5ms
+ ✓ extensions/googlechat/src/targets.test.ts (4 tests) 4ms
+ ✓ src/commands/agent.delivery.test.ts (7 tests) 1289ms
+     ✓ prefers explicit accountId for outbound delivery  1282ms
+ ✓ extensions/irc/src/client.test.ts (4 tests) 10ms
+ ✓ src/config/config.env-vars.test.ts (4 tests) 746ms
+ ✓ src/agents/sandbox-merge.test.ts (7 tests) 1517ms
+     ✓ resolves sandbox scope deterministically  1512ms
+ ✓ src/agents/sandbox-agent-config.agent-specific-sandbox-config.includes-session-status-default-sandbox-allowlist.test.ts (3 tests) 1463ms
+     ✓ includes session_status in default sandbox allowlist  1456ms
+ ✓ extensions/matrix/src/matrix/format.test.ts (5 tests) 14ms
+ ✓ src/agents/subagent-registry.persistence.test.ts (5 tests) 1034ms
+     ✓ persists runs to disk and resumes after restart  337ms
+ ✓ extensions/msteams/src/channel.directory.test.ts (1 test) 9ms
+ ✓ extensions/voice-call/src/providers/plivo.test.ts (1 test) 7ms
+ ✓ extensions/tlon/src/urbit/sse-client.test.ts (1 test) 7ms
+ ✓ extensions/msteams/src/polls-store.test.ts (2 tests) 15ms
+ ✓ src/agents/skills.buildworkspaceskillstatus.test.ts (4 tests) 1125ms
+     ✓ reports missing requirements and install options  437ms
+     ✓ respects OS-gated skills  309ms
+     ✓ filters install options by OS  334ms
+ ✓ src/cron/service.issue-regressions.test.ts (8 tests) 605ms
+     ✓ skips forced manual runs while a timer-triggered run is in progress  559ms
+stdout | src/browser/server.covers-additional-endpoint-branches.test.ts > browser control server > covers additional endpoint branches
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:44141/[39m
+
+ ✓ src/config/config.pruning-defaults.test.ts (4 tests) 678ms
+stdout | src/browser/server.covers-additional-endpoint-branches.test.ts > backward compatibility (profile parameter) > GET / without profile uses default profile
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:39969/[39m
+
+ ✓ extensions/matrix/src/matrix/monitor/rooms.test.ts (1 test) 5ms
+stdout | src/browser/server.covers-additional-endpoint-branches.test.ts > backward compatibility (profile parameter) > POST /start without profile uses default profile
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:34811/[39m
+
+stdout | src/browser/server.covers-additional-endpoint-branches.test.ts > backward compatibility (profile parameter) > POST /stop without profile uses default profile
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:46505/[39m
+
+stdout | src/browser/server.covers-additional-endpoint-branches.test.ts > backward compatibility (profile parameter) > GET /tabs without profile uses default profile
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:42335/[39m
+
+stdout | src/browser/server.covers-additional-endpoint-branches.test.ts > backward compatibility (profile parameter) > POST /tabs/open without profile uses default profile
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:44971/[39m
+
+stdout | src/browser/server.covers-additional-endpoint-branches.test.ts > backward compatibility (profile parameter) > GET /profiles returns list of profiles
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:43233/[39m
+
+stdout | src/browser/server.covers-additional-endpoint-branches.test.ts > backward compatibility (profile parameter) > GET /tabs?profile=openclaw returns tabs for specified profile
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:38057/[39m
+
+stdout | src/browser/server.covers-additional-endpoint-branches.test.ts > backward compatibility (profile parameter) > POST /tabs/open?profile=openclaw opens tab in specified profile
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:42577/[39m
+
+stdout | src/browser/server.covers-additional-endpoint-branches.test.ts > backward compatibility (profile parameter) > GET /tabs?profile=unknown returns 404
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:46189/[39m
+
+ ✓ src/browser/server.covers-additional-endpoint-branches.test.ts (10 tests) 827ms
+     ✓ covers additional endpoint branches  582ms
+ ✓ extensions/tlon/src/urbit/send.test.ts (1 test) 39ms
+stdout | src/web/auto-reply.web-auto-reply.reconnects-after-connection-close.test.ts > web auto-reply > reconnects after a connection close
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.reconnects-after-connection-close.test.ts > web auto-reply > reconnects after a connection close
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.reconnects-after-connection-close.test.ts > web auto-reply > forces reconnect when watchdog closes without onClose
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.reconnects-after-connection-close.test.ts > web auto-reply > forces reconnect when watchdog closes without onClose
+[35m[whatsapp][39m [36mInbound message +1 -> +2 (undefined, 16 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.reconnects-after-connection-close.test.ts > web auto-reply > forces reconnect when watchdog closes without onClose
+[35m[whatsapp][39m [36mAuto-replied to +1[39m
+
+stderr | src/web/auto-reply.web-auto-reply.reconnects-after-connection-close.test.ts > web auto-reply > forces reconnect when watchdog closes without onClose
+[35m[whatsapp][39m [33mNo messages received in 31m - restarting connection[39m
+
+stdout | src/web/auto-reply.web-auto-reply.reconnects-after-connection-close.test.ts > web auto-reply > forces reconnect when watchdog closes without onClose
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.reconnects-after-connection-close.test.ts > web auto-reply > stops after hitting max reconnect attempts
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.reconnects-after-connection-close.test.ts > web auto-reply > stops after hitting max reconnect attempts
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+ ✓ src/auto-reply/reply.block-streaming.test.ts (5 tests) 1282ms
+     ✓ waits for block replies before returning final payloads  334ms
+stdout | src/web/auto-reply.web-auto-reply.reconnects-after-connection-close.test.ts > web auto-reply > processes inbound messages without batching and preserves timestamps
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.reconnects-after-connection-close.test.ts > web auto-reply > processes inbound messages without batching and preserves timestamps
+[35m[whatsapp][39m [36mInbound message +1 -> +2 (undefined, 52 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.reconnects-after-connection-close.test.ts > web auto-reply > processes inbound messages without batching and preserves timestamps
+[35m[whatsapp][39m [36mAuto-replied to +1[39m
+
+stdout | src/web/auto-reply.web-auto-reply.reconnects-after-connection-close.test.ts > web auto-reply > processes inbound messages without batching and preserves timestamps
+[35m[whatsapp][39m [36mInbound message +1 -> +2 (undefined, 53 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.reconnects-after-connection-close.test.ts > web auto-reply > processes inbound messages without batching and preserves timestamps
+[35m[whatsapp][39m [36mAuto-replied to +1[39m
+
+ ✓ src/web/auto-reply.web-auto-reply.reconnects-after-connection-close.test.ts (5 tests) 684ms
+     ✓ forces reconnect when watchdog closes without onClose  561ms
+ ✓ extensions/zalo/src/channel.directory.test.ts (1 test) 7ms
+ ✓ src/infra/transport-ready.test.ts (3 tests) 536ms
+     ✓ returns when the check succeeds and logs after the delay  326ms
+ ✓ extensions/tlon/src/monitor/processed-messages.test.ts (1 test) 4ms
+stdout | src/browser/server.agent-contract-form-layout-act-commands.test.ts > browser control server > agent contract: form + layout act commands
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:36519/[39m
+
+stdout | src/browser/server.agent-contract-form-layout-act-commands.test.ts > browser control server > blocks act:evaluate when browser.evaluateEnabled=false
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:33609/[39m
+
+stdout | src/browser/server.agent-contract-form-layout-act-commands.test.ts > browser control server > agent contract: hooks + response + downloads + screenshot
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:42761/[39m
+
+stdout | src/browser/server.agent-contract-form-layout-act-commands.test.ts > browser control server > agent contract: stop endpoint
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:45043/[39m
+
+ ✓ src/browser/server.agent-contract-form-layout-act-commands.test.ts (4 tests) 537ms
+     ✓ agent contract: form + layout act commands  483ms
+ ✓ src/cli/update-cli.test.ts (20 tests) 807ms
+     ✓ exports updateCommand and registerUpdateCli  464ms
+ ✓ extensions/irc/src/monitor.test.ts (3 tests) 7ms
+stdout | src/canvas-host/server.test.ts > canvas host > creates a default index.html when missing
+canvas host listening on http://127.0.0.1:44213 (root /tmp/openclaw-canvas-7rNSIY)
+
+stdout | src/canvas-host/server.test.ts > canvas host > skips live reload injection when disabled
+canvas host listening on http://127.0.0.1:46249 (root /tmp/openclaw-canvas-jdDkXS)
+
+stdout | src/canvas-host/server.test.ts > canvas host > reuses a handler without closing it twice
+canvas host listening on http://127.0.0.1:35889 (root /tmp/openclaw-canvas-0W7lq0)
+
+stdout | src/canvas-host/server.test.ts > canvas host > serves HTML with injection and broadcasts reload on file changes
+canvas host listening on http://127.0.0.1:41951 (root /tmp/openclaw-canvas-dygJCD)
+
+ ✓ src/security/audit.test.ts (44 tests) 767ms
+stdout | src/canvas-host/server.test.ts > canvas host > serves the gateway-hosted A2UI scaffold
+canvas host listening on http://127.0.0.1:39095 (root /tmp/openclaw-canvas-Jh8KnA)
+
+ ✓ src/canvas-host/server.test.ts (7 tests) 477ms
+     ✓ serves HTML with injection and broadcasts reload on file changes  360ms
+ ✓ src/agents/skills.test.ts (9 tests) 1006ms
+ ✓ src/agents/models-config.skips-writing-models-json-no-env-token.test.ts (4 tests) 595ms
+ ✓ extensions/nextcloud-talk/src/policy.test.ts (3 tests) 7ms
+ ✓ extensions/irc/src/config-schema.test.ts (2 tests) 7ms
+ ✓ src/auto-reply/reply.raw-body.test.ts (5 tests) 1142ms
+ ✓ extensions/matrix/src/matrix/poll-types.test.ts (1 test) 4ms
+stdout | src/browser/server.skips-default-maxchars-explicitly-set-zero.test.ts > browser control server > skips default maxChars when explicitly set to zero
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:33427/[39m
+
+stdout | src/browser/server.skips-default-maxchars-explicitly-set-zero.test.ts > browser control server > validates agent inputs (agent routes)
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:43323/[39m
+
+ ✓ extensions/msteams/src/sent-message-cache.test.ts (1 test) 4ms
+stdout | src/browser/server.skips-default-maxchars-explicitly-set-zero.test.ts > browser control server > covers common error branches
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:36637/[39m
+
+ ✓ extensions/twitch/src/plugin.test.ts (1 test) 4ms
+stdout | src/browser/server.skips-default-maxchars-explicitly-set-zero.test.ts > browser control server > opens tabs via CDP createTarget path
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:46471/[39m
+
+ ✓ src/browser/server.skips-default-maxchars-explicitly-set-zero.test.ts (5 tests) 400ms
+ ✓ extensions/tlon/src/config-schema.test.ts (2 tests) 5ms
+ ✓ extensions/googlechat/src/monitor.test.ts (4 tests) 5ms
+stdout | src/browser/server.post-tabs-open-profile-unknown-returns-404.test.ts > browser control server > POST /tabs/open?profile=unknown returns 404
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:41415/[39m
+
+stdout | src/browser/server.post-tabs-open-profile-unknown-returns-404.test.ts > profile CRUD endpoints > POST /profiles/create returns 400 for missing name
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:43269/[39m
+
+stdout | src/browser/server.post-tabs-open-profile-unknown-returns-404.test.ts > profile CRUD endpoints > POST /profiles/create returns 400 for invalid name format
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:41547/[39m
+
+stdout | src/browser/server.post-tabs-open-profile-unknown-returns-404.test.ts > profile CRUD endpoints > POST /profiles/create returns 409 for duplicate name
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:35565/[39m
+
+stdout | src/browser/server.post-tabs-open-profile-unknown-returns-404.test.ts > profile CRUD endpoints > POST /profiles/create accepts cdpUrl for remote profiles
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:45673/[39m
+
+stdout | src/browser/server.post-tabs-open-profile-unknown-returns-404.test.ts > profile CRUD endpoints > POST /profiles/create returns 400 for invalid cdpUrl
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:33821/[39m
+
+stdout | src/browser/server.post-tabs-open-profile-unknown-returns-404.test.ts > profile CRUD endpoints > DELETE /profiles/:name returns 404 for non-existent profile
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:35371/[39m
+
+stdout | src/browser/server.post-tabs-open-profile-unknown-returns-404.test.ts > profile CRUD endpoints > DELETE /profiles/:name returns 400 for default profile deletion
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:32861/[39m
+
+ ✓ src/process/child-process-bridge.test.ts (1 test) 429ms
+     ✓ forwards SIGTERM to the wrapped child  427ms
+stdout | src/browser/server.post-tabs-open-profile-unknown-returns-404.test.ts > profile CRUD endpoints > DELETE /profiles/:name returns 400 for invalid name format
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:40425/[39m
+
+ ✓ src/browser/server.post-tabs-open-profile-unknown-returns-404.test.ts (9 tests) 228ms
+ ✓ src/browser/pw-tools-core.last-file-chooser-arm-wins.test.ts (3 tests) 423ms
+     ✓ last file-chooser arm wins  419ms
+ ✓ src/browser/pw-tools-core.waits-next-download-saves-it.test.ts (5 tests) 357ms
+     ✓ waits for the next download and saves it  353ms
+ ✓ src/config/config.broadcast.test.ts (3 tests) 307ms
+ ✓ extensions/zalouser/src/channel.test.ts (1 test) 4ms
+
+ Test Files  84 passed (84)
+      Tests  930 passed | 1 skipped (931)
+   Start at  21:32:41
+   Duration  50.22s (transform 42.46s, setup 168.14s, import 181.58s, tests 11.30s, environment 11ms)
+
+ ✓ src/agents/skills.build-workspace-skills-prompt.prefers-workspace-skills-managed-skills.test.ts (3 tests) 355ms
+stdout | src/browser/server.serves-status-starts-browser-requested.test.ts > browser control server > serves status + starts browser when requested
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:38775/[39m
+
+stdout | src/browser/server.serves-status-starts-browser-requested.test.ts > browser control server > handles tabs: list, open, focus conflict on ambiguous prefix
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:35083/[39m
+
+ ✓ src/auto-reply/reply.queue.test.ts (2 tests) 415ms
+ ✓ src/browser/server.serves-status-starts-browser-requested.test.ts (2 tests) 407ms
+     ✓ serves status + starts browser when requested  374ms
+ ✓ src/browser/pw-tools-core.screenshots-element-selector.test.ts (5 tests) 446ms
+     ✓ screenshots an element selector  441ms
+ ✓ src/infra/gateway-lock.test.ts (3 tests) 353ms
+ ✓ src/browser/pw-tools-core.clamps-timeoutms-scrollintoview.test.ts (6 tests) 391ms
+     ✓ clamps timeoutMs for scrollIntoView  386ms
+ ✓ src/wizard/onboarding.test.ts (5 tests) 434ms
+stdout | src/agents/skills.build-workspace-skills-prompt.syncs-merged-skills-into-target-workspace.test.ts > buildWorkspaceSkillsPrompt > applies skill filters, including empty lists
+[skills] Applying skill filter: alpha
+[skills] After filter: alpha
+[skills] Applying skill filter: (none)
+[skills] After filter: 
+
+ ✓ src/agents/skills.build-workspace-skills-prompt.syncs-merged-skills-into-target-workspace.test.ts (3 tests) 406ms
+stderr | src/agents/tool-images.test.ts > tool image sanitizing > shrinks oversized images to <=5MB
+[33m[agents/tool-images][39m [33mImage exceeds limits; resizing[39m
+
+stdout | src/agents/tool-images.test.ts > tool image sanitizing > shrinks oversized images to <=5MB
+[33m[agents/tool-images][39m [36mImage resized[39m
+
+stderr | src/agents/tool-images.test.ts > tool image sanitizing > sanitizes image arrays and reports drops
+[33m[agents/tool-images][39m [33mImage exceeds limits; resizing[39m
+
+stdout | src/agents/tool-images.test.ts > tool image sanitizing > sanitizes image arrays and reports drops
+[33m[agents/tool-images][39m [36mImage resized[39m
+
+stderr | src/agents/tool-images.test.ts > tool image sanitizing > shrinks images that exceed max dimension even if size is small
+[33m[agents/tool-images][39m [33mImage exceeds limits; resizing[39m
+
+stdout | src/agents/tool-images.test.ts > tool image sanitizing > shrinks images that exceed max dimension even if size is small
+[33m[agents/tool-images][39m [36mImage resized[39m
+
+ ✓ src/agents/tool-images.test.ts (4 tests) 333ms
+stdout | src/agents/bash-tools.exec.approval-id.test.ts > exec approvals > honors ask=off for elevated gateway exec without prompting
+[32m[exec][39m [36melevated command echo ok[39m
+
+stdout | src/agents/bash-tools.exec.approval-id.test.ts > exec approvals > requires approval for elevated ask when allowlist misses
+[32m[exec][39m [36melevated command echo ok[39m
+
+ ✓ src/agents/bash-tools.exec.approval-id.test.ts (4 tests) 329ms
+ ✓ src/infra/ports.test.ts (4 tests) 333ms
+ ✓ src/config/config.compaction-settings.test.ts (2 tests) 339ms
+ ✓ src/tui/theme/theme.test.ts (10 tests) 340ms
+ ✓ src/cli/cron-cli.test.ts (15 tests) 233ms
+ ✓ src/config/config.talk-api-key-fallback.test.ts (2 tests) 215ms
+ ✓ src/web/logout.test.ts (3 tests) 321ms
+     ✓ deletes cached credentials when present  316ms
+ ✓ src/config/config.multi-agent-agentdir-validation.test.ts (2 tests) 244ms
+stdout | src/web/auto-reply.partial-reply-gating.test.ts > partial reply gating > does not send partial replies for WhatsApp provider
+[35m[whatsapp][39m [36mInbound message +1000 -> +2000 (direct, 47 chars)[39m
+
+stdout | src/web/auto-reply.partial-reply-gating.test.ts > partial reply gating > does not send partial replies for WhatsApp provider
+[35m[whatsapp][39m [36mAuto-replied to +1000[39m
+
+stdout | src/web/auto-reply.partial-reply-gating.test.ts > partial reply gating > does not send partial replies for WhatsApp provider
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.partial-reply-gating.test.ts > partial reply gating > falls back from empty senderJid to senderE164 for SenderId
+[35m[whatsapp][39m [36mInbound message +1000 -> +2000 (direct, 47 chars)[39m
+
+stdout | src/web/auto-reply.partial-reply-gating.test.ts > partial reply gating > falls back from empty senderJid to senderE164 for SenderId
+[35m[whatsapp][39m [36mAuto-replied to +1000[39m
+
+stdout | src/web/auto-reply.partial-reply-gating.test.ts > partial reply gating > falls back from empty senderJid to senderE164 for SenderId
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.partial-reply-gating.test.ts > partial reply gating > updates last-route for direct chats without senderE164
+[35m[whatsapp][39m [36mInbound message +1000 -> +2000 (direct, 51 chars)[39m
+
+stdout | src/web/auto-reply.partial-reply-gating.test.ts > partial reply gating > updates last-route for direct chats without senderE164
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.partial-reply-gating.test.ts > partial reply gating > updates last-route for group chats with account id
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+ ✓ src/web/auto-reply.partial-reply-gating.test.ts (5 tests) 309ms
+ ✓ src/cli/skills-cli.test.ts (13 tests) 358ms
+ ✓ src/cli/program/register.subclis.test.ts (4 tests) 385ms
+     ✓ replaces placeholder when registering a subcommand by name  360ms
+ ✓ src/config/config.preservation-on-validation-failure.test.ts (2 tests) 182ms
+ ✓ src/cli/exec-approvals-cli.test.ts (4 tests) 198ms
+stderr | src/plugins/loader.test.ts > loadOpenClawPlugins > fails fast on invalid plugin config
+[35m[plugins][39m [31mconfigurable invalid config: <root>: must be object[39m
+
+ ✓ src/plugins/loader.test.ts (14 tests) 265ms
+ ✓ src/agents/models-config.fills-missing-provider-apikey-from-env-var.test.ts (2 tests) 245ms
+ ✓ src/commands/models/list.status.test.ts (5 tests) 1906ms
+     ✓ labels defaults when --agent has no overrides  1892ms
+stdout | src/browser/server.agent-contract-snapshot-endpoints.test.ts > browser control server > agent contract: snapshot endpoints
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:33839/[39m
+
+stdout | src/browser/server.agent-contract-snapshot-endpoints.test.ts > browser control server > agent contract: navigation + common act commands
+[36m[browser/server][39m [36mBrowser control listening on http://127.0.0.1:35315/[39m
+
+ ✓ src/agents/models-config.auto-injects-github-copilot-provider-token-is.test.ts (2 tests) 206ms
+ ✓ src/browser/server.agent-contract-snapshot-endpoints.test.ts (2 tests) 214ms
+stdout | src/telegram/bot.create-telegram-bot.routes-dms-by-telegram-accountid-binding.test.ts > createTelegramBot > routes DMs by telegram accountId binding
+[34m[telegram][39m [36mautoSelectFamily=false (default-node22)[39m
+
+ ✓ src/agents/models-config.falls-back-default-baseurl-token-exchange-fails.test.ts (2 tests) 276ms
+ ✓ src/telegram/bot.create-telegram-bot.routes-dms-by-telegram-accountid-binding.test.ts (8 tests) 255ms
+stdout | src/web/auto-reply.web-auto-reply.falls-back-text-media-send-fails.test.ts > web auto-reply > falls back to text when media send fails
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.falls-back-text-media-send-fails.test.ts > web auto-reply > falls back to text when media send fails
+[35m[whatsapp][39m [36mInbound message +1 -> +2 (undefined, 19 chars)[39m
+
+stderr | src/web/auto-reply.web-auto-reply.falls-back-text-media-send-fails.test.ts > web auto-reply > falls back to text when media send fails
+[35m[whatsapp][39m [31mFailed sending web media to +1: boom[39m
+[35m[whatsapp][39m [33mMedia skipped; sent text-only to +1[39m
+
+stdout | src/web/auto-reply.web-auto-reply.falls-back-text-media-send-fails.test.ts > web auto-reply > falls back to text when media send fails
+[35m[whatsapp][39m [36mAuto-replied to +1 (media)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.falls-back-text-media-send-fails.test.ts > web auto-reply > returns a warning when remote media fetch 404s
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.falls-back-text-media-send-fails.test.ts > web auto-reply > returns a warning when remote media fetch 404s
+[35m[whatsapp][39m [36mInbound message +1 -> +2 (undefined, 19 chars)[39m
+
+stderr | src/web/auto-reply.web-auto-reply.falls-back-text-media-send-fails.test.ts > web auto-reply > returns a warning when remote media fetch 404s
+[35m[whatsapp][39m [31mFailed sending web media to +1: Failed to fetch media from https://example.com/missing.jpg: HTTP 404; empty response body[39m
+[35m[whatsapp][39m [33mMedia skipped; sent text-only to +1[39m
+
+stdout | src/web/auto-reply.web-auto-reply.falls-back-text-media-send-fails.test.ts > web auto-reply > returns a warning when remote media fetch 404s
+[35m[whatsapp][39m [36mAuto-replied to +1 (media)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.falls-back-text-media-send-fails.test.ts > web auto-reply > compresses media over 5MB and still sends it
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.falls-back-text-media-send-fails.test.ts > web auto-reply > compresses media over 5MB and still sends it
+[35m[whatsapp][39m [36mInbound message +1 -> +2 (undefined, 19 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.falls-back-text-media-send-fails.test.ts > web auto-reply > compresses media over 5MB and still sends it
+[35m[whatsapp][39m [36mSent media reply to +1 (0.01MB)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.falls-back-text-media-send-fails.test.ts > web auto-reply > compresses media over 5MB and still sends it
+[35m[whatsapp][39m [36mAuto-replied to +1 (media)[39m
+
+ ✓ src/web/auto-reply.web-auto-reply.falls-back-text-media-send-fails.test.ts (3 tests) 244ms
+ ✓ src/auto-reply/reply.heartbeat-typing.test.ts (2 tests) 281ms
+ ✓ src/auto-reply/skill-commands.test.ts (5 tests) 310ms
+     ✓ merges command names across agents and de-duplicates  304ms
+ ✓ src/agents/tools/image-tool.test.ts (15 tests) 194ms
+ ✓ src/memory/qmd-manager.test.ts (19 tests) 227ms
+ ✓ src/agents/bash-tools.process.send-keys.test.ts (2 tests) 338ms
+ ✓ src/config/config.talk-voicealiases.test.ts (2 tests) 176ms
+ ✓ src/channels/plugins/actions/discord.test.ts (6 tests) 202ms
+ ✓ src/infra/run-node.test.ts (1 test) 296ms
+ ✓ src/config/config.gateway-remote-transport.test.ts (2 tests) 235ms
+ ✓ src/cron/isolated-agent.delivers-response-has-heartbeat-ok-but-includes.test.ts (2 tests) 225ms
+ ✓ src/web/inbound.media.test.ts (4 tests) 215ms
+ ✓ src/agents/models-config.uses-first-github-copilot-profile-env-tokens.test.ts (2 tests) 238ms
+ ✓ src/agents/tools/web-tools.fetch.test.ts (11 tests) 1212ms
+     ✓ falls back to firecrawl when readability returns no content  1197ms
+ ✓ src/config/config.msteams.test.ts (2 tests) 238ms
+ ✓ src/config/config.sandbox-docker.test.ts (2 tests) 237ms
+ ✓ src/infra/provider-usage.auth.normalizes-keys.test.ts (2 tests) 248ms
+ ✓ src/agents/skills-install.test.ts (2 tests) 256ms
+stdout | src/telegram/bot.create-telegram-bot.accepts-group-messages-mentionpatterns-match-without-botusername.test.ts > createTelegramBot > accepts group messages when mentionPatterns match (without @botUsername)
+[34m[telegram][39m [36mautoSelectFamily=false (default-node22)[39m
+
+ ✓ src/memory/index.test.ts (10 tests) 206ms
+ ✓ src/telegram/bot.create-telegram-bot.accepts-group-messages-mentionpatterns-match-without-botusername.test.ts (8 tests) 254ms
+ ✓ src/config/sessions.test.ts (27 tests) 186ms
+ ✓ src/agents/bash-tools.exec.path.test.ts (3 tests) 216ms
+stderr | src/plugins/tools.optional.test.ts > resolvePluginTools optional tools > rejects plugin id collisions with core tool names
+[35m[plugins][39m [31mplugin id conflicts with core tool name (message)[39m
+
+stderr | src/plugins/tools.optional.test.ts > resolvePluginTools optional tools > skips conflicting tool names but keeps other tools
+[35m[plugins][39m [31mplugin tool name conflict (multi): message[39m
+
+ ✓ src/plugins/tools.optional.test.ts (5 tests) 265ms
+ ✓ src/config/config.agent-concurrency-defaults.test.ts (4 tests) 208ms
+stderr | src/memory/manager.batch.test.ts > memory indexing with OpenAI batches > falls back to non-batch on failure and resets failures after success
+[31m[memory][39m [33membeddings: openai batch failed (1/2); keeping batch enabled; falling back to non-batch embeddings: openai batch create failed: 500 batch failed[39m
+
+ ✓ src/imessage/send.test.ts (4 tests) 141ms
+stderr | src/memory/manager.batch.test.ts > memory indexing with OpenAI batches > disables batch after repeated failures and skips batch thereafter
+[31m[memory][39m [33membeddings: openai batch failed (1/2); keeping batch enabled; falling back to non-batch embeddings: openai batch create failed: 500 batch failed[39m
+
+stderr | src/memory/manager.batch.test.ts > memory indexing with OpenAI batches > disables batch after repeated failures and skips batch thereafter
+[31m[memory][39m [33membeddings: openai batch failed (2/2); disabling batch; falling back to non-batch embeddings: openai batch create failed: 500 batch failed[39m
+
+ ✓ src/memory/manager.batch.test.ts (4 tests) 126ms
+ ✓ src/auto-reply/status.test.ts (19 tests) 182ms
+stdout | src/telegram/bot.create-telegram-bot.matches-usernames-case-insensitively-grouppolicy-is.test.ts > createTelegramBot > matches usernames case-insensitively when groupPolicy is 'allowlist'
+[34m[telegram][39m [36mautoSelectFamily=false (default-node22)[39m
+
+stderr | src/agents/bash-tools.exec.pty-fallback.test.ts > exec falls back when PTY spawn fails
+[32m[exec][39m [33mPTY spawn failed (Error: spawn EBADF); retrying without PTY for "printf ok".[39m
+
+ ✓ src/agents/bash-tools.exec.pty-fallback.test.ts (1 test) 198ms
+ ✓ src/telegram/bot.create-telegram-bot.matches-usernames-case-insensitively-grouppolicy-is.test.ts (9 tests) 203ms
+ ✓ src/process/exec.test.ts (2 tests) 216ms
+ ✓ src/config/config.discord.test.ts (1 test) 218ms
+ ✓ src/line/bot-handlers.test.ts (4 tests) 220ms
+ ✓ src/agents/models-config.normalizes-gemini-3-ids-preview-google-providers.test.ts (1 test) 121ms
+stdout | src/config/sessions/store.pruning.test.ts > pruneStaleEntries > removes entries older than maxAgeDays
+[31m[sessions/store][39m [36mpruned stale session entries[39m
+
+stdout | src/config/sessions/store.pruning.test.ts > pruneStaleEntries > all entries stale results in empty store
+[31m[sessions/store][39m [36mpruned stale session entries[39m
+
+stdout | src/config/sessions/store.pruning.test.ts > pruneStaleEntries > returns count of pruned entries
+[31m[sessions/store][39m [36mpruned stale session entries[39m
+
+stdout | src/config/sessions/store.pruning.test.ts > pruneStaleEntries > falls back to built-in default (30 days) when no override given
+[31m[sessions/store][39m [36mpruned stale session entries[39m
+
+stdout | src/config/sessions/store.pruning.test.ts > capEntryCount > over limit: keeps N most recent by updatedAt, deletes rest
+[31m[sessions/store][39m [36mcapped session entry count[39m
+
+stdout | src/config/sessions/store.pruning.test.ts > capEntryCount > entries without updatedAt are evicted first (lowest priority)
+[31m[sessions/store][39m [36mcapped session entry count[39m
+
+stdout | src/config/sessions/store.pruning.test.ts > capEntryCount > returns count of evicted entries
+[31m[sessions/store][39m [36mcapped session entry count[39m
+
+stdout | src/config/sessions/store.pruning.test.ts > capEntryCount > falls back to built-in default (500) when no override given
+[31m[sessions/store][39m [36mcapped session entry count[39m
+
+stdout | src/config/sessions/store.pruning.test.ts > rotateSessionFile > file over maxBytes: renamed to .bak.{timestamp}, returns true
+[31m[sessions/store][39m [36mrotated session store file[39m
+
+stdout | src/config/sessions/store.pruning.test.ts > rotateSessionFile > multiple rotations: only keeps 3 most recent .bak files
+[31m[sessions/store][39m [36mrotated session store file[39m
+
+stdout | src/config/sessions/store.pruning.test.ts > rotateSessionFile > multiple rotations: only keeps 3 most recent .bak files
+[31m[sessions/store][39m [36mrotated session store file[39m
+
+stdout | src/config/sessions/store.pruning.test.ts > rotateSessionFile > multiple rotations: only keeps 3 most recent .bak files
+[31m[sessions/store][39m [36mrotated session store file[39m
+
+stdout | src/config/sessions/store.pruning.test.ts > rotateSessionFile > multiple rotations: only keeps 3 most recent .bak files
+[31m[sessions/store][39m [36mrotated session store file[39m
+
+stdout | src/config/sessions/store.pruning.test.ts > rotateSessionFile > multiple rotations: only keeps 3 most recent .bak files
+[31m[sessions/store][39m [36mcleaned up old session store backups[39m
+
+stdout | src/config/sessions/store.pruning.test.ts > rotateSessionFile > multiple rotations: only keeps 3 most recent .bak files
+[31m[sessions/store][39m [36mrotated session store file[39m
+
+stdout | src/config/sessions/store.pruning.test.ts > rotateSessionFile > multiple rotations: only keeps 3 most recent .bak files
+[31m[sessions/store][39m [36mcleaned up old session store backups[39m
+
+stdout | src/config/sessions/store.pruning.test.ts > rotateSessionFile > backup file name includes a timestamp
+[31m[sessions/store][39m [36mrotated session store file[39m
+
+stdout | src/config/sessions/store.pruning.test.ts > Integration: saveSessionStore with pruning > saveSessionStore prunes stale entries on write
+[31m[sessions/store][39m [36mpruned stale session entries[39m
+
+stdout | src/config/sessions/store.pruning.test.ts > Integration: saveSessionStore with pruning > saveSessionStore caps entries over limit
+[31m[sessions/store][39m [36mcapped session entry count[39m
+
+stdout | src/config/sessions/store.pruning.test.ts > Integration: saveSessionStore with pruning > saveSessionStore rotates file when over size limit and creates .bak
+[31m[sessions/store][39m [36mrotated session store file[39m
+
+stdout | src/config/sessions/store.pruning.test.ts > Integration: saveSessionStore with pruning > saveSessionStore applies both pruning and capping together
+[31m[sessions/store][39m [36mpruned stale session entries[39m
+[31m[sessions/store][39m [36mcapped session entry count[39m
+
+ ✓ src/config/sessions/store.pruning.test.ts (29 tests) 97ms
+stdout | src/hooks/bundled/session-memory/handler.test.ts > session-memory hook > creates memory file with session content on /new command
+[34m[hooks/session-memory][39m [36mSession context saved to /tmp/openclaw-session-memory-mCEwx7/memory/2026-02-12-0233.md[39m
+
+stdout | src/hooks/bundled/session-memory/handler.test.ts > session-memory hook > filters out non-message entries (tool calls, system)
+[34m[hooks/session-memory][39m [36mSession context saved to /tmp/openclaw-session-memory-W2nbxN/memory/2026-02-12-0233.md[39m
+
+stdout | src/hooks/bundled/session-memory/handler.test.ts > session-memory hook > filters out command messages starting with /
+[34m[hooks/session-memory][39m [36mSession context saved to /tmp/openclaw-session-memory-EYnnDi/memory/2026-02-12-0233.md[39m
+
+stdout | src/hooks/bundled/session-memory/handler.test.ts > session-memory hook > respects custom messages config (limits to N messages)
+[34m[hooks/session-memory][39m [36mSession context saved to /tmp/openclaw-session-memory-nhESlN/memory/2026-02-12-0233.md[39m
+
+stdout | src/hooks/bundled/session-memory/handler.test.ts > session-memory hook > filters messages before slicing (fix for #2681)
+[34m[hooks/session-memory][39m [36mSession context saved to /tmp/openclaw-session-memory-8vEynI/memory/2026-02-12-0233.md[39m
+
+stdout | src/hooks/bundled/session-memory/handler.test.ts > session-memory hook > handles empty session files gracefully
+[34m[hooks/session-memory][39m [36mSession context saved to /tmp/openclaw-session-memory-07nVma/memory/2026-02-12-0233.md[39m
+
+stdout | src/hooks/bundled/session-memory/handler.test.ts > session-memory hook > handles session files with fewer messages than requested
+[34m[hooks/session-memory][39m [36mSession context saved to /tmp/openclaw-session-memory-vLDRyG/memory/2026-02-12-0233.md[39m
+
+ ✓ src/hooks/bundled/session-memory/handler.test.ts (9 tests) 128ms
+stdout | src/web/auto-reply.web-auto-reply.requires-mention-group-chats-injects-history-replying.test.ts > web auto-reply > requires mention in group chats and injects history when replying
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.requires-mention-group-chats-injects-history-replying.test.ts > web auto-reply > requires mention in group chats and injects history when replying
+[35m[whatsapp][39m [36mInbound message 123@g.us -> +2 (group, 176 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.requires-mention-group-chats-injects-history-replying.test.ts > web auto-reply > requires mention in group chats and injects history when replying
+[35m[whatsapp][39m [36mAuto-replied to 123@g.us[39m
+
+stdout | src/web/auto-reply.web-auto-reply.requires-mention-group-chats-injects-history-replying.test.ts > web auto-reply > bypasses mention gating for owner /new in group chats
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.requires-mention-group-chats-injects-history-replying.test.ts > web auto-reply > bypasses mention gating for owner /new in group chats
+[35m[whatsapp][39m [36mInbound message 123@g.us -> +2 (group, 38 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.requires-mention-group-chats-injects-history-replying.test.ts > web auto-reply > bypasses mention gating for owner /new in group chats
+[35m[whatsapp][39m [36mAuto-replied to 123@g.us[39m
+
+stdout | src/web/auto-reply.web-auto-reply.requires-mention-group-chats-injects-history-replying.test.ts > web auto-reply > does not bypass mention gating for non-owner /new in group chats
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.requires-mention-group-chats-injects-history-replying.test.ts > web auto-reply > bypasses mention gating for owner /status in group chats
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.requires-mention-group-chats-injects-history-replying.test.ts > web auto-reply > bypasses mention gating for owner /status in group chats
+[35m[whatsapp][39m [36mInbound message 123@g.us -> +2 (group, 41 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.requires-mention-group-chats-injects-history-replying.test.ts > web auto-reply > bypasses mention gating for owner /status in group chats
+[35m[whatsapp][39m [36mAuto-replied to 123@g.us[39m
+
+stdout | src/web/auto-reply.web-auto-reply.requires-mention-group-chats-injects-history-replying.test.ts > web auto-reply > passes conversation id through as From for group replies
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.requires-mention-group-chats-injects-history-replying.test.ts > web auto-reply > passes conversation id through as From for group replies
+[35m[whatsapp][39m [36mInbound message 123@g.us -> +2 (group, 41 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.requires-mention-group-chats-injects-history-replying.test.ts > web auto-reply > passes conversation id through as From for group replies
+[35m[whatsapp][39m [36mAuto-replied to 123@g.us[39m
+
+stdout | src/web/auto-reply.web-auto-reply.requires-mention-group-chats-injects-history-replying.test.ts > web auto-reply > detects LID mentions using authDir mapping
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.requires-mention-group-chats-injects-history-replying.test.ts > web auto-reply > detects LID mentions using authDir mapping
+[35m[whatsapp][39m [36mInbound message 123@g.us -> +2 (group, 176 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.requires-mention-group-chats-injects-history-replying.test.ts > web auto-reply > detects LID mentions using authDir mapping
+[35m[whatsapp][39m [36mAuto-replied to 123@g.us[39m
+
+stdout | src/web/auto-reply.web-auto-reply.requires-mention-group-chats-injects-history-replying.test.ts > web auto-reply > derives self E.164 from LID selfJid for mention gating
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.requires-mention-group-chats-injects-history-replying.test.ts > web auto-reply > derives self E.164 from LID selfJid for mention gating
+[35m[whatsapp][39m [36mInbound message 123@g.us -> +2 (group, 42 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.requires-mention-group-chats-injects-history-replying.test.ts > web auto-reply > derives self E.164 from LID selfJid for mention gating
+[35m[whatsapp][39m [36mAuto-replied to 123@g.us[39m
+
+stdout | src/web/auto-reply.web-auto-reply.requires-mention-group-chats-injects-history-replying.test.ts > web auto-reply > sets OriginatingTo to the sender for queued routing
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.requires-mention-group-chats-injects-history-replying.test.ts > web auto-reply > sets OriginatingTo to the sender for queued routing
+[35m[whatsapp][39m [36mInbound message +15551234567 -> +19998887777 (undefined, 29 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.requires-mention-group-chats-injects-history-replying.test.ts > web auto-reply > sets OriginatingTo to the sender for queued routing
+[35m[whatsapp][39m [36mAuto-replied to +15551234567[39m
+
+ ✓ src/web/auto-reply.web-auto-reply.requires-mention-group-chats-injects-history-replying.test.ts (8 tests) 114ms
+ ✓ src/infra/tailscale.test.ts (10 tests) 155ms
+ ✓ src/cli/program.nodes-media.test.ts (7 tests) 277ms
+ ✓ src/cli/program.smoke.test.ts (14 tests) 374ms
+stdout | src/telegram/bot.create-telegram-bot.installs-grammy-throttler.test.ts > createTelegramBot > installs grammY throttler
+[34m[telegram][39m [36mautoSelectFamily=false (default-node22)[39m
+
+ ✓ src/telegram/bot.create-telegram-bot.installs-grammy-throttler.test.ts (10 tests) 139ms
+ ✓ src/slack/monitor/media.test.ts (12 tests) 170ms
+ ✓ src/agents/model-auth.test.ts (12 tests) 123ms
+ ✓ src/cli/program.nodes-basic.test.ts (8 tests) 128ms
+ ✓ src/infra/provider-usage.fetch.antigravity.test.ts (18 tests) 82ms
+stdout | src/telegram/bot.create-telegram-bot.sends-replies-without-native-reply-threading.test.ts > createTelegramBot > sends replies without native reply threading
+[34m[telegram][39m [36mautoSelectFamily=false (default-node22)[39m
+
+ ✓ src/telegram/bot.create-telegram-bot.sends-replies-without-native-reply-threading.test.ts (7 tests) 156ms
+ ✓ src/signal/send-reactions.test.ts (3 tests) 138ms
+ ✓ src/line/bot-message-context.test.ts (2 tests) 71ms
+ ✓ src/agents/session-tool-result-guard.tool-result-persist-hook.test.ts (2 tests) 133ms
+ ✓ src/media/server.test.ts (6 tests) 118ms
+ ✓ src/agents/tools/web-tools.readability.test.ts (2 tests) 154ms
+ ✓ src/browser/pw-ai.test.ts (6 tests) 54ms
+ ✓ src/security/fix.test.ts (5 tests) 95ms
+ ✓ src/agents/pi-embedded-runner.sanitize-session-history.test.ts (9 tests) 102ms
+stderr | src/auto-reply/reply/session.test.ts > initSessionState thread forking > forks a new session from the parent session file
+[session-init] forking from parent session: parentKey=agent:main:slack:channel:c1 → sessionKey=agent:main:slack:channel:c1:thread:123 parentTokens=?
+[session-init] forked session created: file=/tmp/openclaw-thread-session-eaScsx/sessions/2026-02-12T02-33-55-291Z_889c07ea-fcbc-4c58-8568-aeaab52dff4c.jsonl
+
+ ✓ src/auto-reply/reply/session.test.ts (14 tests) 66ms
+ ✓ src/agents/bash-tools.exec.pty.test.ts (1 test) 93ms
+stdout | src/telegram/bot.create-telegram-bot.dedupes-duplicate-callback-query-updates-by-update.test.ts > createTelegramBot > dedupes duplicate callback_query updates by update_id
+[34m[telegram][39m [36mautoSelectFamily=false (default-node22)[39m
+
+ ✓ src/telegram/bot.create-telegram-bot.dedupes-duplicate-callback-query-updates-by-update.test.ts (2 tests) 109ms
+stdout | src/telegram/bot.create-telegram-bot.applies-topic-skill-filters-system-prompts.test.ts > createTelegramBot > applies topic skill filters and system prompts
+[34m[telegram][39m [36mautoSelectFamily=false (default-node22)[39m
+
+ ✓ src/telegram/bot.create-telegram-bot.applies-topic-skill-filters-system-prompts.test.ts (5 tests) 109ms
+ ✓ src/infra/outbound/message-action-runner.test.ts (24 tests) 43ms
+ ✓ src/slack/monitor/message-handler/prepare.inbound-contract.test.ts (3 tests) 110ms
+ ✓ src/cron/service.runs-one-shot-main-job-disables-it.test.ts (10 tests) 63ms
+stderr | src/memory/manager.embedding-batches.test.ts > memory embedding batches > retries embeddings on rate limit errors
+[31m[memory][39m [33membeddings rate limited; retrying in 593ms[39m
+
+stderr | src/memory/manager.embedding-batches.test.ts > memory embedding batches > retries embeddings on rate limit errors
+[31m[memory][39m [33membeddings rate limited; retrying in 1184ms[39m
+
+stdout | src/slack/monitor.tool-result.sends-tool-summaries-responseprefix.test.ts > monitorSlackProvider tool results > skips tool summaries with responsePrefix
+slack socket mode connected
+
+stderr | src/memory/manager.embedding-batches.test.ts > memory embedding batches > retries embeddings on transient 5xx errors
+[31m[memory][39m [33membeddings rate limited; retrying in 506ms[39m
+
+stderr | src/memory/manager.embedding-batches.test.ts > memory embedding batches > retries embeddings on transient 5xx errors
+[31m[memory][39m [33membeddings rate limited; retrying in 1192ms[39m
+
+stdout | src/slack/monitor.tool-result.sends-tool-summaries-responseprefix.test.ts > monitorSlackProvider tool results > skips tool summaries with responsePrefix
+delivered reply to user:U1
+
+stdout | src/slack/monitor.tool-result.sends-tool-summaries-responseprefix.test.ts > monitorSlackProvider tool results > drops events with mismatched api_app_id
+slack socket mode connected
+
+stdout | src/slack/monitor.tool-result.sends-tool-summaries-responseprefix.test.ts > monitorSlackProvider tool results > does not derive responsePrefix from routed agent identity when unset
+slack: groupPolicy defaults to "open" when channels.slack is missing; set channels.slack.groupPolicy (or channels.defaults.groupPolicy) or add channels.slack.channels to restrict access.
+
+stdout | src/slack/monitor.tool-result.sends-tool-summaries-responseprefix.test.ts > monitorSlackProvider tool results > does not derive responsePrefix from routed agent identity when unset
+slack socket mode connected
+
+stdout | src/slack/monitor.tool-result.sends-tool-summaries-responseprefix.test.ts > monitorSlackProvider tool results > does not derive responsePrefix from routed agent identity when unset
+delivered reply to user:U1
+
+ ✓ src/memory/manager.embedding-batches.test.ts (6 tests) 102ms
+stdout | src/slack/monitor.tool-result.sends-tool-summaries-responseprefix.test.ts > monitorSlackProvider tool results > preserves RawBody without injecting processed room history
+slack socket mode connected
+
+stdout | src/slack/monitor.tool-result.sends-tool-summaries-responseprefix.test.ts > monitorSlackProvider tool results > scopes thread history to the thread by default
+slack channels unresolved: C1
+slack socket mode connected
+
+stdout | src/slack/monitor.tool-result.sends-tool-summaries-responseprefix.test.ts > monitorSlackProvider tool results > updates assistant thread status when replies start
+slack socket mode connected
+
+stdout | src/slack/monitor.tool-result.sends-tool-summaries-responseprefix.test.ts > monitorSlackProvider tool results > updates assistant thread status when replies start
+delivered reply to user:U1
+
+stdout | src/slack/monitor.tool-result.sends-tool-summaries-responseprefix.test.ts > monitorSlackProvider tool results > accepts channel messages when mentionPatterns match
+slack channels unresolved: C1
+slack socket mode connected
+
+stdout | src/slack/monitor.tool-result.sends-tool-summaries-responseprefix.test.ts > monitorSlackProvider tool results > accepts channel messages when mentionPatterns match
+delivered reply to channel:C1
+
+stdout | src/slack/monitor.tool-result.sends-tool-summaries-responseprefix.test.ts > monitorSlackProvider tool results > accepts channel messages when mentionPatterns match even if another user is mentioned
+slack channels unresolved: C1
+slack socket mode connected
+
+stdout | src/slack/monitor.tool-result.sends-tool-summaries-responseprefix.test.ts > monitorSlackProvider tool results > accepts channel messages when mentionPatterns match even if another user is mentioned
+delivered reply to channel:C1
+
+stdout | src/slack/monitor.tool-result.sends-tool-summaries-responseprefix.test.ts > monitorSlackProvider tool results > treats replies to bot threads as implicit mentions
+slack channels unresolved: C1
+slack socket mode connected
+
+stdout | src/slack/monitor.tool-result.sends-tool-summaries-responseprefix.test.ts > monitorSlackProvider tool results > treats replies to bot threads as implicit mentions
+delivered reply to channel:C1
+
+stdout | src/slack/monitor.tool-result.sends-tool-summaries-responseprefix.test.ts > monitorSlackProvider tool results > accepts channel messages without mention when channels.slack.requireMention is false
+slack socket mode connected
+
+stdout | src/slack/monitor.tool-result.sends-tool-summaries-responseprefix.test.ts > monitorSlackProvider tool results > accepts channel messages without mention when channels.slack.requireMention is false
+delivered reply to channel:C1
+
+stdout | src/slack/monitor.tool-result.sends-tool-summaries-responseprefix.test.ts > monitorSlackProvider tool results > treats control commands as mentions for group bypass
+slack socket mode connected
+
+stdout | src/slack/monitor.tool-result.sends-tool-summaries-responseprefix.test.ts > monitorSlackProvider tool results > treats control commands as mentions for group bypass
+delivered reply to channel:C1
+
+stdout | src/slack/monitor.tool-result.sends-tool-summaries-responseprefix.test.ts > monitorSlackProvider tool results > threads replies when incoming message is in a thread
+slack: groupPolicy defaults to "open" when channels.slack is missing; set channels.slack.groupPolicy (or channels.defaults.groupPolicy) or add channels.slack.channels to restrict access.
+
+stdout | src/slack/monitor.tool-result.sends-tool-summaries-responseprefix.test.ts > monitorSlackProvider tool results > threads replies when incoming message is in a thread
+slack socket mode connected
+
+stdout | src/slack/monitor.tool-result.sends-tool-summaries-responseprefix.test.ts > monitorSlackProvider tool results > threads replies when incoming message is in a thread
+delivered reply to user:U1
+
+ ✓ src/slack/monitor.tool-result.sends-tool-summaries-responseprefix.test.ts (12 tests) 76ms
+stdout | src/infra/heartbeat-runner.respects-ackmaxchars-heartbeat-acks.test.ts > resolveHeartbeatIntervalMs > skips WhatsApp delivery when not linked or running
+[36m[heartbeat][39m [36mchannel not ready[39m
+
+stdout | src/infra/heartbeat-runner.respects-ackmaxchars-heartbeat-acks.test.ts > resolveHeartbeatIntervalMs > uses explicit heartbeat accountId for telegram delivery
+[36m[heartbeat][39m [36musing explicit accountId[39m
+
+ ✓ src/infra/heartbeat-runner.respects-ackmaxchars-heartbeat-acks.test.ts (9 tests) 65ms
+ ✓ src/process/command-queue.test.ts (3 tests) 82ms
+stdout | src/telegram/send.returns-undefined-empty-input.test.ts > sendMessageTelegram > passes timeoutSeconds to grammY client when configured
+[34m[telegram][39m [36mautoSelectFamily=false (default-node22)[39m
+
+stderr | src/telegram/send.returns-undefined-empty-input.test.ts > sendMessageTelegram > falls back to plain text when Telegram rejects HTML
+[34m[telegram][39m [31mmessage failed: 400: Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 9[39m
+
+stderr | src/telegram/send.returns-undefined-empty-input.test.ts > sendMessageTelegram > falls back to plain text when Telegram rejects HTML
+telegram HTML parse failed, retrying as plain text: 400: Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 9
+
+stderr | src/telegram/send.returns-undefined-empty-input.test.ts > sendMessageTelegram > keeps link_preview_options on plain-text fallback when disabled
+[34m[telegram][39m [31mmessage failed: 400: Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 9[39m
+
+stderr | src/telegram/send.returns-undefined-empty-input.test.ts > sendMessageTelegram > wraps chat-not-found with actionable context
+[34m[telegram][39m [31mmessage failed: 400: Bad Request: chat not found[39m
+
+stderr | src/telegram/send.returns-undefined-empty-input.test.ts > sendMessageTelegram > wraps chat-not-found with actionable context
+[34m[telegram][39m [31mmessage failed: 400: Bad Request: chat not found[39m
+
+stderr | src/telegram/send.returns-undefined-empty-input.test.ts > sendMessageTelegram > does not retry on non-transient errors
+[34m[telegram][39m [31mmessage failed: 400: Bad Request[39m
+
+stderr | src/telegram/send.returns-undefined-empty-input.test.ts > sendMessageTelegram > retries without message_thread_id when Telegram reports missing thread
+[34m[telegram][39m [31mmessage failed: 400: Bad Request: message thread not found[39m
+
+stderr | src/telegram/send.returns-undefined-empty-input.test.ts > sendMessageTelegram > does not retry thread-not-found when no message_thread_id was provided
+[34m[telegram][39m [31mmessage failed: 400: Bad Request: message thread not found[39m
+
+stderr | src/telegram/send.returns-undefined-empty-input.test.ts > sendMessageTelegram > retries media sends without message_thread_id when thread is missing
+[34m[telegram][39m [31mphoto failed: 400: Bad Request: message thread not found[39m
+
+ ✓ src/telegram/send.returns-undefined-empty-input.test.ts (35 tests) 61ms
+ ✓ src/commands/gateway-status.test.ts (7 tests) 58ms
+ ✓ src/telegram/bot-message-context.dm-threads.test.ts (5 tests) 53ms
+ ✓ src/docker-setup.test.ts (5 tests) 78ms
+stdout | src/web/auto-reply.web-auto-reply.prefixes-body-same-phone-marker-from.test.ts > web auto-reply > prefixes body with same-phone marker when from === to
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+ ✓ src/hooks/install.test.ts (6 tests) 99ms
+stdout | src/web/auto-reply.web-auto-reply.prefixes-body-same-phone-marker-from.test.ts > web auto-reply > prefixes body with same-phone marker when from === to
+[35m[whatsapp][39m [36mInbound message +1555 -> +1555 (undefined, 35 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.prefixes-body-same-phone-marker-from.test.ts > web auto-reply > prefixes body with same-phone marker when from === to
+[35m[whatsapp][39m [36mAuto-replied to +1555[39m
+
+stdout | src/web/auto-reply.web-auto-reply.prefixes-body-same-phone-marker-from.test.ts > web auto-reply > does not prefix body when from !== to
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.prefixes-body-same-phone-marker-from.test.ts > web auto-reply > does not prefix body when from !== to
+[35m[whatsapp][39m [36mInbound message +1555 -> +2666 (undefined, 22 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.prefixes-body-same-phone-marker-from.test.ts > web auto-reply > does not prefix body when from !== to
+[35m[whatsapp][39m [36mAuto-replied to +1555[39m
+
+stdout | src/web/auto-reply.web-auto-reply.prefixes-body-same-phone-marker-from.test.ts > web auto-reply > forwards reply-to context to resolver
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.prefixes-body-same-phone-marker-from.test.ts > web auto-reply > forwards reply-to context to resolver
+[35m[whatsapp][39m [36mInbound message +1555 -> +2666 (undefined, 70 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.prefixes-body-same-phone-marker-from.test.ts > web auto-reply > forwards reply-to context to resolver
+[35m[whatsapp][39m [36mAuto-replied to +1555[39m
+
+stdout | src/web/auto-reply.web-auto-reply.prefixes-body-same-phone-marker-from.test.ts > web auto-reply > applies responsePrefix to regular replies
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.prefixes-body-same-phone-marker-from.test.ts > web auto-reply > applies responsePrefix to regular replies
+[35m[whatsapp][39m [36mInbound message +1555 -> +2666 (undefined, 19 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.prefixes-body-same-phone-marker-from.test.ts > web auto-reply > applies responsePrefix to regular replies
+[35m[whatsapp][39m [36mAuto-replied to +1555[39m
+
+stdout | src/web/auto-reply.web-auto-reply.prefixes-body-same-phone-marker-from.test.ts > web auto-reply > applies channel responsePrefix override to replies
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.prefixes-body-same-phone-marker-from.test.ts > web auto-reply > applies channel responsePrefix override to replies
+[35m[whatsapp][39m [36mInbound message +1555 -> +2666 (undefined, 19 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.prefixes-body-same-phone-marker-from.test.ts > web auto-reply > applies channel responsePrefix override to replies
+[35m[whatsapp][39m [36mAuto-replied to +1555[39m
+
+stdout | src/web/auto-reply.web-auto-reply.prefixes-body-same-phone-marker-from.test.ts > web auto-reply > defaults responsePrefix for self-chat replies when unset
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.prefixes-body-same-phone-marker-from.test.ts > web auto-reply > defaults responsePrefix for self-chat replies when unset
+[35m[whatsapp][39m [36mInbound message +1555 -> +1555 (direct, 19 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.prefixes-body-same-phone-marker-from.test.ts > web auto-reply > defaults responsePrefix for self-chat replies when unset
+[35m[whatsapp][39m [36mAuto-replied to +1555[39m
+
+stdout | src/web/auto-reply.web-auto-reply.prefixes-body-same-phone-marker-from.test.ts > web auto-reply > does not deliver HEARTBEAT_OK responses
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.prefixes-body-same-phone-marker-from.test.ts > web auto-reply > does not deliver HEARTBEAT_OK responses
+[35m[whatsapp][39m [36mInbound message +1555 -> +2666 (undefined, 21 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.prefixes-body-same-phone-marker-from.test.ts > web auto-reply > does not double-prefix if responsePrefix already present
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.prefixes-body-same-phone-marker-from.test.ts > web auto-reply > does not double-prefix if responsePrefix already present
+[35m[whatsapp][39m [36mInbound message +1555 -> +2666 (undefined, 21 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.prefixes-body-same-phone-marker-from.test.ts > web auto-reply > does not double-prefix if responsePrefix already present
+[35m[whatsapp][39m [36mAuto-replied to +1555[39m
+
+ ✓ src/web/auto-reply.web-auto-reply.prefixes-body-same-phone-marker-from.test.ts (8 tests) 117ms
+ ✓ src/memory/embeddings.test.ts (12 tests) 67ms
+ ✓ src/cron/service.read-ops-nonblocking.test.ts (1 test) 74ms
+stdout | src/web/auto-reply.web-auto-reply.supports-always-group-activation-silent-token-preserves.test.ts > web auto-reply > supports always-on group activation with silent token and clears pending history
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.supports-always-group-activation-silent-token-preserves.test.ts > web auto-reply > supports always-on group activation with silent token and clears pending history
+[35m[whatsapp][39m [36mInbound message 123@g.us -> +2 (group, 50 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.supports-always-group-activation-silent-token-preserves.test.ts > web auto-reply > supports always-on group activation with silent token and clears pending history
+[35m[whatsapp][39m [36mInbound message 123@g.us -> +2 (group, 49 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.supports-always-group-activation-silent-token-preserves.test.ts > web auto-reply > supports always-on group activation with silent token and clears pending history
+[35m[whatsapp][39m [36mAuto-replied to 123@g.us[39m
+
+stdout | src/web/auto-reply.web-auto-reply.supports-always-group-activation-silent-token-preserves.test.ts > web auto-reply > ignores JID mentions in self-chat mode (group chats)
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.supports-always-group-activation-silent-token-preserves.test.ts > web auto-reply > ignores JID mentions in self-chat mode (group chats)
+[35m[whatsapp][39m [36mInbound message 123@g.us -> +2 (group, 180 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.supports-always-group-activation-silent-token-preserves.test.ts > web auto-reply > ignores JID mentions in self-chat mode (group chats)
+[35m[whatsapp][39m [36mAuto-replied to 123@g.us[39m
+
+stdout | src/web/auto-reply.web-auto-reply.supports-always-group-activation-silent-token-preserves.test.ts > web auto-reply > emits heartbeat logs with connection metadata
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.supports-always-group-activation-silent-token-preserves.test.ts > web auto-reply > logs outbound replies to file
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.supports-always-group-activation-silent-token-preserves.test.ts > web auto-reply > logs outbound replies to file
+[35m[whatsapp][39m [36mInbound message +1 -> +2 (undefined, 19 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.supports-always-group-activation-silent-token-preserves.test.ts > web auto-reply > logs outbound replies to file
+[35m[whatsapp][39m [36mAuto-replied to +1[39m
+
+ ✓ src/web/auto-reply.web-auto-reply.supports-always-group-activation-silent-token-preserves.test.ts (4 tests) 92ms
+stdout | src/web/auto-reply.broadcast-groups.broadcasts-sequentially-configured-order.test.ts > broadcast groups > broadcasts sequentially in configured order
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.broadcast-groups.broadcasts-sequentially-configured-order.test.ts > broadcast groups > broadcasts sequentially in configured order
+[35m[whatsapp][39m [36mBroadcasting message to 2 agents (sequential)[39m
+[35m[whatsapp][39m [36mInbound message +1000 -> +2000 (direct, 47 chars)[39m
+
+stdout | src/web/auto-reply.broadcast-groups.broadcasts-sequentially-configured-order.test.ts > broadcast groups > broadcasts sequentially in configured order
+[35m[whatsapp][39m [36mAuto-replied to +1000[39m
+
+stdout | src/web/auto-reply.broadcast-groups.broadcasts-sequentially-configured-order.test.ts > broadcast groups > broadcasts sequentially in configured order
+[35m[whatsapp][39m [36mInbound message +1000 -> +2000 (direct, 47 chars)[39m
+
+stdout | src/web/auto-reply.broadcast-groups.broadcasts-sequentially-configured-order.test.ts > broadcast groups > broadcasts sequentially in configured order
+[35m[whatsapp][39m [36mAuto-replied to +1000[39m
+
+stdout | src/web/auto-reply.broadcast-groups.broadcasts-sequentially-configured-order.test.ts > broadcast groups > shares group history across broadcast agents and clears after replying
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.broadcast-groups.broadcasts-sequentially-configured-order.test.ts > broadcast groups > shares group history across broadcast agents and clears after replying
+[35m[whatsapp][39m [36mBroadcasting message to 2 agents (sequential)[39m
+[35m[whatsapp][39m [36mInbound message 123@g.us -> +2 (group, 176 chars)[39m
+
+stdout | src/web/auto-reply.broadcast-groups.broadcasts-sequentially-configured-order.test.ts > broadcast groups > shares group history across broadcast agents and clears after replying
+[35m[whatsapp][39m [36mAuto-replied to 123@g.us[39m
+
+stdout | src/web/auto-reply.broadcast-groups.broadcasts-sequentially-configured-order.test.ts > broadcast groups > shares group history across broadcast agents and clears after replying
+[35m[whatsapp][39m [36mInbound message 123@g.us -> +2 (group, 176 chars)[39m
+
+stdout | src/web/auto-reply.broadcast-groups.broadcasts-sequentially-configured-order.test.ts > broadcast groups > shares group history across broadcast agents and clears after replying
+[35m[whatsapp][39m [36mAuto-replied to 123@g.us[39m
+
+stdout | src/web/auto-reply.broadcast-groups.broadcasts-sequentially-configured-order.test.ts > broadcast groups > shares group history across broadcast agents and clears after replying
+[35m[whatsapp][39m [36mBroadcasting message to 2 agents (sequential)[39m
+[35m[whatsapp][39m [36mInbound message 123@g.us -> +2 (group, 45 chars)[39m
+
+stdout | src/web/auto-reply.broadcast-groups.broadcasts-sequentially-configured-order.test.ts > broadcast groups > shares group history across broadcast agents and clears after replying
+[35m[whatsapp][39m [36mAuto-replied to 123@g.us[39m
+
+stdout | src/web/auto-reply.broadcast-groups.broadcasts-sequentially-configured-order.test.ts > broadcast groups > shares group history across broadcast agents and clears after replying
+[35m[whatsapp][39m [36mInbound message 123@g.us -> +2 (group, 45 chars)[39m
+
+stdout | src/web/auto-reply.broadcast-groups.broadcasts-sequentially-configured-order.test.ts > broadcast groups > shares group history across broadcast agents and clears after replying
+[35m[whatsapp][39m [36mAuto-replied to 123@g.us[39m
+
+stdout | src/web/auto-reply.broadcast-groups.broadcasts-sequentially-configured-order.test.ts > broadcast groups > broadcasts in parallel by default
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.broadcast-groups.broadcasts-sequentially-configured-order.test.ts > broadcast groups > broadcasts in parallel by default
+[35m[whatsapp][39m [36mBroadcasting message to 2 agents (parallel)[39m
+[35m[whatsapp][39m [36mInbound message +1000 -> +2000 (direct, 47 chars)[39m
+[35m[whatsapp][39m [36mInbound message +1000 -> +2000 (direct, 47 chars)[39m
+
+stdout | src/web/auto-reply.broadcast-groups.broadcasts-sequentially-configured-order.test.ts > broadcast groups > broadcasts in parallel by default
+[35m[whatsapp][39m [36mAuto-replied to +1000[39m
+[35m[whatsapp][39m [36mAuto-replied to +1000[39m
+
+ ✓ src/web/auto-reply.broadcast-groups.broadcasts-sequentially-configured-order.test.ts (3 tests) 108ms
+ ✓ src/browser/server-context.remote-tab-ops.test.ts (6 tests) 51ms
+stdout | src/web/auto-reply.web-auto-reply.uses-per-agent-mention-patterns-group-gating.test.ts > web auto-reply > uses per-agent mention patterns for group gating
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.uses-per-agent-mention-patterns-group-gating.test.ts > web auto-reply > uses per-agent mention patterns for group gating
+[35m[whatsapp][39m [36mInbound message 123@g.us -> +2 (group, 181 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.uses-per-agent-mention-patterns-group-gating.test.ts > web auto-reply > uses per-agent mention patterns for group gating
+[35m[whatsapp][39m [36mAuto-replied to 123@g.us[39m
+
+stdout | src/web/auto-reply.web-auto-reply.uses-per-agent-mention-patterns-group-gating.test.ts > web auto-reply > allows group messages when whatsapp groups default disables mention gating
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.uses-per-agent-mention-patterns-group-gating.test.ts > web auto-reply > allows group messages when whatsapp groups default disables mention gating
+[35m[whatsapp][39m [36mInbound message 123@g.us -> +2 (group, 45 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.uses-per-agent-mention-patterns-group-gating.test.ts > web auto-reply > allows group messages when whatsapp groups default disables mention gating
+[35m[whatsapp][39m [36mAuto-replied to 123@g.us[39m
+
+stdout | src/web/auto-reply.web-auto-reply.uses-per-agent-mention-patterns-group-gating.test.ts > web auto-reply > blocks group messages when whatsapp groups is set without a wildcard
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.uses-per-agent-mention-patterns-group-gating.test.ts > web auto-reply > honors per-group mention overrides when conversationId uses session key
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.uses-per-agent-mention-patterns-group-gating.test.ts > web auto-reply > honors per-group mention overrides when conversationId uses session key
+[35m[whatsapp][39m [36mInbound message whatsapp:group:123@g.us -> +2 (group, 60 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.uses-per-agent-mention-patterns-group-gating.test.ts > web auto-reply > honors per-group mention overrides when conversationId uses session key
+[35m[whatsapp][39m [36mAuto-replied to whatsapp:group:123@g.us[39m
+
+ ✓ src/web/auto-reply.web-auto-reply.uses-per-agent-mention-patterns-group-gating.test.ts (4 tests) 66ms
+ ✓ src/config/config.backup-rotation.test.ts (1 test) 57ms
+stdout | src/imessage/monitor.skips-group-messages-without-mention-by-default.test.ts > monitorIMessageProvider > allows group messages when imessage groups default disables mention gating
+imessage: delivered reply to chat_id:123
+
+stdout | src/imessage/monitor.skips-group-messages-without-mention-by-default.test.ts > monitorIMessageProvider > allows group messages when requireMention is true but no mentionPatterns exist
+imessage: delivered reply to chat_id:777
+
+stdout | src/imessage/monitor.skips-group-messages-without-mention-by-default.test.ts > monitorIMessageProvider > treats configured chat_id as a group session even when is_group is false
+imessage: delivered reply to chat_id:2
+
+stdout | src/imessage/monitor.skips-group-messages-without-mention-by-default.test.ts > monitorIMessageProvider > prefixes final replies with responsePrefix
+imessage: delivered reply to imessage:+15550001111
+
+stdout | src/imessage/monitor.skips-group-messages-without-mention-by-default.test.ts > monitorIMessageProvider > delivers group replies when mentioned
+imessage: delivered reply to chat_id:42
+
+stdout | src/imessage/monitor.skips-group-messages-without-mention-by-default.test.ts > monitorIMessageProvider > prefixes group message bodies with sender
+imessage: delivered reply to chat_id:99
+
+stdout | src/imessage/monitor.skips-group-messages-without-mention-by-default.test.ts > monitorIMessageProvider > includes reply context when imessage reply metadata is present
+imessage: delivered reply to imessage:+15550001111
+
+ ✓ src/imessage/monitor.skips-group-messages-without-mention-by-default.test.ts (12 tests) 58ms
+ ✓ src/auto-reply/reply/commands.test.ts (21 tests) 41ms
+ ✓ src/commands/onboard-channels.test.ts (3 tests) 89ms
+ ✓ src/agents/skills-status.test.ts (1 test) 83ms
+stdout | src/web/auto-reply.typing-controller-idle.test.ts > typing controller idle > marks dispatch idle after replies flush
+[35m[whatsapp][39m [36mInbound message +1000 -> +2000 (direct, 47 chars)[39m
+
+stdout | src/web/auto-reply.typing-controller-idle.test.ts > typing controller idle > marks dispatch idle after replies flush
+[35m[whatsapp][39m [36mAuto-replied to +1000[39m
+
+stdout | src/web/auto-reply.typing-controller-idle.test.ts > typing controller idle > marks dispatch idle after replies flush
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+ ✓ src/web/auto-reply.typing-controller-idle.test.ts (1 test) 70ms
+ ✓ src/infra/update-runner.test.ts (13 tests) 46ms
+ ✓ src/cli/nodes-cli.coverage.test.ts (5 tests) 55ms
+ ✓ src/config/io.compat.test.ts (4 tests) 45ms
+stderr | src/agents/pi-tools-agent-config.test.ts > Agent-specific tool filtering > should apply provider-specific tool profile overrides
+[34m[tools][39m [33mtools.profile (coding) allowlist contains unknown entries (group:memory). These entries won't match any tool unless the plugin is enabled.[39m
+
+ ✓ src/agents/pi-tools-agent-config.test.ts (15 tests) 47ms
+ ✓ src/discord/send.creates-thread.test.ts (20 tests) 52ms
+ ✓ src/infra/heartbeat-runner.returns-default-unset.test.ts (32 tests) 59ms
+ ✓ src/browser/extension-relay.test.ts (4 tests) 60ms
+ ✓ src/auto-reply/reply/queue.collect-routing.test.ts (6 tests) 59ms
+ ✓ src/auto-reply/reply.media-note.test.ts (1 test) 58ms
+ ✓ src/commands/doctor-state-migrations.test.ts (21 tests) 52ms
+stdout | src/slack/monitor.tool-result.threads-top-level-replies-replytomode-is-all.test.ts > monitorSlackProvider tool results > threads top-level replies when replyToMode is all
+slack: groupPolicy defaults to "open" when channels.slack is missing; set channels.slack.groupPolicy (or channels.defaults.groupPolicy) or add channels.slack.channels to restrict access.
+
+stdout | src/slack/monitor.tool-result.threads-top-level-replies-replytomode-is-all.test.ts > monitorSlackProvider tool results > threads top-level replies when replyToMode is all
+slack socket mode connected
+
+stdout | src/slack/monitor.tool-result.threads-top-level-replies-replytomode-is-all.test.ts > monitorSlackProvider tool results > threads top-level replies when replyToMode is all
+delivered reply to user:U1
+
+stdout | src/slack/monitor.tool-result.threads-top-level-replies-replytomode-is-all.test.ts > monitorSlackProvider tool results > treats parent_user_id as a thread reply even when thread_ts matches ts
+slack socket mode connected
+
+stdout | src/slack/monitor.tool-result.threads-top-level-replies-replytomode-is-all.test.ts > monitorSlackProvider tool results > treats parent_user_id as a thread reply even when thread_ts matches ts
+delivered reply to user:U1
+
+stdout | src/slack/monitor.tool-result.threads-top-level-replies-replytomode-is-all.test.ts > monitorSlackProvider tool results > keeps thread parent inheritance opt-in
+slack channels unresolved: C1
+slack socket mode connected
+
+stdout | src/slack/monitor.tool-result.threads-top-level-replies-replytomode-is-all.test.ts > monitorSlackProvider tool results > keeps thread parent inheritance opt-in
+delivered reply to channel:C1
+
+stdout | src/slack/monitor.tool-result.threads-top-level-replies-replytomode-is-all.test.ts > monitorSlackProvider tool results > injects starter context for thread replies
+slack channels unresolved: C1
+slack socket mode connected
+
+stdout | src/slack/monitor.tool-result.threads-top-level-replies-replytomode-is-all.test.ts > monitorSlackProvider tool results > injects starter context for thread replies
+delivered reply to channel:C1
+
+ ✓ src/auto-reply/reply/session-resets.test.ts (11 tests) 44ms
+stdout | src/slack/monitor.tool-result.threads-top-level-replies-replytomode-is-all.test.ts > monitorSlackProvider tool results > scopes thread session keys to the routed agent
+slack channels unresolved: C1
+slack socket mode connected
+
+stdout | src/slack/monitor.tool-result.threads-top-level-replies-replytomode-is-all.test.ts > monitorSlackProvider tool results > scopes thread session keys to the routed agent
+delivered reply to channel:C1
+
+stdout | src/slack/monitor.tool-result.threads-top-level-replies-replytomode-is-all.test.ts > monitorSlackProvider tool results > keeps replies in channel root when message is not threaded (replyToMode off)
+slack: groupPolicy defaults to "open" when channels.slack is missing; set channels.slack.groupPolicy (or channels.defaults.groupPolicy) or add channels.slack.channels to restrict access.
+
+stdout | src/slack/monitor.tool-result.threads-top-level-replies-replytomode-is-all.test.ts > monitorSlackProvider tool results > keeps replies in channel root when message is not threaded (replyToMode off)
+slack socket mode connected
+
+stdout | src/slack/monitor.tool-result.threads-top-level-replies-replytomode-is-all.test.ts > monitorSlackProvider tool results > keeps replies in channel root when message is not threaded (replyToMode off)
+delivered reply to user:U1
+
+stdout | src/slack/monitor.tool-result.threads-top-level-replies-replytomode-is-all.test.ts > monitorSlackProvider tool results > threads first reply when replyToMode is first and message is not threaded
+slack: groupPolicy defaults to "open" when channels.slack is missing; set channels.slack.groupPolicy (or channels.defaults.groupPolicy) or add channels.slack.channels to restrict access.
+
+stdout | src/slack/monitor.tool-result.threads-top-level-replies-replytomode-is-all.test.ts > monitorSlackProvider tool results > threads first reply when replyToMode is first and message is not threaded
+slack socket mode connected
+
+stdout | src/slack/monitor.tool-result.threads-top-level-replies-replytomode-is-all.test.ts > monitorSlackProvider tool results > threads first reply when replyToMode is first and message is not threaded
+delivered reply to user:U1
+
+ ✓ src/slack/monitor.tool-result.threads-top-level-replies-replytomode-is-all.test.ts (7 tests) 61ms
+ ✓ src/discord/monitor.tool-result.sends-status-replies-responseprefix.test.ts (6 tests) 35ms
+ ✓ src/cron/service.every-jobs-fire.test.ts (3 tests) 40ms
+ ✓ src/discord/send.sends-basic-channel-messages.test.ts (23 tests) 47ms
+stdout | src/telegram/fetch.test.ts > resolveTelegramFetch > returns wrapped global fetch when available
+[34m[telegram][39m [36mautoSelectFamily=false (default-node22)[39m
+
+stdout | src/telegram/fetch.test.ts > resolveTelegramFetch > prefers proxy fetch when provided
+[34m[telegram][39m [36mautoSelectFamily=false (default-node22)[39m
+
+stdout | src/telegram/fetch.test.ts > resolveTelegramFetch > honors env enable override
+[34m[telegram][39m [36mautoSelectFamily=true (env:OPENCLAW_TELEGRAM_ENABLE_AUTO_SELECT_FAMILY)[39m
+
+stdout | src/telegram/fetch.test.ts > resolveTelegramFetch > uses config override when provided
+[34m[telegram][39m [36mautoSelectFamily=true (config)[39m
+
+stdout | src/telegram/fetch.test.ts > resolveTelegramFetch > env disable override wins over config
+[34m[telegram][39m [36mautoSelectFamily=false (env:OPENCLAW_TELEGRAM_DISABLE_AUTO_SELECT_FAMILY)[39m
+
+ ✓ src/telegram/fetch.test.ts (5 tests) 42ms
+ ✓ src/config/schema.test.ts (4 tests) 53ms
+stdout | src/agents/cli-runner.test.ts > runCliAgent resume cleanup > kills stale resume processes for codex sessions
+[32m[agent/claude-cli][39m [36mcli exec: provider=codex-cli model=gpt-5.2-codex promptChars=2[39m
+
+stderr | src/agents/cli-runner.test.ts > runCliAgent resume cleanup > falls back to per-agent workspace when workspaceDir is missing
+[32m[agent/claude-cli][39m [33m[workspace-fallback] caller=runCliAgent reason=missing run=run-1 session=sha256:e8bc163c82ee sessionKey=sha256:32fae1b94202 agent=main workspace=sha256:6a199d5ed3ac[39m
+
+stdout | src/agents/cli-runner.test.ts > runCliAgent resume cleanup > falls back to per-agent workspace when workspaceDir is missing
+[32m[agent/claude-cli][39m [36mcli exec: provider=codex-cli model=gpt-5.2-codex promptChars=2[39m
+
+ ✓ src/agents/cli-runner.test.ts (6 tests) 62ms
+ ✓ src/memory/manager.atomic-reindex.test.ts (1 test) 53ms
+stdout | src/web/outbound.test.ts > web outbound > sends message via active listener
+[35m[whatsapp][39m [36mSending message -> 1555@s.whatsapp.net[39m
+
+stdout | src/web/outbound.test.ts > web outbound > sends message via active listener
+[35m[whatsapp][39m [36mSent message msg123 -> 1555@s.whatsapp.net (23ms)[39m
+
+stdout | src/web/outbound.test.ts > web outbound > maps audio to PTT with opus mime when ogg
+[35m[whatsapp][39m [36mSending message -> 1555@s.whatsapp.net (media)[39m
+
+stdout | src/web/outbound.test.ts > web outbound > maps audio to PTT with opus mime when ogg
+[35m[whatsapp][39m [36mSent message msg123 -> 1555@s.whatsapp.net (media) (3ms)[39m
+
+stdout | src/web/outbound.test.ts > web outbound > maps video with caption
+[35m[whatsapp][39m [36mSending message -> 1555@s.whatsapp.net (media)[39m
+
+stdout | src/web/outbound.test.ts > web outbound > maps video with caption
+[35m[whatsapp][39m [36mSent message msg123 -> 1555@s.whatsapp.net (media) (4ms)[39m
+
+stdout | src/web/outbound.test.ts > web outbound > marks gif playback for video when requested
+[35m[whatsapp][39m [36mSending message -> 1555@s.whatsapp.net (media)[39m
+
+stdout | src/web/outbound.test.ts > web outbound > marks gif playback for video when requested
+[35m[whatsapp][39m [36mSent message msg123 -> 1555@s.whatsapp.net (media) (4ms)[39m
+
+stdout | src/web/outbound.test.ts > web outbound > maps image with caption
+[35m[whatsapp][39m [36mSending message -> 1555@s.whatsapp.net (media)[39m
+
+stdout | src/web/outbound.test.ts > web outbound > maps image with caption
+[35m[whatsapp][39m [36mSent message msg123 -> 1555@s.whatsapp.net (media) (3ms)[39m
+
+stdout | src/web/outbound.test.ts > web outbound > maps other kinds to document with filename
+[35m[whatsapp][39m [36mSending message -> 1555@s.whatsapp.net (media)[39m
+
+stdout | src/web/outbound.test.ts > web outbound > maps other kinds to document with filename
+[35m[whatsapp][39m [36mSent message msg123 -> 1555@s.whatsapp.net (media) (3ms)[39m
+
+stdout | src/web/outbound.test.ts > web outbound > sends polls via active listener
+[35m[whatsapp][39m [36mSending poll -> 1555@s.whatsapp.net: "Lunch?"[39m
+
+stdout | src/web/outbound.test.ts > web outbound > sends polls via active listener
+[35m[whatsapp][39m [36mSent poll poll123 -> 1555@s.whatsapp.net (2ms)[39m
+
+stdout | src/web/outbound.test.ts > web outbound > sends reactions via active listener
+[35m[whatsapp][39m [36mSending reaction "✅" -> message msg123[39m
+
+stdout | src/web/outbound.test.ts > web outbound > sends reactions via active listener
+[35m[whatsapp][39m [36mSent reaction "✅" -> message msg123[39m
+
+ ✓ src/web/outbound.test.ts (9 tests) 73ms
+stdout | src/web/auto-reply.web-auto-reply.sends-tool-summaries-immediately-responseprefix.test.ts > web auto-reply > skips tool summaries and sends final reply with responsePrefix
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.sends-tool-summaries-immediately-responseprefix.test.ts > web auto-reply > skips tool summaries and sends final reply with responsePrefix
+[35m[whatsapp][39m [36mInbound message +1555 -> +2666 (undefined, 19 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.sends-tool-summaries-immediately-responseprefix.test.ts > web auto-reply > skips tool summaries and sends final reply with responsePrefix
+[35m[whatsapp][39m [36mAuto-replied to +1555[39m
+
+stdout | src/web/auto-reply.web-auto-reply.sends-tool-summaries-immediately-responseprefix.test.ts > web auto-reply > uses identity.name for messagePrefix when set
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.sends-tool-summaries-immediately-responseprefix.test.ts > web auto-reply > uses identity.name for messagePrefix when set
+[35m[whatsapp][39m [36mInbound message +1555 -> +2666 (undefined, 29 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.sends-tool-summaries-immediately-responseprefix.test.ts > web auto-reply > uses identity.name for messagePrefix when set
+[35m[whatsapp][39m [36mAuto-replied to +1555[39m
+
+stdout | src/web/auto-reply.web-auto-reply.sends-tool-summaries-immediately-responseprefix.test.ts > web auto-reply > does not derive responsePrefix from identity.name when unset
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stdout | src/web/auto-reply.web-auto-reply.sends-tool-summaries-immediately-responseprefix.test.ts > web auto-reply > does not derive responsePrefix from identity.name when unset
+[35m[whatsapp][39m [36mInbound message +1555 -> +2666 (undefined, 29 chars)[39m
+
+stdout | src/web/auto-reply.web-auto-reply.sends-tool-summaries-immediately-responseprefix.test.ts > web auto-reply > does not derive responsePrefix from identity.name when unset
+[35m[whatsapp][39m [36mAuto-replied to +1555[39m
+
+ ✓ src/web/auto-reply.web-auto-reply.sends-tool-summaries-immediately-responseprefix.test.ts (3 tests) 63ms
+ ✓ src/commands/auth-choice.test.ts (15 tests) 58ms
+stdout | src/hooks/loader.test.ts > loader > loadInternalHooks > should load a handler from a module
+Registered hook (legacy): command:new -> /tmp/openclaw-test-1770863649514/test-handler.js
+
+stdout | src/hooks/loader.test.ts > loader > loadInternalHooks > should load multiple handlers
+Registered hook (legacy): command:new -> /tmp/openclaw-test-1770863649524/handler1.js
+
+stdout | src/hooks/loader.test.ts > loader > loadInternalHooks > should load multiple handlers
+Registered hook (legacy): command:stop -> /tmp/openclaw-test-1770863649524/handler2.js
+
+stdout | src/hooks/loader.test.ts > loader > loadInternalHooks > should support named exports
+Registered hook (legacy): command:new -> /tmp/openclaw-test-1770863649532/named-export.js#myHandler
+
+stdout | src/hooks/loader.test.ts > loader > loadInternalHooks > should handle relative paths
+Registered hook (legacy): command:new -> /tmp/openclaw-test-1770863649547/relative-handler.js
+
+stdout | src/hooks/loader.test.ts > loader > loadInternalHooks > should actually call the loaded handler
+Registered hook (legacy): command:new -> /tmp/openclaw-test-1770863649552/callable-handler.js
+
+ ✓ src/hooks/loader.test.ts (9 tests) 48ms
+ ✓ src/browser/cdp.test.ts (6 tests) 46ms
+ ✓ src/memory/manager.embedding-token-limit.test.ts (2 tests) 55ms
+ ✓ src/agents/skills.loadworkspaceskillentries.test.ts (3 tests) 52ms
+stdout | src/agents/claude-cli-runner.test.ts > runClaudeCliAgent > starts a new session with --session-id when none is provided
+[32m[agent/claude-cli][39m [36mcli exec: provider=claude-cli model=opus promptChars=2[39m
+
+stdout | src/agents/claude-cli-runner.test.ts > runClaudeCliAgent > uses --resume when a claude session id is provided
+[32m[agent/claude-cli][39m [36mcli exec: provider=claude-cli model=opus promptChars=2[39m
+
+stdout | src/agents/claude-cli-runner.test.ts > runClaudeCliAgent > serializes concurrent claude-cli runs
+[32m[agent/claude-cli][39m [36mcli exec: provider=claude-cli model=opus promptChars=5[39m
+
+stdout | src/agents/claude-cli-runner.test.ts > runClaudeCliAgent > serializes concurrent claude-cli runs
+[32m[agent/claude-cli][39m [36mcli exec: provider=claude-cli model=opus promptChars=6[39m
+
+ ✓ src/agents/claude-cli-runner.test.ts (3 tests) 58ms
+ ✓ src/channels/plugins/catalog.test.ts (3 tests) 22ms
+stdout | src/signal/monitor.tool-result.sends-tool-summaries-responseprefix.test.ts > monitorSignalProvider tool results > skips tool summaries with responsePrefix
+delivered reply to signal:+15550001111
+
+stdout | src/signal/monitor.tool-result.sends-tool-summaries-responseprefix.test.ts > monitorSignalProvider tool results > processes messages when reaction metadata is present
+delivered reply to signal:+15550001111
+
+ ✓ src/signal/monitor.tool-result.sends-tool-summaries-responseprefix.test.ts (11 tests) 40ms
+stdout | src/telegram/bot.create-telegram-bot.matches-tg-prefixed-allowfrom-entries-case-insensitively.test.ts > createTelegramBot > matches tg:-prefixed allowFrom entries case-insensitively in group allowlist
+[34m[telegram][39m [36mautoSelectFamily=false (default-node22)[39m
+
+ ✓ src/telegram/bot.create-telegram-bot.matches-tg-prefixed-allowfrom-entries-case-insensitively.test.ts (6 tests) 45ms
+ ✓ src/discord/monitor/message-handler.inbound-contract.test.ts (2 tests) 18ms
+ ✓ src/media-understanding/providers/google/video.test.ts (2 tests) 39ms
+ ✓ src/agents/pi-tools.workspace-paths.test.ts (6 tests) 48ms
+stderr | Object.error (/srv/data/code/openclaw/src/runtime.ts:17:13)
+gateway connect failed: Error: unauthorized: gateway token missing (provide gateway auth token)
+
+ ✓ src/commands/status.test.ts (5 tests) 39ms
+stderr | src/memory/manager.sync-errors-do-not-crash.test.ts > memory manager sync failures > does not raise unhandledRejection when watch-triggered sync fails
+[31m[memory][39m [33msync failed (watch): Error: openai embeddings failed: 400 bad request[39m
+
+ ✓ src/memory/manager.sync-errors-do-not-crash.test.ts (1 test) 40ms
+ ✓ src/web/monitor-inbox.blocks-messages-from-unauthorized-senders-not-allowfrom.test.ts (9 tests) 24ms
+stdout | src/agents/cli-credentials.test.ts > cli credentials > updates the Claude Code keychain item in place
+[33m[agents/auth-profiles][39m [36mwrote refreshed credentials to claude cli keychain[39m
+
+stdout | src/agents/cli-credentials.test.ts > cli credentials > falls back to the file store when the keychain update fails
+[33m[agents/auth-profiles][39m [36mwrote refreshed credentials to claude cli file[39m
+
+stdout | src/agents/cli-credentials.test.ts > cli credentials > caches Claude Code CLI credentials within the TTL window
+[33m[agents/auth-profiles][39m [36mread anthropic credentials from claude cli keychain[39m
+
+stdout | src/agents/cli-credentials.test.ts > cli credentials > refreshes Claude Code CLI credentials after the TTL window
+[33m[agents/auth-profiles][39m [36mread anthropic credentials from claude cli keychain[39m
+[33m[agents/auth-profiles][39m [36mread anthropic credentials from claude cli keychain[39m
+
+stdout | src/agents/cli-credentials.test.ts > cli credentials > reads Codex credentials from keychain when available
+[33m[agents/auth-profiles][39m [36mread codex credentials from keychain[39m
+
+ ✓ src/agents/cli-credentials.test.ts (6 tests) 47ms
+stdout | src/web/auto-reply.broadcast-groups.skips-unknown-broadcast-agent-ids-agents-list.test.ts > broadcast groups > skips unknown broadcast agent ids when agents.list is present
+[35m[whatsapp][39m [36mListening for personal WhatsApp inbound messages.[39m
+
+stderr | src/web/auto-reply.broadcast-groups.skips-unknown-broadcast-agent-ids-agents-list.test.ts > broadcast groups > skips unknown broadcast agent ids when agents.list is present
+[35m[whatsapp][39m [33mBroadcast agent missing not found in agents.list; skipping[39m
+
+stdout | src/web/auto-reply.broadcast-groups.skips-unknown-broadcast-agent-ids-agents-list.test.ts > broadcast groups > skips unknown broadcast agent ids when agents.list is present
+[35m[whatsapp][39m [36mBroadcasting message to 2 agents (parallel)[39m
+[35m[whatsapp][39m [36mInbound message +1000 -> +2000 (direct, 47 chars)[39m
+
+stdout | src/web/auto-reply.broadcast-groups.skips-unknown-broadcast-agent-ids-agents-list.test.ts > broadcast groups > skips unknown broadcast agent ids when agents.list is present
+[35m[whatsapp][39m [36mAuto-replied to +1000[39m
+
+ ✓ src/commands/chutes-oauth.test.ts (4 tests) 37ms
+ ✓ src/web/auto-reply.broadcast-groups.skips-unknown-broadcast-agent-ids-agents-list.test.ts (1 test) 47ms
+stdout | src/cli/memory-cli.test.ts > memory cli > enables verbose logging with --verbose
+Memory Search (main)
+Provider: openai (requested: openai)
+Model: text-embedding-3-small
+Indexed: 0/0 files · 0 chunks
+Dirty: no
+Store: /tmp/memory.sqlite
+Workspace: /tmp/openclaw
+Vector: ready
+Issues:
+  memory directory missing (/tmp/openclaw/memory)
+
+
+stdout | src/cli/memory-cli.test.ts > memory cli > logs close failure after status
+Memory Search (main)
+Provider: openai (requested: openai)
+Model: text-embedding-3-small
+Indexed: 1/0 files · 1 chunks
+Dirty: no
+Store: /tmp/memory.sqlite
+Workspace: /tmp/openclaw
+Issues:
+  memory directory missing (/tmp/openclaw/memory)
+
+
+stdout | src/cli/memory-cli.test.ts > memory cli > logs close failures without failing the command
+Memory index updated (main).
+
+stdout | src/cli/memory-cli.test.ts > memory cli > logs close failure after search
+0.500 memory/2026-01-12.md:1-2
+Hello
+
+ ✓ src/cli/memory-cli.test.ts (10 tests) 53ms
+ ✓ src/browser/pw-session.get-page-for-targetid.extension-fallback.test.ts (1 test) 33ms
+ ✓ src/media/store.redirect.test.ts (2 tests) 32ms
+ ✓ src/agents/skills.buildworkspaceskillsnapshot.test.ts (2 tests) 41ms
+ ✓ src/cli/browser-cli-extension.test.ts (4 tests) 39ms
+ ✓ src/web/monitor-inbox.allows-messages-from-senders-allowfrom-list.test.ts (7 tests) 24ms
+ ✓ src/canvas-host/server.state-dir.test.ts (1 test) 25ms
+ ✓ src/auto-reply/reply/followup-runner.test.ts (5 tests) 14ms
+ ✓ src/agents/pi-tools.create-openclaw-coding-tools.adds-claude-style-aliases-schemas-without-dropping.test.ts (21 tests) 20ms
+ ✓ src/security/skill-scanner.test.ts (25 tests) 21ms
+ ✓ src/agents/model-fallback.test.ts (19 tests) 26ms
+stdout | src/slack/monitor.tool-result.forces-thread-replies-replytoid-is-set.test.ts > monitorSlackProvider tool results > forces thread replies when replyToId is set
+slack: groupPolicy defaults to "open" when channels.slack is missing; set channels.slack.groupPolicy (or channels.defaults.groupPolicy) or add channels.slack.channels to restrict access.
+
+stdout | src/slack/monitor.tool-result.forces-thread-replies-replytoid-is-set.test.ts > monitorSlackProvider tool results > forces thread replies when replyToId is set
+slack socket mode connected
+
+stdout | src/slack/monitor.tool-result.forces-thread-replies-replytoid-is-set.test.ts > monitorSlackProvider tool results > forces thread replies when replyToId is set
+delivered reply to user:U1
+
+stdout | src/slack/monitor.tool-result.forces-thread-replies-replytoid-is-set.test.ts > monitorSlackProvider tool results > reacts to mention-gated room messages when ackReaction is enabled
+slack socket mode connected
+
+stdout | src/slack/monitor.tool-result.forces-thread-replies-replytoid-is-set.test.ts > monitorSlackProvider tool results > replies with pairing code when dmPolicy is pairing and no allowFrom is set
+slack socket mode connected
+
+stdout | src/slack/monitor.tool-result.forces-thread-replies-replytoid-is-set.test.ts > monitorSlackProvider tool results > does not resend pairing code when a request is already pending
+slack socket mode connected
+
+ ✓ src/slack/monitor.tool-result.forces-thread-replies-replytoid-is-set.test.ts (4 tests) 40ms
+ ✓ src/pairing/pairing-store.test.ts (4 tests) 28ms
+ ✓ src/cli/dns-cli.test.ts (1 test) 77ms
+ ✓ src/commands/onboard-auth.test.ts (31 tests) 20ms
+ ✓ src/infra/heartbeat-runner.model-override.test.ts (4 tests) 31ms
+ ✓ src/agents/pi-tools.create-openclaw-coding-tools.adds-claude-style-aliases-schemas-without-dropping-d.test.ts (5 tests) 91ms
+ ✓ src/discord/monitor.test.ts (40 tests) 18ms
+ ✓ src/infra/exec-approvals.test.ts (44 tests) 25ms
+ ✓ src/auto-reply/reply/reply-routing.test.ts (18 tests) 30ms
+ ✓ src/agents/skills/refresh.test.ts (1 test) 18ms
+stdout | src/telegram/bot.create-telegram-bot.blocks-all-group-messages-grouppolicy-is.test.ts > createTelegramBot > blocks all group messages when groupPolicy is 'disabled'
+[34m[telegram][39m [36mautoSelectFamily=false (default-node22)[39m
+
+ ✓ src/telegram/bot.create-telegram-bot.blocks-all-group-messages-grouppolicy-is.test.ts (7 tests) 40ms
+ ✓ src/auto-reply/reply/agent-runner.memory-flush.runreplyagent-memory-flush.runs-memory-flush-turn-updates-session-metadata.test.ts (2 tests) 34ms
+ ✓ src/infra/control-ui-assets.test.ts (14 tests) 23ms
+stdout | src/telegram/webhook.test.ts > startTelegramWebhook > starts server, registers webhook, and serves health
+webhook listening on http://localhost:0/telegram-webhook
+
+stdout | src/telegram/webhook.test.ts > startTelegramWebhook > invokes webhook handler on matching path
+webhook listening on http://localhost:0/hook
+
+ ✓ src/telegram/webhook.test.ts (2 tests) 36ms
+stdout | src/telegram/send.caption-split.test.ts > sendMessageTelegram caption splitting > splits long captions into media + text messages when text exceeds 1024 chars
+[34m[telegram][39m [36mautoSelectFamily=false (default-node22)[39m
+
+stdout | src/telegram/send.preserves-thread-params-plain-text-fallback.test.ts > buildInlineKeyboard > preserves thread params in plain text fallback
+[34m[telegram][39m [36mautoSelectFamily=false (default-node22)[39m
+
+stderr | src/telegram/send.preserves-thread-params-plain-text-fallback.test.ts > buildInlineKeyboard > preserves thread params in plain text fallback
+[34m[telegram][39m [31mmessage failed: 400: Bad Request: can't parse entities: Can't find end of the entity[39m
+
+ ✓ src/telegram/send.preserves-thread-params-plain-text-fallback.test.ts (5 tests) 31ms
+stderr | src/telegram/send.caption-split.test.ts > sendMessageTelegram caption splitting > wraps chat-not-found errors from follow-up message
+[34m[telegram][39m [31mmessage failed: 400: Bad Request: chat not found[39m
+
+ ✓ src/telegram/send.caption-split.test.ts (9 tests) 36ms
+ ✓ src/media/store.test.ts (14 tests) 44ms
+ ✓ src/infra/session-cost-usage.test.ts (4 tests) 32ms
+ ✓ src/auto-reply/reply/agent-runner.messaging-tools.test.ts (4 tests) 20ms
+ ✓ src/memory/manager.async-search.test.ts (1 test) 31ms
+ ✓ src/web/monitor-inbox.streams-inbound-messages.test.ts (8 tests) 42ms
+ ✓ src/browser/chrome.test.ts (14 tests) 30ms
+ ✓ src/web/monitor-inbox.captures-media-path-image-messages.test.ts (8 tests) 29ms
+ ✓ src/agents/system-prompt.test.ts (30 tests) 39ms
+ ✓ src/cron/service.restart-catchup.test.ts (2 tests) 29ms
+stdout | src/slack/monitor.threading.missing-thread-ts.test.ts > monitorSlackProvider threading > recovers missing thread_ts when parent_user_id is present
+slack channels unresolved: C1
+slack socket mode connected
+
+stdout | src/slack/monitor.threading.missing-thread-ts.test.ts > monitorSlackProvider threading > recovers missing thread_ts when parent_user_id is present
+delivered reply to channel:C1
+
+ ✓ src/slack/monitor.threading.missing-thread-ts.test.ts (1 test) 36ms
+ ✓ src/infra/provider-usage.test.ts (10 tests) 25ms
+ ✓ src/telegram/bot/delivery.test.ts (10 tests) 35ms
+stdout | src/telegram/send.edit-message.test.ts > editMessageTelegram > keeps existing buttons when buttons is undefined (no reply_markup)
+[34m[telegram][39m [36mautoSelectFamily=false (default-node22)[39m
+
+stderr | src/telegram/send.edit-message.test.ts > editMessageTelegram > falls back to plain text when Telegram HTML parse fails (and preserves reply_markup)
+[34m[telegram][39m [31meditMessage failed: 400: Bad Request: can't parse entities[39m
+
+ ✓ src/telegram/send.edit-message.test.ts (3 tests) 26ms
+ ✓ src/commands/models.set.test.ts (3 tests) 9ms
+ ✓ src/agents/openclaw-tools.sessions.test.ts (10 tests) 27ms
+ ✓ src/auto-reply/inbound.test.ts (23 tests) 36ms
+ ✓ src/markdown/ir.table-bullets.test.ts (7 tests) 29ms
+ ✓ src/agents/pi-embedded-subscribe.subscribe-embedded-pi-session.suppresses-message-end-block-replies-message-tool.test.ts (3 tests) 26ms
+ ✓ src/auto-reply/command-control.test.ts (19 tests) 17ms
+ ✓ src/auto-reply/reply/agent-runner.memory-flush.runreplyagent-memory-flush.skips-memory-flush-sandbox-workspace-is-read.test.ts (2 tests) 28ms
+stdout | src/imessage/monitor.updates-last-route-chat-id-direct-messages.test.ts > monitorIMessageProvider > updates last route with sender handle for direct messages
+imessage: delivered reply to imessage:+15550004444
+
+ ✓ src/imessage/monitor.updates-last-route-chat-id-direct-messages.test.ts (2 tests) 33ms
+ ✓ src/agents/openclaw-tools.session-status.test.ts (7 tests) 21ms
+ ✓ src/telegram/format.test.ts (15 tests) 32ms
+ ✓ src/auto-reply/reply/agent-runner.memory-flush.runreplyagent-memory-flush.uses-configured-prompts-memory-flush-runs.test.ts (2 tests) 68ms
+ ✓ src/agents/skills.build-workspace-skills-prompt.applies-bundled-allowlist-without-affecting-workspace-skills.test.ts (1 test) 72ms
+ ✓ src/infra/update-startup.test.ts (3 tests) 59ms
+ ✓ src/agents/tools/discord-actions.test.ts (28 tests) 15ms
+ ✓ src/auto-reply/reply/agent-runner.memory-flush.runreplyagent-memory-flush.increments-compaction-count-flush-compaction-completes.test.ts (1 test) 38ms
+stderr | src/memory/search-manager.test.ts > getMemorySearchManager caching > evicts failed qmd wrapper so next call retries qmd
+[31m[memory][39m [33mqmd memory failed; switching to builtin index: qmd query failed[39m
+
+stderr | src/memory/search-manager.test.ts > getMemorySearchManager caching > does not evict a newer cached wrapper when closing an older failed wrapper
+[31m[memory][39m [33mqmd memory failed; switching to builtin index: qmd query failed[39m
+
+stderr | src/memory/search-manager.test.ts > getMemorySearchManager caching > falls back to builtin search when qmd fails with sqlite busy
+[31m[memory][39m [33mqmd memory failed; switching to builtin index: qmd index busy while reading results: SQLITE_BUSY: database is locked[39m
+
+ ✓ src/agents/tools/web-fetch.ssrf.test.ts (5 tests) 29ms
+ ✓ src/memory/search-manager.test.ts (4 tests) 38ms
+stderr | src/auto-reply/reply/agent-runner.heartbeat-typing.runreplyagent-typing-heartbeat.retries-after-compaction-failure-by-resetting-session.test.ts > runReplyAgent typing (heartbeat) > retries after compaction failure by resetting the session
+Auto-compaction failed (Context overflow: Summarization failed: 400 {"message":"prompt is too long"}). Restarting session main -> 7c8134f1-eae8-4490-9e70-14a41dbc579e and retrying.
+
+stderr | src/auto-reply/reply/agent-runner.heartbeat-typing.runreplyagent-typing-heartbeat.retries-after-compaction-failure-by-resetting-session.test.ts > runReplyAgent typing (heartbeat) > retries after context overflow payload by resetting the session
+Auto-compaction failed (Context overflow: Summarization failed: 400 {"message":"prompt is too long"}). Restarting session main -> 71482089-aecf-4bb0-90df-f8b25eccfea6 and retrying.
+
+stderr | src/auto-reply/reply/agent-runner.heartbeat-typing.runreplyagent-typing-heartbeat.retries-after-compaction-failure-by-resetting-session.test.ts > runReplyAgent typing (heartbeat) > resets the session after role ordering payloads
+Role ordering conflict (messages: roles must alternate between "user" and "assistant"). Restarting session main -> 658a1061-b90f-4ca9-9f44-30fee93dfde8.
+
+ ✓ src/auto-reply/reply/agent-runner.heartbeat-typing.runreplyagent-typing-heartbeat.retries-after-compaction-failure-by-resetting-session.test.ts (3 tests) 47ms
+ ✓ src/slack/format.test.ts (18 tests) 28ms
+ ✓ src/agents/pi-embedded-subscribe.subscribe-embedded-pi-session.includes-canvas-action-metadata-tool-summaries.test.ts (3 tests) 20ms
+ ✓ src/auto-reply/reply/agent-runner.memory-flush.runreplyagent-memory-flush.skips-memory-flush-cli-providers.test.ts (1 test) 22ms
+ ✓ src/auto-reply/reply/commands-policy.test.ts (10 tests) 23ms
+ ✓ src/auto-reply/reply/route-reply.test.ts (16 tests) 25ms
+ ✓ src/hooks/soul-evil.test.ts (14 tests) 32ms
+ ✓ src/infra/format-time/format-time.test.ts (31 tests) 27ms
+ ✓ src/agents/pi-embedded-subscribe.subscribe-embedded-pi-session.waits-multiple-compaction-retries-before-resolving.test.ts (5 tests) 33ms
+ ✓ src/cron/schedule.test.ts (9 tests) 34ms
+ ✓ src/cli/pairing-cli.test.ts (7 tests) 60ms
+ ✓ src/hooks/frontmatter.test.ts (20 tests) 23ms
+ ✓ src/agents/tools/cron-tool.test.ts (25 tests) 20ms
+stdout | src/telegram/send.video-note.test.ts > sendMessageTelegram video notes > sends video as video note when asVideoNote is true
+[34m[telegram][39m [36mautoSelectFamily=false (default-node22)[39m
+
+ ✓ src/telegram/send.video-note.test.ts (4 tests) 32ms
+ ✓ src/agents/system-prompt-params.test.ts (5 tests) 21ms
+stdout | src/agents/auth-profiles/oauth.fallback-to-main-agent.test.ts > resolveApiKeyForProfile fallback to main agent > falls back to main agent credentials when secondary agent token is expired and refresh fails
+[33m[agents/auth-profiles][39m [36minherited fresh OAuth credentials from main agent[39m
+
+ ✓ src/agents/tools/sessions-announce-target.test.ts (2 tests) 20ms
+ ✓ src/agents/auth-profiles/oauth.fallback-to-main-agent.test.ts (2 tests) 30ms
+ ✓ src/hooks/internal-hooks.test.ts (18 tests) 25ms
+ ✓ src/infra/heartbeat-active-hours.test.ts (7 tests) 21ms
+stderr | src/auto-reply/reply/agent-runner.heartbeat-typing.runreplyagent-typing-heartbeat.resets-corrupted-gemini-sessions-deletes-transcripts.test.ts > runReplyAgent typing (heartbeat) > resets corrupted Gemini sessions and deletes transcripts
+Session history corrupted (Gemini function call ordering). Resetting session: main
+
+stderr | src/auto-reply/reply/agent-runner.heartbeat-typing.runreplyagent-typing-heartbeat.resets-corrupted-gemini-sessions-deletes-transcripts.test.ts > runReplyAgent typing (heartbeat) > keeps sessions intact on other errors
+Embedded agent failed before reply: INVALID_ARGUMENT: some other failure
+
+stderr | src/auto-reply/reply/agent-runner.heartbeat-typing.runreplyagent-typing-heartbeat.resets-corrupted-gemini-sessions-deletes-transcripts.test.ts > runReplyAgent typing (heartbeat) > returns friendly message for role ordering errors thrown as exceptions
+Embedded agent failed before reply: 400 Incorrect role information
+
+stderr | src/auto-reply/reply/agent-runner.heartbeat-typing.runreplyagent-typing-heartbeat.resets-corrupted-gemini-sessions-deletes-transcripts.test.ts > runReplyAgent typing (heartbeat) > returns friendly message for 'roles must alternate' errors thrown as exceptions
+Embedded agent failed before reply: messages: roles must alternate between "user" and "assistant"
+
+ ✓ src/auto-reply/reply/agent-runner.heartbeat-typing.runreplyagent-typing-heartbeat.resets-corrupted-gemini-sessions-deletes-transcripts.test.ts (4 tests) 29ms
+ ✓ src/config/sessions.cache.test.ts (8 tests) 26ms
+ ✓ src/agents/tools/telegram-actions.test.ts (25 tests) 22ms
+ ✓ src/infra/archive.test.ts (3 tests) 24ms
+ ✓ src/agents/pi-tools.create-openclaw-coding-tools.adds-claude-style-aliases-schemas-without-dropping-f.test.ts (4 tests) 24ms
+ ✓ src/auto-reply/reply/abort.test.ts (5 tests) 22ms
+ ✓ src/memory/manager.vector-dedupe.test.ts (1 test) 26ms
+ ✓ src/agents/openclaw-tools.subagents.sessions-spawn-announces-agent-wait-lifecycle-events.test.ts (2 tests) 22ms
+ ✓ src/agents/session-write-lock.test.ts (8 tests) 27ms
+ ✓ src/infra/outbound/deliver.test.ts (12 tests) 28ms
+ ✓ src/cron/service.skips-main-jobs-empty-systemevent-text.test.ts (3 tests) 22ms
+ ✓ src/auto-reply/reply/commands-approve.test.ts (5 tests) 19ms
+ ✓ src/commands/channels.adds-non-default-telegram-account.test.ts (16 tests) 17ms
+ ✓ src/agents/pi-embedded-subscribe.subscribe-embedded-pi-session.calls-onblockreplyflush-before-tool-execution-start-preserve.test.ts (2 tests) 26ms
+ ✓ src/web/auto-reply/monitor/message-line.test.ts (1 test) 20ms
+ ✓ src/cron/service.store-migration.test.ts (1 test) 19ms
+ ✓ src/web/session.test.ts (8 tests) 23ms
+stdout | src/web/login.coverage.test.ts > loginWeb coverage > restarts once when WhatsApp requests code 515
+WhatsApp asked for a restart after pairing (code 515); creds are saved. Restarting connection once…
+
+stdout | src/web/login.coverage.test.ts > loginWeb coverage > restarts once when WhatsApp requests code 515
+✅ Linked after restart; web session ready.
+
+stdout | src/web/login.coverage.test.ts > loginWeb coverage > clears creds and throws when logged out
+Waiting for WhatsApp connection...
+
+stderr | src/web/login.coverage.test.ts > loginWeb coverage > clears creds and throws when logged out
+WhatsApp reported the session is logged out. Cleared cached web session; please rerun openclaw channels login and scan the QR again.
+
+stdout | src/web/login.coverage.test.ts > loginWeb coverage > formats and rethrows generic errors
+Waiting for WhatsApp connection...
+
+stderr | src/web/login.coverage.test.ts > loginWeb coverage > formats and rethrows generic errors
+WhatsApp Web connection ended before fully opening. formatted:Error: boom
+
+ ✓ src/web/login.coverage.test.ts (3 tests) 22ms
+ ✓ src/telegram/bot-message-context.sender-prefix.test.ts (3 tests) 19ms
+ ✓ src/tts/tts.test.ts (33 tests) 26ms
+ ✓ src/auto-reply/envelope.test.ts (12 tests) 30ms
+ ✓ src/web/auto-reply/heartbeat-runner.timestamp.test.ts (1 test) 27ms
+ ✓ src/line/flex-templates.test.ts (43 tests) 14ms
+ ✓ src/signal/monitor/event-handler.mention-gating.test.ts (7 tests) 29ms
+ ✓ src/cron/session-reaper.test.ts (14 tests) 25ms
+ ✓ src/agents/pi-embedded-subscribe.subscribe-embedded-pi-session.subscribeembeddedpisession.test.ts (13 tests) 20ms
+ ✓ src/utils.test.ts (25 tests) 17ms
+ ✓ src/infra/bonjour.test.ts (7 tests) 44ms
+ ✓ src/auto-reply/commands-registry.test.ts (16 tests) 19ms
+ ✓ src/plugins/discovery.test.ts (4 tests) 22ms
+stdout | src/logger.test.ts > logger helpers > only logs debug when verbose is enabled
+loud
+
+stdout | src/logger.test.ts > logger helpers > writes to configured log file at configured level
+hello
+
+stdout | src/logger.test.ts > logger helpers > filters messages below configured level
+info-only
+warn-only
+
+stdout | src/logger.test.ts > logger helpers > uses daily rolling default log file and prunes old ones
+roll-me
+
+ ✓ src/logger.test.ts (5 tests) 26ms
+ ✓ src/auto-reply/reply/agent-runner.heartbeat-typing.runreplyagent-typing-heartbeat.signals-typing-block-replies.test.ts (4 tests) 25ms
+ ✓ src/logging/console-capture.test.ts (6 tests) 21ms
+ ✓ src/agents/pi-embedded-runner/run.overflow-compaction.test.ts (8 tests) 17ms
+ ✓ src/signal/format.test.ts (6 tests) 22ms
+ ✓ src/agents/pi-embedded-subscribe.subscribe-embedded-pi-session.splits-long-single-line-fenced-blocks-reopen.test.ts (3 tests) 20ms
+ ✓ src/agents/tools/slack-actions.test.ts (22 tests) 12ms
+ ✓ src/cron/service.prevents-duplicate-timers.test.ts (1 test) 23ms
+ ✓ src/commands/sandbox.test.ts (19 tests) 14ms
+stdout | src/infra/heartbeat-runner.scheduler.test.ts > startHeartbeatRunner > updates scheduling when config changes without restart
+[36m[heartbeat][39m [36mstarted[39m
+
+ ✓ src/infra/heartbeat-runner.scheduler.test.ts (1 test) 21ms
+stderr | src/agents/pi-embedded-runner.google-sanitize-thinking.test.ts > sanitizeSessionHistory (google thinking) > sanitizes tool call ids for Google APIs
+[33m[agent/embedded][39m [33mgoogle turn ordering fixup: prepended user bootstrap (sessionId=session:google)[39m
+
+ ✓ src/agents/pi-embedded-runner.google-sanitize-thinking.test.ts (11 tests) 25ms
+ ✓ src/signal/monitor/event-handler.inbound-contract.test.ts (1 test) 15ms
+ ✓ src/discord/audit.test.ts (1 test) 25ms
+ ✓ src/agents/tools/web-tools.enabled-defaults.test.ts (21 tests) 13ms
+ ✓ src/infra/heartbeat-runner.sender-prefers-delivery-target.test.ts (1 test) 19ms
+ ✓ src/auto-reply/chunk.test.ts (44 tests) 16ms
+ ✓ src/agents/tools/web-fetch.firecrawl-api-key-normalization.test.ts (1 test) 29ms
+│
+◇  Config ───────────────────────────────────────────────────╮
+│                                                            │
+│  Config invalid; doctor will run with best-effort config.  │
+│                                                            │
+├────────────────────────────────────────────────────────────╯
+│
+◇  Config ───────────────────────────────────────────────────╮
+│                                                            │
+│  Config invalid; doctor will run with best-effort config.  │
+│                                                            │
+├────────────────────────────────────────────────────────────╯
+│
+◇  Doctor changes ───────╮
+│                        │
+│  - gateway.auth.extra  │
+│  - bridge              │
+│                        │
+├────────────────────────╯
+ ✓ src/commands/doctor-config-flow.test.ts (2 tests) 24ms
+ ✓ src/auto-reply/reply/dispatch-from-config.test.ts (12 tests) 20ms
+ ✓ src/infra/outbound/message-action-runner.threading.test.ts (6 tests) 29ms
+ ✓ src/config/plugin-auto-enable.test.ts (10 tests) 24ms
+ ✓ src/cron/service.store.migration.test.ts (2 tests) 20ms
+ ✓ src/agents/openclaw-tools.subagents.sessions-spawn-resolves-main-announce-target-from.test.ts (2 tests) 18ms
+ ✓ src/infra/retry.test.ts (8 tests) 16ms
+ ✓ src/cron/run-log.test.ts (3 tests) 14ms
+stdout | src/web/auto-reply/monitor/process-message.inbound-contract.test.ts > web processMessage inbound contract > passes a finalized MsgContext to the dispatcher
+[35m[whatsapp][39m [36mInbound message 123@g.us -> +15550001111 (group, 55 chars)[39m
+
+ ✓ src/web/auto-reply/monitor/process-message.inbound-contract.test.ts (1 test) 16ms
+ ✓ src/agents/openclaw-tools.subagents.sessions-spawn-applies-model-child-session.test.ts (4 tests) 13ms
+stderr | src/agents/pi-tools.before-tool-call.test.ts > before_tool_call hook integration > continues execution when hook throws
+[33m[agents/tools][39m [33mbefore_tool_call hook failed: tool=read toolCallId=call-4 error=Error: boom[39m
+
+ ✓ src/agents/pi-tools.before-tool-call.test.ts (6 tests) 18ms
+ ✓ src/telegram/bot-message-context.dm-topic-threadid.test.ts (3 tests) 27ms
+stderr | src/logging/console-settings.test.ts > getConsoleSettings > does not recurse when loadConfig logs during resolution
+2026-02-12T02:34:54.494Z config load failed
+
+ ✓ src/logging/console-settings.test.ts (2 tests) 24ms
+ ✓ src/telegram/send.proxy.test.ts (3 tests) 20ms
+ ✓ src/config/config.identity-avatar.test.ts (3 tests) 15ms
+ ✓ src/agents/openclaw-tools.subagents.sessions-spawn-normalizes-allowlisted-agent-ids.test.ts (4 tests) 20ms
+ ✓ src/agents/openclaw-tools.subagents.sessions-spawn-prefers-per-agent-subagent-model.test.ts (3 tests) 9ms
+ ✓ src/memory/batch-voyage.test.ts (2 tests) 13ms
+ ✓ src/memory/session-files.test.ts (3 tests) 9ms
+ ✓ src/commands/onboard-custom.test.ts (12 tests) 14ms
+ ✓ src/agents/session-file-repair.test.ts (4 tests) 12ms
+ ✓ src/cron/service.delivery-plan.test.ts (2 tests) 16ms
+ ✓ src/slack/monitor/message-handler/prepare.sender-prefix.test.ts (2 tests) 17ms
+ ✓ src/markdown/frontmatter.test.ts (5 tests) 14ms
+ ✓ src/agents/pi-embedded-utils.test.ts (43 tests) 12ms
+ ✓ src/browser/profiles.test.ts (28 tests) 13ms
+ ✓ src/discord/monitor/message-handler.process.test.ts (2 tests) 15ms
+ ✓ src/auto-reply/reply/line-directives.test.ts (36 tests) 16ms
+ ✓ src/tui/components/searchable-select-list.test.ts (13 tests) 12ms
+ ✓ src/web/qr-image.test.ts (2 tests) 11ms
+stdout | src/agents/openclaw-gateway-tool.test.ts > gateway tool > schedules SIGUSR1 restart
+gateway tool: restart requested (delayMs=0, reason=none)
+
+ ✓ src/agents/openclaw-gateway-tool.test.ts (4 tests) 16ms
+ ✓ src/commands/health.snapshot.test.ts (6 tests) 15ms
+ ✓ src/config/config.irc.test.ts (7 tests) 16ms
+ ✓ src/agents/pi-embedded-subscribe.subscribe-embedded-pi-session.does-not-call-onblockreplyflush-callback-is-not.test.ts (1 test) 13ms
+ ✓ src/config/includes.test.ts (25 tests) 15ms
+ ✓ src/auto-reply/reply/typing.test.ts (17 tests) 12ms
+stderr | src/auto-reply/reply/agent-runner.heartbeat-typing.runreplyagent-typing-heartbeat.still-replies-even-if-session-reset-fails.test.ts > runReplyAgent typing (heartbeat) > still replies even if session reset fails to persist
+Session history corrupted (Gemini function call ordering). Resetting session: main
+
+ ✓ src/auto-reply/reply/agent-runner.heartbeat-typing.runreplyagent-typing-heartbeat.still-replies-even-if-session-reset-fails.test.ts (2 tests) 18ms
+stderr | src/agents/pi-tool-definition-adapter.test.ts > pi tool definition adapter > wraps tool errors into a tool result
+[tools] boom failed: nope
+
+stderr | src/agents/pi-tool-definition-adapter.test.ts > pi tool definition adapter > normalizes exec tool aliases in error results
+[tools] exec failed: nope
+
+ ✓ src/agents/pi-tool-definition-adapter.test.ts (2 tests) 14ms
+ ✓ src/memory/embeddings-voyage.test.ts (4 tests) 11ms
+stdout | src/web/login.test.ts > web login > loginWeb waits for connection and closes
+Waiting for WhatsApp connection...
+
+stdout | src/web/login.test.ts > web login > loginWeb waits for connection and closes
+✅ Linked! Credentials saved for future sends.
+
+ ✓ src/web/login.test.ts (1 test) 15ms
+ ✓ src/slack/monitor/context.test.ts (7 tests) 11ms
+ ✓ src/plugins/voice-call.plugin.test.ts (6 tests) 14ms
+ ✓ src/config/paths.test.ts (9 tests) 15ms
+ ✓ src/auto-reply/reply/agent-runner.heartbeat-typing.runreplyagent-typing-heartbeat.signals-typing-normal-runs.test.ts (7 tests) 17ms
+ ✓ src/auto-reply/reply/commands-parsing.test.ts (8 tests) 12ms
+ ✓ src/media-understanding/providers/openai/audio.test.ts (2 tests) 8ms
+ ✓ src/media/fetch.test.ts (3 tests) 11ms
+ ✓ src/config/sessions/transcript.test.ts (6 tests) 16ms
+ ✓ src/media-understanding/runner.auto-audio.test.ts (2 tests) 14ms
+ ✓ src/browser/client.test.ts (6 tests) 15ms
+ ✓ src/agents/skills.summarize-skill-description.test.ts (1 test) 11ms
+ ✓ src/memory/internal.test.ts (10 tests) 26ms
+stderr | src/telegram/monitor.test.ts > monitorTelegramProvider (grammY) > retries on recoverable network errors
+Telegram network error: timeout; retrying in 0ms.
+
+ ✓ src/telegram/monitor.test.ts (5 tests) 16ms
+ ✓ src/commands/auth-choice.moonshot.test.ts (2 tests) 13ms
+│
+◇  Auth profiles ─────────────────────────────────────────────────────────╮
+│                                                                         │
+│  Deprecated external CLI auth profiles detected (no longer supported):  │
+│  - anthropic:claude-cli (Anthropic): use setup-token → openclaw models  │
+│    auth setup-token                                                     │
+│  - openai-codex:codex-cli (OpenAI Codex): use OAuth → openclaw models   │
+│    auth login --provider openai-codex                                   │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────╯
+│
+◇  Doctor changes ───────────────────────────────╮
+│                                                │
+│  - removed anthropic:claude-cli from config    │
+│  - removed openai-codex:codex-cli from config  │
+│                                                │
+├────────────────────────────────────────────────╯
+ ✓ src/commands/doctor-auth.deprecated-cli-profiles.test.ts (1 test) 12ms
+ ✓ src/line/markdown-to-line.test.ts (38 tests) 14ms
+ ✓ src/agents/pi-embedded-runner-extraparams.test.ts (4 tests) 11ms
+ ✓ src/auto-reply/reply/formatting.test.ts (18 tests) 13ms
+ ✓ src/auto-reply/reply/agent-runner.response-usage-footer.test.ts (2 tests) 10ms
+ ✓ src/daemon/schtasks.test.ts (17 tests) 14ms
+ ✓ src/infra/device-identity.state-dir.test.ts (1 test) 12ms
+ ✓ src/discord/monitor/agent-components.test.ts (3 tests) 11ms
+ ✓ src/agents/pi-embedded-runner/run/payloads.test.ts (12 tests) 13ms
+ ✓ src/media/mime.test.ts (12 tests) 14ms
+ ✓ src/telegram/sticker-cache.test.ts (17 tests) 11ms
+ ✓ src/agents/auth-profiles.chutes.test.ts (1 test) 10ms
+ ✓ src/config/slack-http-config.test.ts (4 tests) 10ms
+ ✓ src/infra/system-events.test.ts (2 tests) 11ms
+ ✓ src/channels/ack-reactions.test.ts (9 tests) 10ms
+ ✓ src/web/auto-reply/session-snapshot.test.ts (1 test) 10ms
+ ✓ src/scripts/canvas-a2ui-copy.test.ts (2 tests) 11ms
+ ✓ src/commands/agents.identity.test.ts (7 tests) 12ms
+ ✓ src/globals.test.ts (2 tests) 10ms
+ ✓ src/auto-reply/reply.triggers.trigger-handling.stages-inbound-media-into-sandbox-workspace.test.ts (1 test) 8ms
+ ✓ src/infra/unhandled-rejections.fatal-detection.test.ts (10 tests) 16ms
+ ✓ src/browser/pw-session.test.ts (6 tests) 12ms
+ ✓ src/infra/ports-inspect.test.ts (1 test) 13ms
+ ✓ src/agents/pi-embedded-subscribe.subscribe-embedded-pi-session.emits-reasoning-as-separate-message-enabled.test.ts (5 tests) 9ms
+ ✓ src/agents/pi-embedded-runner/run/images.test.ts (24 tests) 11ms
+ ✓ src/agents/openclaw-tools.camera.test.ts (3 tests) 14ms
+ ✓ src/auto-reply/reply/agent-runner.reasoning-tags.test.ts (2 tests) 14ms
+ ✓ src/cli/program.force.test.ts (6 tests) 12ms
+ ✓ src/browser/pw-tools-core.interactions.evaluate.abort.test.ts (2 tests) 11ms
+ ✓ src/agents/tools/browser-tool.test.ts (12 tests) 13ms
+ ✓ src/security/windows-acl.test.ts (26 tests) 13ms
+ ✓ src/media-understanding/providers/deepgram/audio.test.ts (2 tests) 13ms
+ ✓ src/commands/onboard-hooks.test.ts (6 tests) 11ms
+ ✓ src/link-understanding/detect.test.ts (4 tests) 5ms
+ ✓ src/agents/pi-embedded-subscribe.subscribe-embedded-pi-session.filters-final-suppresses-output-without-start-tag.test.ts (4 tests) 13ms
+ ✓ src/agents/auth-profiles.markauthprofilefailure.test.ts (3 tests) 10ms
+ ✓ src/security/external-content.test.ts (28 tests) 12ms
+ ✓ src/agents/session-tool-result-guard.test.ts (10 tests) 10ms
+ ✓ src/slack/monitor/slash.command-arg-menus.test.ts (5 tests) 14ms
+ ✓ src/plugins/cli.test.ts (1 test) 13ms
+ ✓ src/discord/api.test.ts (3 tests) 11ms
+ ✓ src/version.test.ts (4 tests) 12ms
+ ✓ src/telegram/model-buttons.test.ts (28 tests) 12ms
+ ✓ src/agents/pi-tools.whatsapp-login-gating.test.ts (3 tests) 10ms
+ ✓ src/line/template-messages.test.ts (35 tests) 12ms
+ ✓ src/agents/pi-embedded-runner/tool-result-truncation.test.ts (17 tests) 8ms
+ ✓ src/tui/tui-event-handlers.test.ts (10 tests) 9ms
+ ✓ src/telegram/bot-native-commands.test.ts (3 tests) 11ms
+ ✓ src/config/telegram-webhook-secret.test.ts (4 tests) 15ms
+ ✓ src/agents/apply-patch.test.ts (3 tests) 14ms
+ ✓ src/slack/monitor/slash.policy.test.ts (6 tests) 12ms
+ ✓ src/telegram/download.test.ts (2 tests) 16ms
+ ✓ src/agents/pi-embedded-subscribe.reply-tags.test.ts (3 tests) 13ms
+ ✓ src/agents/tools/discord-actions-presence.test.ts (18 tests) 11ms
+ ✓ src/auto-reply/reply.directive.parse.test.ts (31 tests) 13ms
+ ✓ src/auto-reply/reply/agent-runner.block-streaming.test.ts (1 test) 12ms
+ ✓ src/channels/plugins/actions/telegram.test.ts (6 tests) 9ms
+ ✓ src/auto-reply/reply/agent-runner.authprofileid-fallback.test.ts (1 test) 11ms
+ ✓ src/auto-reply/reply/directive-handling.model.test.ts (5 tests) 10ms
+ ✓ src/browser/server-context.ensure-tab-available.prefers-last-target.test.ts (3 tests) 10ms
+ ✓ src/agents/memory-search.test.ts (11 tests) 10ms
+ ✓ src/agents/pi-embedded-subscribe.subscribe-embedded-pi-session.does-not-emit-duplicate-block-replies-text.test.ts (5 tests) 10ms
+ ✓ src/agents/model-scan.test.ts (2 tests) 10ms
+ ✓ src/config/redact-snapshot.test.ts (25 tests) 12ms
+ ✓ src/agents/auth-health.test.ts (2 tests) 13ms
+ ✓ src/telegram/audit.test.ts (3 tests) 13ms
+ ✓ src/providers/google-shared.preserves-parameters-type-is-missing.test.ts (9 tests) 11ms
+ ✓ src/agents/sessions-spawn-threadid.test.ts (2 tests) 8ms
+ ✓ src/agents/chutes-oauth.test.ts (2 tests) 8ms
+ ✓ src/daemon/service-env.test.ts (17 tests) 11ms
+ ✓ src/browser/config.test.ts (12 tests) 8ms
+ ✓ src/commands/doctor-security.test.ts (4 tests) 9ms
+ ✓ src/config/ui-seam-color.test.ts (3 tests) 8ms
+ ✓ src/media-understanding/runner.deepgram.test.ts (1 test) 12ms
+ ✓ src/cli/nodes-camera.test.ts (5 tests) 11ms
+ ✓ src/config/config.tools-alsoAllow.test.ts (3 tests) 9ms
+ ✓ src/agents/pi-embedded-subscribe.subscribe-embedded-pi-session.streams-soft-chunks-paragraph-preference.test.ts (2 tests) 11ms
+ ✓ src/browser/routes/dispatcher.abort.test.ts (1 test) 8ms
+ ✓ src/browser/profiles-service.test.ts (4 tests) 8ms
+ ✓ src/agents/openclaw-tools.subagents.sessions-spawn-allows-cross-agent-spawning-configured.test.ts (2 tests) 10ms
+ ✓ src/routing/resolve-route.test.ts (20 tests) 8ms
+ ✓ src/discord/resolve-channels.test.ts (2 tests) 9ms
+ ✓ src/auto-reply/reply.triggers.trigger-handling.stages-inbound-media-into-sandbox-workspace.security.test.ts (1 test) 12ms
+ ✓ src/cron/store.test.ts (3 tests) 10ms
+ ✓ src/auto-reply/thinking.test.ts (15 tests) 7ms
+ ✓ src/infra/voicewake.test.ts (3 tests) 6ms
+ ✓ src/media/parse.test.ts (14 tests) 9ms
+ ✓ src/agents/pi-embedded-runner.get-dm-history-limit-from-session-key.returns-undefined-sessionkey-is-undefined.test.ts (14 tests) 7ms
+ ✓ src/agents/openclaw-tools.subagents.sessions-spawn-applies-thinking-default.test.ts (2 tests) 8ms
+ ✓ src/config/slack-token-validation.test.ts (2 tests) 11ms
+ ✓ src/commands/onboarding/plugin-install.test.ts (5 tests) 11ms
+ ✓ src/cli/logs-cli.test.ts (9 tests) 12ms
+ ✓ src/agents/pi-embedded-subscribe.subscribe-embedded-pi-session.reopens-fenced-blocks-splitting-inside-them.test.ts (2 tests) 11ms
+ ✓ src/agents/tools/message-tool.test.ts (9 tests) 9ms
+ ✓ src/config/env-substitution.test.ts (31 tests) 11ms
+ ✓ src/agents/pi-embedded-subscribe.subscribe-embedded-pi-session.keeps-indented-fenced-blocks-intact.test.ts (2 tests) 10ms
+ ✓ src/discord/targets.test.ts (11 tests) 11ms
+ ✓ src/agents/minimax-vlm.normalizes-api-key.test.ts (1 test) 9ms
+ ✓ src/line/webhook.test.ts (5 tests) 8ms
+ ✓ src/slack/actions.read.test.ts (2 tests) 8ms
+ ✓ src/agents/pi-embedded-runner/model.test.ts (10 tests) 8ms
+ ✓ src/infra/device-pairing.test.ts (1 test) 6ms
+ ✓ src/config/normalize-paths.test.ts (1 test) 7ms
+ ✓ src/agents/identity.per-channel-prefix.test.ts (23 tests) 8ms
+ ✓ src/commands/sandbox-formatters.test.ts (20 tests) 7ms
+ ✓ src/config/config.telegram-custom-commands.test.ts (2 tests) 11ms
+ ✓ src/commands/health.test.ts (3 tests) 8ms
+ ✓ src/agents/pi-embedded-helpers.validate-turns.test.ts (17 tests) 8ms
+ ✓ src/shared/text/reasoning-tags.test.ts (39 tests) 12ms
+ ✓ src/terminal/table.test.ts (5 tests) 7ms
+ ✓ src/media/host.test.ts (3 tests) 9ms
+ ✓ src/channels/plugins/directory-config.test.ts (4 tests) 8ms
+ ✓ src/infra/exec-approval-forwarder.test.ts (5 tests) 8ms
+ ✓ src/providers/github-copilot-token.test.ts (3 tests) 7ms
+ ✓ src/infra/binaries.test.ts (2 tests) 8ms
+ ✓ src/agents/identity-avatar.test.ts (4 tests) 10ms
+ ✓ src/telegram/update-offset-store.test.ts (1 test) 9ms
+ ✓ src/cron/cron-protocol-conformance.test.ts (2 tests) 8ms
+ ✓ src/commands/health.command.coverage.test.ts (1 test) 7ms
+stdout | src/web/login-qr.test.ts > login-qr > restarts login once on status 515 and completes
+WhatsApp QR received.
+
+stdout | src/web/login-qr.test.ts > login-qr > restarts login once on status 515 and completes
+WhatsApp asked for a restart after pairing (code 515); retrying connection once…
+
+stdout | src/web/login-qr.test.ts > login-qr > restarts login once on status 515 and completes
+✅ Linked! WhatsApp is ready.
+
+ ✓ src/web/login-qr.test.ts (1 test) 10ms
+ ✓ src/agents/workspace.defaults.test.ts (1 test) 8ms
+ ✓ src/cli/browser-cli-inspect.test.ts (2 tests) 11ms
+ ✓ src/agents/pi-embedded-subscribe.subscribe-embedded-pi-session.keeps-assistanttexts-final-answer-block-replies-are.test.ts (2 tests) 10ms
+ ✓ src/infra/restart-sentinel.test.ts (3 tests) 8ms
+ ✓ src/telegram/bot/helpers.test.ts (24 tests) 9ms
+ ✓ src/agents/pi-extensions/compaction-safeguard.test.ts (17 tests) 9ms
+ ✓ src/agents/openclaw-tools.agents.test.ts (4 tests) 10ms
+ ✓ src/auto-reply/model.test.ts (21 tests) 6ms
+ ✓ src/agents/tools/web-search.test.ts (26 tests) 10ms
+stderr | src/commands/sessions.test.ts > sessionsCommand > renders a tabular view with token percentages
+[openclaw] Model "pi:opus" specified without provider. Falling back to "anthropic/pi:opus". Please use "anthropic/pi:opus" in your config.
+
+stderr | src/commands/sessions.test.ts > sessionsCommand > shows placeholder rows when tokens are missing
+[openclaw] Model "pi:opus" specified without provider. Falling back to "anthropic/pi:opus". Please use "anthropic/pi:opus" in your config.
+
+ ✓ src/commands/sessions.test.ts (2 tests) 10ms
+ ✓ src/commands/channels/capabilities.test.ts (2 tests) 8ms
+ ✓ src/tui/tui-command-handlers.test.ts (1 test) 7ms
+ ✓ src/auto-reply/reply/agent-runner.claude-cli.test.ts (1 test) 9ms
+ ✓ src/web/inbound/access-control.pairing-history.test.ts (2 tests) 8ms
+ ✓ src/daemon/constants.test.ts (35 tests) 9ms
+ ✓ src/agents/pi-extensions/context-pruning.test.ts (11 tests) 8ms
+ ✓ src/commands/onboard-helpers.test.ts (9 tests) 9ms
+ ✓ src/agents/model-selection.test.ts (11 tests) 10ms
+ ✓ src/discord/chunk.test.ts (10 tests) 9ms
+ ✓ src/infra/bonjour-discovery.test.ts (4 tests) 12ms
+ ✓ src/media-understanding/resolve.test.ts (6 tests) 6ms
+ ✓ src/agents/tool-display.test.ts (3 tests) 6ms
+ ✓ src/commands/model-picker.test.ts (7 tests) 9ms
+ ✓ src/agents/workspace.test.ts (4 tests) 12ms
+ ✓ src/infra/path-env.test.ts (4 tests) 12ms
+ ✓ src/line/probe.test.ts (2 tests) 6ms
+ ✓ src/cron/normalize.test.ts (15 tests) 10ms
+ ✓ src/agents/pi-tools.create-openclaw-coding-tools.adds-claude-style-aliases-schemas-without-dropping-b.test.ts (6 tests) 12ms
+ ✓ src/config/config.web-search-provider.test.ts (1 test) 6ms
+ ✓ src/cli/browser-cli.test.ts (3 tests) 7ms
+ ✓ src/agents/tools/common.test.ts (11 tests) 7ms
+ ✓ src/media/store.header-ext.test.ts (1 test) 9ms
+ ✓ src/agents/pi-embedded-subscribe.subscribe-embedded-pi-session.emits-block-replies-text-end-does-not.test.ts (2 tests) 9ms
+ ✓ src/hooks/gmail.test.ts (8 tests) 7ms
+ ✓ src/infra/runtime-guard.test.ts (5 tests) 8ms
+ ✓ src/agents/auth-profiles.ensureauthprofilestore.test.ts (2 tests) 6ms
+ ✓ src/agents/pi-embedded-subscribe.code-span-awareness.test.ts (3 tests) 6ms
+ ✓ src/agents/auth-profiles/session-override.test.ts (1 test) 12ms
+ ✓ src/commands/auth-choice.default-model.test.ts (3 tests) 11ms
+ ✓ src/agents/channel-tools.test.ts (1 test) 5ms
+ ✓ src/line/reply-chunks.test.ts (3 tests) 9ms
+ ✓ src/infra/heartbeat-visibility.test.ts (13 tests) 7ms
+ ✓ src/telegram/bot-message-dispatch.test.ts (1 test) 8ms
+ ✓ src/infra/brew.test.ts (3 tests) 15ms
+ ✓ src/agents/workspace-run.test.ts (8 tests) 7ms
+ ✓ src/auto-reply/heartbeat.test.ts (20 tests) 7ms
+ ✓ src/channels/channel-config.test.ts (13 tests) 8ms
+ ✓ src/line/accounts.test.ts (14 tests) 8ms
+ ✓ src/line/rich-menu.test.ts (20 tests) 8ms
+ ✓ src/infra/net/ssrf.pinning.test.ts (3 tests) 6ms
+ ✓ src/providers/qwen-portal-oauth.test.ts (3 tests) 8ms
+ ✓ src/web/inbound.test.ts (14 tests) 8ms
+ ✓ src/telegram/bot-native-commands.plugin-auth.test.ts (1 test) 12ms
+ ✓ src/wizard/onboarding.completion.test.ts (2 tests) 6ms
+ ✓ src/line/send.test.ts (9 tests) 7ms
+ ✓ src/agents/sandbox-explain.test.ts (4 tests) 7ms
+ ✓ src/agents/pi-embedded-subscribe.subscribe-embedded-pi-session.does-not-duplicate-text-end-repeats-full.test.ts (2 tests) 8ms
+ ✓ src/discord/monitor.gateway.test.ts (4 tests) 9ms
+ ✓ src/slack/monitor.test.ts (15 tests) 7ms
+ ✓ src/auto-reply/reply/response-prefix-template.test.ts (27 tests) 9ms
+ ✓ src/commands/configure.wizard.test.ts (2 tests) 5ms
+ ✓ src/infra/dotenv.test.ts (2 tests) 7ms
+ ✓ src/agents/opencode-zen-models.test.ts (11 tests) 10ms
+ ✓ src/channels/plugins/actions/signal.test.ts (9 tests) 10ms
+ ✓ src/agents/tool-call-id.test.ts (7 tests) 9ms
+ ✓ src/agents/bedrock-discovery.test.ts (5 tests) 7ms
+ ✓ src/docs/slash-commands-doc.test.ts (1 test) 5ms
+ ✓ src/infra/outbound/targets.test.ts (15 tests) 8ms
+ ✓ src/telegram/targets.test.ts (11 tests) 7ms
+ ✓ src/process/spawn-utils.test.ts (2 tests) 7ms
+ ✓ src/config/config.skills-entries-config.test.ts (2 tests) 7ms
+ ✓ src/agents/session-transcript-repair.test.ts (10 tests) 8ms
+ ✓ src/infra/shell-env.test.ts (4 tests) 6ms
+ ✓ src/agents/tools/memory-tool.citations.test.ts (5 tests) 7ms
+ ✓ src/agents/compaction.test.ts (10 tests) 8ms
+ ✓ src/agents/tools/memory-tool.does-not-crash-on-errors.test.ts (2 tests) 7ms
+ ✓ src/infra/agent-events.test.ts (3 tests) 5ms
+ ✓ src/agents/models-config.providers.ollama.test.ts (8 tests) 9ms
+ ✓ src/telegram/token.test.ts (6 tests) 5ms
+ ✓ src/daemon/service-audit.test.ts (3 tests) 7ms
+ ✓ src/commands/daemon-install-helpers.test.ts (8 tests) 7ms
+ ✓ src/tui/tui-formatters.test.ts (8 tests) 6ms
+ ✓ src/infra/ssh-config.test.ts (3 tests) 8ms
+ ✓ src/agents/auth-profiles.resolve-auth-profile-order.does-not-prioritize-lastgood-round-robin-ordering.test.ts (10 tests) 8ms
+ ✓ src/auto-reply/reply/memory-flush.test.ts (10 tests) 4ms
+ ✓ src/tui/tui.submit-handler.test.ts (4 tests) 5ms
+ ✓ src/slack/http/registry.test.ts (5 tests) 6ms
+ ✓ src/telegram/network-errors.test.ts (11 tests) 5ms
+ ✓ src/cli/argv.test.ts (11 tests) 6ms
+ ✓ src/agents/bash-process-registry.test.ts (5 tests) 6ms
+ ✓ src/commands/onboard-interactive.test.ts (2 tests) 7ms
+ ✓ src/agents/tools/whatsapp-actions.test.ts (5 tests) 7ms
+ ✓ src/commands/agent-via-gateway.test.ts (3 tests) 7ms
+ ✓ src/infra/outbound/outbound-session.test.ts (7 tests) 7ms
+ ✓ src/utils/transcript-tools.test.ts (7 tests) 6ms
+ ✓ src/commands/doctor-legacy-config.test.ts (6 tests) 6ms
+ ✓ src/cli/profile.test.ts (19 tests) 10ms
+ ✓ src/web/auto-reply/monitor/group-gating.test.ts (1 test) 6ms
+ ✓ src/agents/pi-embedded-subscribe.subscribe-embedded-pi-session.does-not-append-text-end-content-is.test.ts (3 tests) 10ms
+ ✓ src/auto-reply/reply/history.test.ts (7 tests) 5ms
+ ✓ src/tui/tui-input-history.test.ts (8 tests) 7ms
+ ✓ src/logging/redact.test.ts (9 tests) 10ms
+ ✓ src/agents/auth-profiles.resolve-auth-profile-order.uses-stored-profiles-no-config-exists.test.ts (7 tests) 7ms
+ ✓ src/agents/sandbox-create-args.test.ts (3 tests) 6ms
+ ✓ src/agents/workspace-templates.test.ts (1 test) 5ms
+ ✓ src/commands/agents.test.ts (4 tests) 8ms
+ ✓ src/web/accounts.whatsapp-auth.test.ts (4 tests) 6ms
+ ✓ src/agents/tools/sessions-helpers.test.ts (4 tests) 6ms
+ ✓ src/channels/typing.test.ts (3 tests) 7ms
+ ✓ src/discord/gateway-logging.test.ts (3 tests) 5ms
+ ✓ src/commands/onboard-skills.test.ts (2 tests) 6ms
+ ✓ src/plugins/slots.test.ts (4 tests) 6ms
+ ✓ src/agents/pi-embedded-helpers.sanitize-session-messages-images.removes-empty-assistant-text-blocks-but-preserves.test.ts (6 tests) 7ms
+ ✓ src/agents/agent-paths.test.ts (2 tests) 9ms
+ ✓ src/auto-reply/tool-meta.test.ts (6 tests) 7ms
+ ✓ src/channels/plugins/outbound/telegram.test.ts (2 tests) 8ms
+ ✓ src/browser/pw-role-snapshot.test.ts (7 tests) 8ms
+ ✓ src/line/auto-reply-delivery.test.ts (3 tests) 6ms
+ ✓ src/cli/hooks-cli.test.ts (3 tests) 5ms
+ ✓ src/whatsapp/normalize.test.ts (8 tests) 6ms
+ ✓ src/commands/channels.surfaces-signal-runtime-errors-channels-status-output.test.ts (2 tests) 5ms
+ ✓ src/agents/tools/sessions-send-tool.gating.test.ts (1 test) 5ms
+ ✓ src/agents/pi-embedded-block-chunker.test.ts (6 tests) 6ms
+ ✓ src/utils/delivery-context.test.ts (5 tests) 6ms
+ ✓ src/discord/monitor/exec-approvals.test.ts (17 tests) 10ms
+ ✓ src/daemon/runtime-paths.test.ts (5 tests) 6ms
+ ✓ src/agents/tool-policy.plugin-only-allowlist.test.ts (6 tests) 6ms
+ ✓ src/agents/models-config.providers.qianfan.test.ts (1 test) 5ms
+ ✓ src/commands/openai-model-default.test.ts (4 tests) 6ms
+ ✓ src/infra/retry-policy.test.ts (1 test) 6ms
+ ✓ src/agents/skills/bundled-dir.test.ts (1 test) 6ms
+ ✓ src/commands/agents.add.test.ts (3 tests) 8ms
+ ✓ src/agents/pi-embedded-runner.applygoogleturnorderingfix.test.ts (2 tests) 5ms
+ ✓ src/macos/relay-smoke.test.ts (5 tests) 9ms
+ ✓ src/index.test.ts (6 tests) 5ms
+ ✓ src/tui/tui-session-actions.test.ts (1 test) 6ms
+ ✓ src/web/accounts.test.ts (4 tests) 5ms
+ ✓ src/agents/cache-trace.test.ts (4 tests) 5ms
+ ✓ src/commands/auth-choice-options.test.ts (13 tests) 5ms
+ ✓ src/infra/system-presence.test.ts (2 tests) 5ms
+ ✓ src/browser/chrome.default-browser.test.ts (2 tests) 7ms
+ ✓ src/memory/backend-config.test.ts (5 tests) 7ms
+ ✓ src/providers/google-shared.ensures-function-call-comes-after-user-turn.test.ts (2 tests) 6ms
+ ✓ src/agents/pi-embedded-runner.limithistoryturns.test.ts (9 tests) 7ms
+ ✓ src/web/reconnect.test.ts (4 tests) 7ms
+ ✓ src/infra/outbound/format.test.ts (7 tests) 6ms
+ ✓ src/commands/doctor-platform-notes.launchctl-env-overrides.test.ts (3 tests) 5ms
+ ✓ src/config/agent-dirs.test.ts (2 tests) 5ms
+ ✓ src/agents/pi-embedded-helpers.sanitizeuserfacingtext.test.ts (11 tests) 9ms
+ ✓ src/wizard/session.test.ts (3 tests) 6ms
+ ✓ src/discord/monitor/threading.test.ts (7 tests) 6ms
+ ✓ src/agents/auth-profiles.resolve-auth-profile-order.orders-by-lastused-no-explicit-order-exists.test.ts (2 tests) 5ms
+ ✓ src/config/runtime-overrides.test.ts (4 tests) 5ms
+ ✓ src/infra/channel-activity.test.ts (2 tests) 6ms
+ ✓ src/infra/fetch.test.ts (2 tests) 6ms
+ ✓ src/config/model-alias-defaults.test.ts (5 tests) 6ms
+ ✓ src/discord/pluralkit.test.ts (3 tests) 5ms
+ ✓ src/media-understanding/attachments.ssrf.test.ts (1 test) 6ms
+ ✓ src/memory/hybrid.test.ts (4 tests) 5ms
+ ✓ src/agents/pi-embedded-helpers.buildbootstrapcontextfiles.test.ts (4 tests) 5ms
+ ✓ src/telegram/voice.test.ts (3 tests) 6ms
+ ✓ src/infra/outbound/agent-delivery.test.ts (3 tests) 6ms
+ ✓ src/channels/plugins/actions/discord/handle-action.test.ts (1 test) 6ms
+ ✓ src/commands/opencode-zen-model-default.test.ts (5 tests) 5ms
+ ✓ src/infra/outbound/target-resolver.test.ts (2 tests) 5ms
+ ✓ src/imessage/targets.test.ts (10 tests) 7ms
+ ✓ src/agents/model-catalog.test.ts (2 tests) 6ms
+ ✓ src/discord/monitor/allow-list.test.ts (4 tests) 5ms
+ ✓ src/signal/monitor.test.ts (6 tests) 4ms
+ ✓ src/agents/tool-policy.test.ts (3 tests) 4ms
+ ✓ src/agents/usage.test.ts (6 tests) 5ms
+(node:382965) [OPENCLAW_TEST_WARNING] Warning: Visible warning
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ src/infra/warning-filter.test.ts (3 tests) 6ms
+ ✓ src/infra/restart.test.ts (2 tests) 7ms
+ ✓ src/agents/agent-scope.test.ts (10 tests) 7ms
+ ✓ src/infra/unhandled-rejections.test.ts (19 tests) 5ms
+ ✓ src/agents/pi-embedded-helpers.formatassistanterrortext.test.ts (10 tests) 7ms
+ ✓ src/slack/monitor/channel-config.test.ts (5 tests) 5ms
+ ✓ src/daemon/systemd.test.ts (10 tests) 5ms
+ ✓ src/cron/service.jobs.test.ts (3 tests) 6ms
+ ✓ src/channels/command-gating.test.ts (8 tests) 4ms
+ ✓ src/agents/pi-embedded-helpers.ismessagingtoolduplicate.test.ts (8 tests) 6ms
+ ✓ src/wizard/onboarding.gateway-config.test.ts (1 test) 5ms
+ ✓ src/telegram/sent-message-cache.test.ts (3 tests) 4ms
+ ✓ src/slack/targets.test.ts (6 tests) 7ms
+ ✓ src/auto-reply/reply/agent-runner-utils.test.ts (6 tests) 5ms
+ ✓ src/channels/targets.test.ts (4 tests) 6ms
+ ✓ src/agents/bootstrap-files.test.ts (2 tests) 9ms
+ ✓ src/pairing/pairing-messages.test.ts (6 tests) 5ms
+ ✓ src/infra/outbound/outbound-policy.test.ts (4 tests) 5ms
+ ✓ src/cli/nodes-screen.test.ts (3 tests) 5ms
+ ✓ src/channels/plugins/slack.actions.test.ts (1 test) 5ms
+ ✓ src/agents/pi-embedded-runner.splitsdktools.test.ts (2 tests) 5ms
+ ✓ src/agents/pi-embedded-helpers.stripthoughtsignatures.test.ts (6 tests) 6ms
+ ✓ src/agents/context-window-guard.test.ts (9 tests) 5ms
+ ✓ src/agents/session-slug.test.ts (3 tests) 5ms
+ ✓ src/acp/session-mapper.test.ts (2 tests) 6ms
+ ✓ src/agents/pi-tools.policy.test.ts (4 tests) 4ms
+ ✓ src/agents/auth-profiles.resolve-auth-profile-order.normalizes-z-ai-aliases-auth-order.test.ts (4 tests) 5ms
+ ✓ src/agents/pi-embedded-helpers.sanitizetoolcallid.test.ts (8 tests) 5ms
+ ✓ src/infra/outbound/payloads.test.ts (5 tests) 6ms
+ ✓ src/logging/console-prefix.test.ts (5 tests) 4ms
+ ✓ src/cli/cron-cli/shared.test.ts (2 tests) 6ms
+ ✓ src/slack/threading-tool-context.test.ts (7 tests) 5ms
+ ✓ src/channels/plugins/config-writes.test.ts (4 tests) 3ms
+ ✓ src/media-understanding/runner.vision-skip.test.ts (1 test) 7ms
+ ✓ src/acp/session.test.ts (1 test) 4ms
+ ✓ src/tui/tui-waiting.test.ts (2 tests) 4ms
+ ✓ src/agents/failover-error.test.ts (6 tests) 6ms
+ ✓ src/agents/pi-settings.test.ts (4 tests) 6ms
+ ✓ src/auto-reply/reply/subagents-utils.test.ts (5 tests) 5ms
+ ✓ src/infra/update-check.test.ts (2 tests) 5ms
+ ✓ src/polls.test.ts (3 tests) 5ms
+ ✓ src/commands/dashboard.test.ts (3 tests) 7ms
+ ✓ src/slack/monitor/thread-resolution.test.ts (1 test) 4ms
+ ✓ src/cli/progress.test.ts (2 tests) 5ms
+ ✓ src/tui/commands.test.ts (3 tests) 6ms
+ ✓ src/agents/pi-embedded-runner/run/attempt.test.ts (3 tests) 6ms
+ ✓ src/cli/wait.test.ts (1 test) 5ms
+ ✓ src/auto-reply/reply/model-selection.inherit-parent.test.ts (6 tests) 6ms
+ ✓ src/telegram/reaction-level.test.ts (7 tests) 6ms
+ ✓ src/telegram/group-migration.test.ts (4 tests) 5ms
+ ✓ src/config/config-paths.test.ts (2 tests) 5ms
+ ✓ src/infra/node-shell.test.ts (4 tests) 5ms
+ ✓ src/telegram/inline-buttons.test.ts (6 tests) 5ms
+ ✓ src/agents/pi-embedded-helpers.classifyfailoverreason.test.ts (2 tests) 5ms
+ ✓ src/telegram/network-config.test.ts (5 tests) 6ms
+ ✓ src/channels/mention-gating.test.ts (5 tests) 4ms
+ ✓ src/line/signature.test.ts (3 tests) 4ms
+ ✓ src/infra/diagnostic-flags.test.ts (3 tests) 5ms
+ ✓ src/config/sessions/reset.test.ts (4 tests) 4ms
+ ✓ src/channels/location.test.ts (4 tests) 5ms
+ ✓ src/infra/tailnet.test.ts (1 test) 3ms
+ ✓ src/tui/tui-overlays.test.ts (2 tests) 5ms
+ ✓ src/sessions/send-policy.test.ts (4 tests) 5ms
+ ✓ src/terminal/stream-writer.test.ts (2 tests) 4ms
+ ✓ src/agents/pi-embedded-runner.buildembeddedsandboxinfo.test.ts (3 tests) 4ms
+ ✓ src/agents/pi-embedded-subscribe.tools.test.ts (2 tests) 3ms
+ ✓ src/infra/outbound/envelope.test.ts (4 tests) 3ms
+ ✓ src/infra/shell-env.path.test.ts (3 tests) 4ms
+ ✓ src/agents/pi-embedded-runner.resolvesessionagentids.test.ts (5 tests) 4ms
+ ✓ src/agents/model-compat.test.ts (3 tests) 4ms
+ ✓ src/plugins/config-state.test.ts (7 tests) 5ms
+ ✓ src/channels/web/index.test.ts (1 test) 4ms
+ ✓ src/channels/plugins/normalize/signal.test.ts (5 tests) 5ms
+ ✓ src/channels/sender-identity.test.ts (3 tests) 5ms
+ ✓ src/agents/tools/sessions-list-tool.gating.test.ts (1 test) 6ms
+ ✓ src/agents/pi-embedded-helpers.isautherrormessage.test.ts (3 tests) 3ms
+ ✓ src/agents/skills.resolveskillspromptforrun.test.ts (2 tests) 4ms
+ ✓ src/cli/parse-duration.test.ts (6 tests) 4ms
+ ✓ src/telegram/accounts.test.ts (4 tests) 7ms
+ ✓ src/daemon/program-args.test.ts (3 tests) 6ms
+ ✓ src/cli/run-main.test.ts (4 tests) 5ms
+ ✓ src/infra/ssh-tunnel.test.ts (3 tests) 5ms
+ ✓ src/agents/pi-embedded-runner/google.test.ts (1 test) 4ms
+ ✓ src/telegram/draft-stream.test.ts (3 tests) 5ms
+ ✓ src/commands/configure.gateway.test.ts (1 test) 5ms
+ ✓ src/slack/resolve-channels.test.ts (2 tests) 6ms
+ ✓ src/agents/tools/gateway.test.ts (2 tests) 7ms
+ ✓ src/tui/tui-local-shell.test.ts (1 test) 5ms
+ ✓ src/agents/pi-embedded-helpers.messaging-duplicate.test.ts (13 tests) 7ms
+ ✓ src/browser/routes/utils.test.ts (3 tests) 4ms
+ ✓ src/slack/client.test.ts (3 tests) 5ms
+ ✓ src/agents/shell-utils.test.ts (4 tests) 5ms
+ ✓ src/infra/dedupe.test.ts (4 tests) 5ms
+ ✓ src/telegram/draft-chunking.test.ts (3 tests) 5ms
+ ✓ src/media-understanding/scope.test.ts (2 tests) 4ms
+ ✓ src/agents/skills/frontmatter.test.ts (2 tests) 4ms
+ ✓ src/agents/pi-embedded-helpers.image-size-error.test.ts (2 tests) 3ms
+ ✓ src/agents/pi-embedded-helpers.iscloudcodeassistformaterror.test.ts (2 tests) 5ms
+ ✓ src/tui/gateway-chat.test.ts (3 tests) 4ms
+ ✓ src/infra/widearea-dns.test.ts (2 tests) 4ms
+ ✓ src/auto-reply/reply/normalize-reply.test.ts (3 tests) 4ms
+ ✓ src/channels/plugins/normalize/imessage.test.ts (2 tests) 4ms
+ ✓ src/agents/pi-embedded-helpers.isfailovererrormessage.test.ts (1 test) 4ms
+ ✓ src/agents/pi-embedded-helpers.iscontextoverflowerror.test.ts (5 tests) 5ms
+ ✓ src/agents/pi-embedded-helpers.image-dimension-error.test.ts (1 test) 4ms
+ ✓ src/agents/pi-embedded-helpers.formatrawassistanterrorforui.test.ts (3 tests) 6ms
+ ✓ src/config/channel-capabilities.test.ts (6 tests) 6ms
+ ✓ src/infra/is-main.test.ts (3 tests) 4ms
+ ✓ src/discord/probe.intents.test.ts (4 tests) 4ms
+ ✓ src/cli/nodes-canvas.test.ts (2 tests) 4ms
+ ✓ src/infra/env.test.ts (4 tests) 5ms
+ ✓ src/agents/bootstrap-hooks.test.ts (1 test) 5ms
+ ✓ src/utils/usage-format.test.ts (3 tests) 5ms
+ ✓ src/config/sessions/paths.test.ts (1 test) 3ms
+ ✓ src/agents/pty-keys.test.ts (3 tests) 4ms
+ ✓ src/cli/parse-bytes.test.ts (4 tests) 5ms
+ ✓ src/telegram/proxy.test.ts (1 test) 5ms
+ ✓ src/utils/message-channel.test.ts (2 tests) 5ms
+ ✓ src/daemon/paths.test.ts (6 tests) 5ms
+ ✓ src/daemon/systemd-unit.test.ts (3 tests) 5ms
+ ✓ src/signal/probe.test.ts (2 tests) 4ms
+ ✓ src/imessage/probe.test.ts (1 test) 4ms
+ ✓ src/infra/home-dir.test.ts (8 tests) 6ms
+ ✓ src/agents/identity-file.test.ts (2 tests) 5ms
+ ✓ src/agents/pi-embedded-helpers.resolvebootstrapmaxchars.test.ts (3 tests) 3ms
+ ✓ src/channels/conversation-label.test.ts (5 tests) 4ms
+ ✓ src/signal/daemon.test.ts (4 tests) 5ms
+ ✓ src/infra/state-migrations.fs.test.ts (1 test) 5ms
+ ✓ src/channels/chat-type.test.ts (3 tests) 4ms
+ ✓ src/logging/parse-log-line.test.ts (3 tests) 5ms
+ ✓ src/cron/delivery.test.ts (2 tests) 5ms
+ ✓ src/routing/session-key.test.ts (6 tests) 4ms
+ ✓ src/slack/channel-migration.test.ts (4 tests) 6ms
+ ✓ src/commands/google-gemini-model-default.test.ts (3 tests) 5ms
+ ✓ src/hooks/bundled/soul-evil/handler.test.ts (1 test) 6ms
+ ✓ src/tui/tui.test.ts (2 tests) 4ms
+ ✓ src/commands/openai-codex-model-default.test.ts (4 tests) 5ms
+ ✓ src/discord/token.test.ts (3 tests) 5ms
+ ✓ src/agents/pi-embedded-helpers.normalizetextforcomparison.test.ts (5 tests) 5ms
+ ✓ src/channels/plugins/load.test.ts (2 tests) 4ms
+ ✓ src/agents/timeout.test.ts (2 tests) 4ms
+ ✓ src/cli/prompt.test.ts (2 tests) 3ms
+ ✓ src/agents/pi-embedded-helpers.downgradeopenai-reasoning.test.ts (4 tests) 5ms
+ ✓ src/agents/pi-embedded-helpers.iscompactionfailureerror.test.ts (2 tests) 4ms
+ ✓ src/auto-reply/media-note.test.ts (5 tests) 5ms
+ ✓ src/web/auto-reply/mentions.test.ts (3 tests) 6ms
+ ✓ src/commands/configure.gateway-auth.test.ts (3 tests) 5ms
+ ✓ src/daemon/systemd-availability.test.ts (2 tests) 5ms
+ ✓ src/infra/diagnostic-events.test.ts (2 tests) 4ms
+ ✓ src/discord/monitor/presence-cache.test.ts (2 tests) 4ms
+ ✓ src/agents/pi-embedded-runner.get-dm-history-limit-from-session-key.falls-back-provider-default-per-dm-not.test.ts (5 tests) 3ms
+ ✓ src/utils/boolean.test.ts (4 tests) 3ms
+ ✓ src/commands/doctor-workspace.test.ts (1 test) 4ms
+ ✓ src/agents/pi-embedded-runner.guard.test.ts (1 test) 5ms
+ ✓ src/agents/pi-embedded-helpers.sanitizesessionmessagesimages-thought-signature-stripping.test.ts (1 test) 5ms
+ ✓ src/plugins/source-display.test.ts (3 tests) 4ms
+ ✓ src/tui/tui-stream-assembler.test.ts (4 tests) 4ms
+ ✓ src/agents/pi-embedded-helpers.sanitize-session-messages-images.keeps-tool-call-tool-result-ids-unchanged.test.ts (3 tests) 5ms
+ ✓ src/plugin-sdk/index.test.ts (1 test) 4ms
+ ✓ src/config/sessions/metadata.test.ts (1 test) 5ms
+ ✓ src/channels/registry.test.ts (4 tests) 5ms
+ ✓ src/browser/target-id.test.ts (4 tests) 5ms
+ ✓ src/agents/tool-policy.conformance.test.ts (2 tests) 3ms
+ ✓ src/slack/threading.test.ts (5 tests) 4ms
+ ✓ src/browser/cdp.helpers.test.ts (4 tests) 4ms
+ ✓ src/agents/identity.test.ts (2 tests) 4ms
+ ✓ src/node-host/runner.test.ts (3 tests) 5ms
+ ✓ src/discord/monitor/gateway-registry.test.ts (5 tests) 5ms
+ ✓ src/config/commands.test.ts (2 tests) 3ms
+ ✓ src/acp/event-mapper.test.ts (2 tests) 5ms
+ ✓ src/auto-reply/reply/mentions.test.ts (4 tests) 3ms
+ ✓ src/agents/pi-embedded-helpers.islikelycontextoverflowerror.test.ts (2 tests) 4ms
+ ✓ src/agents/sandbox/tool-policy.test.ts (3 tests) 5ms
+ ✓ src/commands/health-format.test.ts (2 tests) 4ms
+ ✓ src/agents/pi-embedded-runner.createsystempromptoverride.test.ts (2 tests) 4ms
+ ✓ src/media-understanding/format.test.ts (5 tests) 4ms
+ ✓ src/agents/pi-embedded-helpers.isbillingerrormessage.test.ts (2 tests) 4ms
+ ✓ src/telegram/bot-message.test.ts (2 tests) 5ms
+ ✓ src/agents/auth-profiles.auth-profile-cooldowns.test.ts (1 test) 4ms
+ ✓ src/hooks/gmail-watcher.test.ts (1 test) 4ms
+ ✓ src/agents/pty-dsr.test.ts (2 tests) 3ms
+ ✓ src/channels/plugins/index.test.ts (1 test) 4ms
+ ✓ src/auto-reply/reply/commands-info.test.ts (1 test) 4ms
+ ✓ src/agents/pi-embedded-helpers.sanitizegoogleturnordering.test.ts (2 tests) 3ms
+ ✓ src/infra/tls/fingerprint.test.ts (1 test) 2ms
+ ✓ src/channel-web.barrel.test.ts (1 test) 2ms
+
+ Test Files  882 passed (882)
+      Tests  5751 passed (5751)
+   Start at  21:32:41
+   Duration  245.62s (transform 38.44s, setup 1085.22s, import 452.78s, tests 202.05s, environment 107ms)
+
+
+ RUN  v4.0.18 /srv/data/code/openclaw
+
+ ✓ src/gateway/hooks-mapping.test.ts (9 tests) 13ms
+ ✓ src/gateway/chat-attachments.test.ts (12 tests) 42ms
+ ✓ src/gateway/client.maxpayload.test.ts (1 test) 309ms
+     ✓ uses a large maxPayload for node snapshots  308ms
+ ✓ src/gateway/server-methods/skills.update.normalizes-api-key.test.ts (1 test) 840ms
+     ✓ strips embedded CR/LF from apiKey  839ms
+ ✓ src/gateway/server-methods/agent-timestamp.test.ts (15 tests) 26ms
+ ✓ src/gateway/call.test.ts (21 tests) 28ms
+ ✓ src/gateway/client.test.ts (2 tests) 1792ms
+     ✓ closes on missing ticks  1777ms
+ ✓ src/gateway/session-utils.fs.test.ts (29 tests) 14ms
+ ✓ src/gateway/server-methods/agent.test.ts (3 tests) 15ms
+ ✓ src/gateway/session-utils.test.ts (28 tests) 12ms
+ ✓ src/gateway/server-methods/agents-mutate.test.ts (16 tests) 10ms
+ ✓ src/gateway/boot.test.ts (3 tests) 14ms
+ ✓ src/gateway/control-ui.test.ts (1 test) 11ms
+ ✓ src/gateway/net.test.ts (7 tests) 7ms
+ ✓ src/gateway/server-methods/usage.sessions-usage.test.ts (2 tests) 10ms
+ ✓ src/gateway/server-methods/logs.test.ts (1 test) 11ms
+ ✓ src/gateway/server-methods/chat.inject.parentid.test.ts (1 test) 4853ms
+     ✓ appends a Pi session entry that includes parentId  4851ms
+ ✓ src/gateway/server-methods/send.test.ts (5 tests) 12ms
+ ✓ src/gateway/server-methods/exec-approval.test.ts (8 tests) 9ms
+ ✓ src/gateway/server/plugins-http.test.ts (4 tests) 9ms
+ ✓ src/gateway/server-chat.agent-events.test.ts (5 tests) 12ms
+ ✓ src/gateway/config-reload.test.ts (8 tests) 8ms
+stdout | src/gateway/server.nodes.late-invoke.test.ts
+[34m[gmail-watcher][39m [36mgmail watcher stopped[39m
+
+ ✓ src/gateway/server.nodes.late-invoke.test.ts (2 tests) 5784ms
+ ✓ src/gateway/tools-invoke-http.test.ts (9 tests) 5830ms
+ ✓ src/gateway/hooks.test.ts (10 tests) 11ms
+ ✓ src/gateway/server-methods/usage.test.ts (5 tests) 7ms
+ ✓ src/gateway/ws-log.test.ts (4 tests) 8ms
+ ✓ src/gateway/auth.test.ts (7 tests) 6ms
+ ✓ src/gateway/server-startup-memory.test.ts (3 tests) 7ms
+ ✓ src/gateway/server-methods/agent-job.test.ts (2 tests) 4ms
+ ✓ src/gateway/sessions-patch.test.ts (7 tests) 5ms
+ ✓ src/gateway/protocol/index.test.ts (6 tests) 3ms
+ ✓ src/gateway/server-node-subscriptions.test.ts (2 tests) 5ms
+ ✓ src/gateway/origin-check.test.ts (5 tests) 3ms
+ ✓ src/gateway/server-broadcast.test.ts (1 test) 4ms
+ ✓ src/gateway/server-plugins.test.ts (1 test) 5ms
+ ✓ src/gateway/server-discovery.test.ts (3 tests) 4ms
+ ✓ src/gateway/chat-sanitize.test.ts (4 tests) 4ms
+ ✓ src/gateway/server-methods/chat.transcript-writes.guardrail.test.ts (1 test) 3ms
+ ✓ src/gateway/node-command-policy.test.ts (2 tests) 5ms
+ ✓ src/gateway/server-node-events.test.ts (3 tests) 7ms
+ ✓ src/gateway/server-utils.test.ts (4 tests) 3ms
+ ✓ src/gateway/assistant-identity.test.ts (3 tests) 4ms
+ ✓ src/gateway/server-chat-registry.test.ts (1 test) 3ms
+
+ Test Files  44 passed (44)
+      Tests  267 passed (267)
+   Start at  21:36:47
+   Duration  12.89s (transform 17.16s, setup 52.50s, import 13.68s, tests 19.77s, environment 5ms)
+
