@@ -1,0 +1,74 @@
+{
+  "id": "prompt-ab-test",
+  "name": "Prompt A/B Test",
+  "description": "Replaces hardcoded system prompt sections with configurable variants for A/B testing. Uses deterministic session-stable assignment so each conversation consistently sees the same variant.",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "experiments": {
+        "type": "array",
+        "description": "List of A/B test experiments to run concurrently.",
+        "items": {
+          "type": "object",
+          "required": ["id", "variants"],
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "Unique experiment identifier (e.g. \"identity-tone-v1\")."
+            },
+            "description": {
+              "type": "string",
+              "description": "Human-readable description of what this experiment tests."
+            },
+            "enabled": {
+              "type": "boolean",
+              "description": "Set to false to pause the experiment without removing it. Default: true."
+            },
+            "agentIds": {
+              "type": "array",
+              "items": { "type": "string" },
+              "description": "Restrict experiment to specific agent IDs. If omitted, applies to all agents."
+            },
+            "variants": {
+              "type": "array",
+              "minItems": 1,
+              "description": "Variant pool. Include a 'control' variant with no overrides to keep a holdout group.",
+              "items": {
+                "type": "object",
+                "required": ["id"],
+                "additionalProperties": false,
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "description": "Variant identifier (e.g. \"control\", \"variant-a\")."
+                  },
+                  "weight": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Relative selection weight. Default: 1. Use 0 to disable a variant."
+                  },
+                  "prependContext": {
+                    "type": "string",
+                    "description": "Text injected before the system prompt context. Use this to surgically override or augment specific built-in behaviors (identity, tone, safety wording, etc.)."
+                  },
+                  "systemPrompt": {
+                    "type": "string",
+                    "description": "Full system prompt replacement. Overrides the entire built-in prompt. Use prependContext for surgical changes; reserve this for complete prompt rewrites."
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "uiHints": {
+    "experiments": {
+      "label": "Experiments",
+      "help": "Each experiment defines a set of prompt variants. Sessions are deterministically assigned to a variant based on their session key, so the assignment is stable across turns."
+    }
+  }
+}
