@@ -1,6 +1,11 @@
 import { isLoopbackHost, isPrivateOrLoopbackHost, normalizeHostHeader, resolveHostName } from "./net.js";
 
-type OriginCheckResult = { ok: true } | { ok: false; reason: string };
+type OriginCheckResult =
+  | {
+      ok: true;
+      matchedBy: "allowlist" | "host-header-fallback" | "local-loopback";
+    }
+  | { ok: false; reason: string };
 
 function parseOrigin(
   originRaw?: string,
@@ -26,6 +31,7 @@ export function checkBrowserOrigin(params: {
   origin?: string;
   allowedOrigins?: string[];
   allowHostHeaderOriginFallback?: boolean;
+  isLocalClient?: boolean;
 }): OriginCheckResult {
   const parsedOrigin = parseOrigin(params.origin);
   if (!parsedOrigin) {
@@ -36,7 +42,7 @@ export function checkBrowserOrigin(params: {
     (params.allowedOrigins ?? []).map((value) => value.trim().toLowerCase()).filter(Boolean),
   );
   if (allowlist.has("*") || allowlist.has(parsedOrigin.origin)) {
-    return { ok: true };
+    return { ok: true, matchedBy: "allowlist" };
   }
 
   const requestHost = normalizeHostHeader(params.requestHost);
@@ -45,7 +51,7 @@ export function checkBrowserOrigin(params: {
     requestHost &&
     parsedOrigin.host === requestHost
   ) {
-    return { ok: true };
+    return { ok: true, matchedBy: "host-header-fallback" };
   }
 
   const requestHostname = resolveHostName(requestHost);

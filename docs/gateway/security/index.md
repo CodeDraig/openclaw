@@ -538,6 +538,11 @@ Guidance:
 - Only enable temporarily for tightly scoped debugging.
 - If enabled, isolate that agent (sandbox + minimal tools + dedicated session namespace).
 
+Hooks risk note:
+
+- Hook payloads are untrusted content, even when delivery comes from systems you control (mail/docs/web content can carry prompt injection).
+- Weak model tiers increase this risk. For hook-driven automation, prefer strong modern model tiers and keep tool policy tight (`tools.profile: "messaging"` or stricter), plus sandboxing where possible.
+
 ### Prompt injection does not require public DMs
 
 Even if **only you** can message the bot, prompt injection can still happen via
@@ -691,6 +696,8 @@ do **not** protect local WS access by themselves.
 Local call paths can use `gateway.remote.*` as fallback when `gateway.auth.*`
 is unset.
 Optional: pin remote TLS with `gateway.remote.tlsFingerprint` when using `wss://`.
+Plaintext `ws://` is loopback-only by default. For trusted private-network
+paths, set `OPENCLAW_ALLOW_INSECURE_PRIVATE_WS=1` on the client process as break-glass.
 
 Local device pairing:
 
