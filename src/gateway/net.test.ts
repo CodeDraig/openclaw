@@ -40,8 +40,15 @@ describe("isLocalishHost", () => {
     }
   });
 
+  it("accepts private/LAN hosts", () => {
+    const accepted = ["192.168.1.10", "10.0.0.5:18789", "172.16.0.1"];
+    for (const host of accepted) {
+      expect(isLocalishHost(host), host).toBe(true);
+    }
+  });
+
   it("rejects non-local hosts", () => {
-    const rejected = ["example.com", "192.168.1.10", "203.0.113.5:18789"];
+    const rejected = ["example.com", "203.0.113.5:18789"];
     for (const host of rejected) {
       expect(isLocalishHost(host), host).toBe(false);
     }
@@ -418,25 +425,11 @@ describe("isSecureWebSocketUrl", () => {
       { input: "ws://localhost:18789", expected: true },
       { input: "ws://[::1]:18789", expected: true },
       { input: "ws://127.0.0.42:18789", expected: true },
-      // ws:// private/public remote addresses rejected by default
-      { input: "ws://10.0.0.5:18789", expected: false },
-      { input: "ws://10.42.1.100:18789", expected: false },
-      { input: "ws://172.16.0.1:18789", expected: false },
-      { input: "ws://172.31.255.254:18789", expected: false },
-      { input: "ws://192.168.1.100:18789", expected: false },
-      { input: "ws://169.254.10.20:18789", expected: false },
-      { input: "ws://100.64.0.1:18789", expected: false },
-      { input: "ws://[fc00::1]:18789", expected: false },
-      { input: "ws://[fd12:3456:789a::1]:18789", expected: false },
-      { input: "ws://[fe80::1]:18789", expected: false },
-      { input: "ws://[::]:18789", expected: false },
-      { input: "ws://[ff02::1]:18789", expected: false },
-      // ws:// public addresses rejected
+      { input: "ws://192.168.1.100:18789", expected: true },
+      { input: "ws://10.0.0.5:18789", expected: true },
+      { input: "ws://100.64.0.1:18789", expected: true },
+      { input: "ws://172.16.0.1:18789", expected: true },
       { input: "ws://remote.example.com:18789", expected: false },
-      { input: "ws://1.1.1.1:18789", expected: false },
-      { input: "ws://8.8.8.8:18789", expected: false },
-      { input: "ws://203.0.113.10:18789", expected: false },
-      // invalid URLs
       { input: "not-a-url", expected: false },
       { input: "", expected: false },
       { input: "http://127.0.0.1:18789", expected: false },

@@ -185,7 +185,7 @@ export function resolveClientIp(params: {
 }
 
 export function isLocalGatewayAddress(ip: string | undefined): boolean {
-  if (isLoopbackAddress(ip)) {
+  if (isPrivateOrLoopbackAddress(ip)) {
     return true;
   }
   if (!ip) {
@@ -333,8 +333,25 @@ export function isLoopbackHost(host: string): boolean {
 }
 
 /**
+ * Check if a hostname or IP is a private/LAN address (RFC1918, link-local, CGNAT)
+ * or loopback. Used to treat LAN the same as localhost for local network use.
+ */
+export function isPrivateOrLoopbackHost(host: string): boolean {
+  if (!host) {
+    return false;
+  }
+  const h = host.trim().toLowerCase();
+  if (h === "localhost") {
+    return true;
+  }
+  const unbracket = h.startsWith("[") && h.endsWith("]") ? h.slice(1, -1) : h;
+  return isPrivateOrLoopbackAddress(unbracket);
+}
+
+/**
  * Local-facing host check for inbound requests:
  * - loopback hosts (localhost/127.x/::1 and mapped forms)
+ * - private/LAN hosts (RFC1918: 10.x, 172.16-31.x, 192.168.x)
  * - Tailscale Serve/Funnel hostnames (*.ts.net)
  */
 export function isLocalishHost(hostHeader?: string): boolean {
@@ -342,7 +359,7 @@ export function isLocalishHost(hostHeader?: string): boolean {
   if (!host) {
     return false;
   }
-  return isLoopbackHost(host) || host.endsWith(".ts.net");
+  return isPrivateOrLoopbackHost(host) || host.endsWith(".ts.net");
 }
 
 /**
@@ -402,10 +419,10 @@ function parseHostForAddressChecks(
  *
  * Returns true if the URL is secure for transmitting data:
  * - wss:// (TLS) is always secure
- * - ws:// is secure only for loopback addresses by default
- * - optional break-glass: private ws:// can be enabled for trusted networks
+ * - ws:// is allowed for loopback and private/LAN addresses
+ *   (localhost, 127.x.x.x, ::1, 192.168.x.x, 10.x.x.x, 172.16-31.x.x)
  *
- * All other ws:// URLs are considered insecure because both credentials
+ * Public ws:// URLs are considered insecure because both credentials
  * AND chat/conversation data would be exposed to network interception.
  */
 export function isSecureWebSocketUrl(
@@ -429,13 +446,6 @@ export function isSecureWebSocketUrl(
     return false;
   }
 
-  // Default policy stays strict: loopback-only plaintext ws://.
-  if (isLoopbackHost(parsed.hostname)) {
-    return true;
-  }
-  // Optional break-glass for trusted private-network overlays.
-  if (opts?.allowPrivateWs) {
-    return isPrivateOrLoopbackHost(parsed.hostname);
-  }
-  return false;
+  // ws:// is allowed for loopback and private/LAN addresses
+  return isPrivateOrLoopbackHost(parsed.hostname);
 }

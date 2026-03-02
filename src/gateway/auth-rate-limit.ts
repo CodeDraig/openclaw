@@ -16,7 +16,7 @@
  *   {@link createAuthRateLimiter} and pass it where needed.
  */
 
-import { isLoopbackAddress, resolveClientIp } from "./net.js";
+import { isLoopbackAddress, isPrivateOrLoopbackAddress, resolveClientIp } from "./net.js";
 
 // ---------------------------------------------------------------------------
 // Types
@@ -129,7 +129,8 @@ export function createAuthRateLimiter(config?: RateLimitConfig): AuthRateLimiter
   }
 
   function isExempt(ip: string): boolean {
-    return exemptLoopback && isLoopbackAddress(ip);
+    // Exempt both loopback and private/LAN addresses from rate limiting
+    return exemptLoopback && isPrivateOrLoopbackAddress(ip);
   }
 
   function slideWindow(entry: RateLimitEntry, now: number): void {

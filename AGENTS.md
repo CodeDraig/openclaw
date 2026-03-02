@@ -1,5 +1,7 @@
 # Repository Guidelines
 
+> **Note:** This is a fork of the original OpenClaw repository, used for making modifications. Changes here are not part of the upstream project.
+
 - Repo: https://github.com/openclaw/openclaw
 - In chat replies, file references must be repo-root relative only (example: `extensions/bluebubbles/src/channel.ts:80`); never absolute paths or `~/...`.
 - GitHub issues/comments/PR comments: use literal multiline strings or `-F - <<'EOF'` (or $'...') for real newlines; never embed "\\n".

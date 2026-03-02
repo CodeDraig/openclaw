@@ -83,11 +83,11 @@ export function evaluateMissingDeviceIdentity(params: {
     return { kind: "allow" };
   }
   if (params.isControlUi && !params.controlUiAuthPolicy.allowBypass) {
-    // Allow localhost Control UI connections when allowInsecureAuth is configured.
-    // Localhost has no network interception risk, and browser SubtleCrypto
-    // (needed for device identity) is unavailable in insecure HTTP contexts.
-    // Remote connections are still rejected to preserve the MitM protection
-    // that the security fix (#20684) intended.
+    // Allow local (loopback + LAN) Control UI connections when allowInsecureAuth
+    // is configured. Local network has minimal interception risk, and browser
+    // SubtleCrypto (needed for device identity) is unavailable in insecure HTTP
+    // contexts. Public/remote connections are still rejected to preserve the
+    // MitM protection that the security fix (#20684) intended.
     if (!params.controlUiAuthPolicy.allowInsecureAuthConfigured || !params.isLocalClient) {
       return { kind: "reject-control-ui-insecure-auth" };
     }

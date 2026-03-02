@@ -1,4 +1,4 @@
-import { isLoopbackHost, normalizeHostHeader } from "./net.js";
+import { isLoopbackHost, isPrivateOrLoopbackHost, normalizeHostHeader, resolveHostName } from "./net.js";
 
 type OriginCheckResult =
   | {
@@ -54,9 +54,10 @@ export function checkBrowserOrigin(params: {
     return { ok: true, matchedBy: "host-header-fallback" };
   }
 
-  // Dev fallback only for genuinely local socket clients, not Host-header claims.
-  if (params.isLocalClient && isLoopbackHost(parsedOrigin.hostname)) {
-    return { ok: true, matchedBy: "local-loopback" };
+  const requestHostname = resolveHostName(requestHost);
+  // Allow CORS for loopback-to-loopback and LAN-to-LAN connections
+  if (isPrivateOrLoopbackHost(parsedOrigin.hostname) && isPrivateOrLoopbackHost(requestHostname)) {
+    return { ok: true };
   }
 
   return { ok: false, reason: "origin not allowed" };
