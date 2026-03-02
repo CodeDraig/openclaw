@@ -1,4 +1,4 @@
-import { isLoopbackHost, normalizeHostHeader, resolveHostName } from "./net.js";
+import { isLoopbackHost, isPrivateOrLoopbackHost, normalizeHostHeader, resolveHostName } from "./net.js";
 
 type OriginCheckResult = { ok: true } | { ok: false; reason: string };
 
@@ -49,7 +49,8 @@ export function checkBrowserOrigin(params: {
   }
 
   const requestHostname = resolveHostName(requestHost);
-  if (isLoopbackHost(parsedOrigin.hostname) && isLoopbackHost(requestHostname)) {
+  // Allow CORS for loopback-to-loopback and LAN-to-LAN connections
+  if (isPrivateOrLoopbackHost(parsedOrigin.hostname) && isPrivateOrLoopbackHost(requestHostname)) {
     return { ok: true };
   }
 

@@ -15,6 +15,7 @@ import { resolveGatewayCredentialsFromValues } from "./credentials.js";
 import {
   isLocalishHost,
   isLoopbackAddress,
+  isPrivateOrLoopbackAddress,
   isTrustedProxyAddress,
   resolveClientIp,
 } from "./net.js";
@@ -130,7 +131,8 @@ export function isLocalDirectRequest(
     return false;
   }
   const clientIp = resolveRequestClientIp(req, trustedProxies, allowRealIpFallback) ?? "";
-  if (!isLoopbackAddress(clientIp)) {
+  // Accept both loopback and private/LAN IPs as local clients
+  if (!isPrivateOrLoopbackAddress(clientIp)) {
     return false;
   }
 
