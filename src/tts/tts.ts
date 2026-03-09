@@ -23,8 +23,23 @@ import type {
 } from "../config/types.tts.js";
 import { logVerbose } from "../globals.js";
 import { resolvePreferredOpenClawTmpDir } from "../infra/tmp-openclaw-dir.js";
-import { stripMarkdown } from "../line/markdown-to-line.js";
 import { isVoiceCompatibleAudio } from "../media/audio.js";
+
+/** Strip common Markdown formatting for TTS readability. */
+function stripMarkdown(text: string): string {
+  let result = text;
+  result = result.replace(/\*\*(.+?)\*\*/g, "$1");
+  result = result.replace(/__(.+?)__/g, "$1");
+  result = result.replace(/(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)/g, "$1");
+  result = result.replace(/(?<!_)_(?!_)(.+?)(?<!_)_(?!_)/g, "$1");
+  result = result.replace(/~~(.+?)~~/g, "$1");
+  result = result.replace(/^#{1,6}\s+(.+)$/gm, "$1");
+  result = result.replace(/^>\s?(.*)$/gm, "$1");
+  result = result.replace(/^[-*_]{3,}$/gm, "");
+  result = result.replace(/`([^`]+)`/g, "$1");
+  result = result.replace(/\n{3,}/g, "\n\n");
+  return result.trim();
+}
 import { CONFIG_DIR, resolveUserPath } from "../utils.js";
 import {
   edgeTTS,
@@ -481,7 +496,7 @@ export function setLastTtsAttempt(entry: TtsStatusEntry | undefined): void {
 }
 
 /** Channels that require opus audio and support voice-bubble playback */
-const VOICE_BUBBLE_CHANNELS = new Set(["telegram", "feishu", "whatsapp"]);
+const VOICE_BUBBLE_CHANNELS = new Set(["telegram", "feishu"]);
 
 function resolveOutputFormat(channelId?: string | null) {
   if (channelId && VOICE_BUBBLE_CHANNELS.has(channelId)) {

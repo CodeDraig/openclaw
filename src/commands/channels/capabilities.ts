@@ -6,7 +6,6 @@ import { fetchChannelPermissionsDiscord } from "../../discord/send.js";
 import { parseDiscordTarget } from "../../discord/targets.js";
 import { danger } from "../../globals.js";
 import { defaultRuntime, type RuntimeEnv } from "../../runtime.js";
-import { fetchSlackScopes, type SlackScopesResult } from "../../slack/scopes.js";
 import { theme } from "../../terminal/theme.js";
 import { formatChannelAccountLabel, requireValidConfig } from "./shared.js";
 
@@ -45,25 +44,11 @@ type ChannelCapabilitiesReport = {
   support?: ChannelCapabilities;
   actions?: string[];
   probe?: unknown;
-  slackScopes?: Array<{
-    tokenType: "bot" | "user";
-    result: SlackScopesResult;
-  }>;
   target?: DiscordTargetSummary;
   channelPermissions?: DiscordPermissionsReport;
 };
 
 const REQUIRED_DISCORD_PERMISSIONS = ["ViewChannel", "SendMessages"] as const;
-
-const TEAMS_GRAPH_PERMISSION_HINTS: Record<string, string> = {
-  "ChannelMessage.Read.All": "channel history",
-  "Chat.Read.All": "chat history",
-  "Channel.ReadBasic.All": "channel list",
-  "Team.ReadBasic.All": "team list",
-  "TeamsActivity.Read.All": "teams activity",
-  "Sites.Read.All": "files (SharePoint)",
-  "Files.Read.All": "files (OneDrive)",
-};
 
 function normalizeTimeout(raw: unknown, fallback = 10_000) {
   const value = typeof raw === "string" ? Number(raw) : Number(raw);
@@ -207,62 +192,10 @@ function formatProbeLines(channelId: string, probe: unknown): string[] {
     }
   }
 
-  if (channelId === "slack") {
-    const bot = probeObj.bot as { name?: string } | undefined;
-    const team = probeObj.team as { name?: string; id?: string } | undefined;
-    if (bot?.name) {
-      lines.push(`Bot: ${theme.accent(`@${bot.name}`)}`);
-    }
-    if (team?.name || team?.id) {
-      const id = team?.id ? ` (${team.id})` : "";
-      lines.push(`Team: ${team?.name ?? "unknown"}${id}`);
-    }
-  }
-
   if (channelId === "signal") {
     const version = probeObj.version as string | null | undefined;
     if (version) {
       lines.push(`Signal daemon: ${version}`);
-    }
-  }
-
-  if (channelId === "msteams") {
-    const appId = typeof probeObj.appId === "string" ? probeObj.appId.trim() : "";
-    if (appId) {
-      lines.push(`App: ${theme.accent(appId)}`);
-    }
-    const graph = probeObj.graph as
-      | { ok?: boolean; roles?: unknown; scopes?: unknown; error?: string }
-      | undefined;
-    if (graph) {
-      const roles = Array.isArray(graph.roles)
-        ? graph.roles.map((role) => String(role).trim()).filter(Boolean)
-        : [];
-      const scopes =
-        typeof graph.scopes === "string"
-          ? graph.scopes
-              .split(/\s+/)
-              .map((scope) => scope.trim())
-              .filter(Boolean)
-          : Array.isArray(graph.scopes)
-            ? graph.scopes.map((scope) => String(scope).trim()).filter(Boolean)
-            : [];
-      if (graph.ok === false) {
-        lines.push(`Graph: ${theme.error(graph.error ?? "failed")}`);
-      } else if (roles.length > 0 || scopes.length > 0) {
-        const formatPermission = (permission: string) => {
-          const hint = TEAMS_GRAPH_PERMISSION_HINTS[permission];
-          return hint ? `${permission} (${hint})` : permission;
-        };
-        if (roles.length > 0) {
-          lines.push(`Graph roles: ${roles.map(formatPermission).join(", ")}`);
-        }
-        if (scopes.length > 0) {
-          lines.push(`Graph scopes: ${scopes.map(formatPermission).join(", ")}`);
-        }
-      } else if (graph.ok === true) {
-        lines.push("Graph: ok");
-      }
     }
   }
 
@@ -378,31 +311,6 @@ async function resolveChannelReports(params: {
       }
     }
 
-    let slackScopes: ChannelCapabilitiesReport["slackScopes"];
-    if (plugin.id === "slack" && configured && enabled) {
-      const botToken = (resolvedAccount as { botToken?: string }).botToken?.trim();
-      const userToken = (resolvedAccount as { userToken?: string }).userToken?.trim();
-      const scopeReports: NonNullable<ChannelCapabilitiesReport["slackScopes"]> = [];
-      if (botToken) {
-        scopeReports.push({
-          tokenType: "bot",
-          result: await fetchSlackScopes(botToken, timeoutMs),
-        });
-      } else {
-        scopeReports.push({
-          tokenType: "bot",
-          result: { ok: false, error: "Slack bot token missing." },
-        });
-      }
-      if (userToken) {
-        scopeReports.push({
-          tokenType: "user",
-          result: await fetchSlackScopes(userToken, timeoutMs),
-        });
-      }
-      slackScopes = scopeReports;
-    }
-
     let discordTarget: DiscordTargetSummary | undefined;
     let discordPermissions: DiscordPermissionsReport | undefined;
     if (plugin.id === "discord" && params.target) {
@@ -428,7 +336,6 @@ async function resolveChannelReports(params: {
       target: discordTarget,
       channelPermissions: discordPermissions,
       actions,
-      slackScopes,
     });
   }
   return reports;
@@ -518,17 +425,6 @@ export async function channelsCapabilitiesCommand(
       lines.push(...probeLines);
     } else if (report.configured && report.enabled) {
       lines.push(theme.muted("Probe: unavailable"));
-    }
-    if (report.channel === "slack" && report.slackScopes) {
-      for (const entry of report.slackScopes) {
-        const source = entry.result.source ? ` (${entry.result.source})` : "";
-        const label = entry.tokenType === "user" ? "User scopes" : "Bot scopes";
-        if (entry.result.ok && entry.result.scopes?.length) {
-          lines.push(`${label}${source}: ${entry.result.scopes.join(", ")}`);
-        } else if (entry.result.error) {
-          lines.push(`${label}: ${theme.error(entry.result.error)}`);
-        }
-      }
     }
     if (report.channel === "discord" && report.channelPermissions) {
       const perms = report.channelPermissions;

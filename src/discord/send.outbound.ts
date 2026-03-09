@@ -12,8 +12,8 @@ import { resolvePreferredOpenClawTmpDir } from "../infra/tmp-openclaw-dir.js";
 import { convertMarkdownTables } from "../markdown/tables.js";
 import { maxBytesForKind } from "../media/constants.js";
 import { extensionForMime } from "../media/mime.js";
+import { loadWebMediaRaw } from "../media/web-media.js";
 import type { PollInput } from "../polls.js";
-import { loadWebMediaRaw } from "../web/media.js";
 import { resolveDiscordAccount } from "./accounts.js";
 import {
   buildDiscordMessagePayload,

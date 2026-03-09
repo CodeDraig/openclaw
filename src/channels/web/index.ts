@@ -1,13 +1,3 @@
 /* istanbul ignore file */
-export {
-  createWaSocket,
-  loginWeb,
-  logWebSelfId,
-  monitorWebChannel,
-  monitorWebInbox,
-  pickWebChannel,
-  sendMessageWhatsApp,
-  WA_WEB_AUTH_DIR,
-  waitForWaConnection,
-  webAuthExists,
-} from "../../channel-web.js";
+// WhatsApp Web channel has been removed. This module is kept as a placeholder
+// for any remaining import references during migration.

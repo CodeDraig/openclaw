@@ -19,15 +19,12 @@ import {
 } from "../../config/sessions.js";
 import type { sendMessageDiscord } from "../../discord/send.js";
 import { createInternalHookEvent, triggerInternalHook } from "../../hooks/internal-hooks.js";
-import type { sendMessageIMessage } from "../../imessage/send.js";
 import { createSubsystemLogger } from "../../logging/subsystem.js";
 import { getAgentScopedMediaLocalRoots } from "../../media/local-roots.js";
 import { getGlobalHookRunner } from "../../plugins/hook-runner-global.js";
 import { markdownToSignalTextChunks, type SignalTextStyleRange } from "../../signal/format.js";
 import { sendMessageSignal } from "../../signal/send.js";
-import type { sendMessageSlack } from "../../slack/send.js";
 import type { sendMessageTelegram } from "../../telegram/send.js";
-import type { sendMessageWhatsApp } from "../../web/outbound.js";
 import { throwIfAborted } from "./abort.js";
 import { ackDelivery, enqueueDelivery, failDelivery } from "./delivery-queue.js";
 import type { OutboundIdentity } from "./identity.js";
@@ -49,18 +46,10 @@ type SendMatrixMessage = (
 ) => Promise<{ messageId: string; roomId: string }>;
 
 export type OutboundSendDeps = {
-  sendWhatsApp?: typeof sendMessageWhatsApp;
   sendTelegram?: typeof sendMessageTelegram;
   sendDiscord?: typeof sendMessageDiscord;
-  sendSlack?: typeof sendMessageSlack;
   sendSignal?: typeof sendMessageSignal;
-  sendIMessage?: typeof sendMessageIMessage;
   sendMatrix?: SendMatrixMessage;
-  sendMSTeams?: (
-    to: string,
-    text: string,
-    opts?: { mediaUrl?: string },
-  ) => Promise<{ messageId: string; conversationId: string }>;
 };
 
 export type OutboundDeliveryResult = {
@@ -427,31 +416,7 @@ async function deliverOutboundPayloadsCore(
       })),
     };
   };
-  const normalizeWhatsAppPayload = (payload: ReplyPayload): ReplyPayload | null => {
-    const hasMedia = Boolean(payload.mediaUrl) || (payload.mediaUrls?.length ?? 0) > 0;
-    const rawText = typeof payload.text === "string" ? payload.text : "";
-    const normalizedText = rawText.replace(/^(?:[ \t]*\r?\n)+/, "");
-    if (!normalizedText.trim()) {
-      if (!hasMedia) {
-        return null;
-      }
-      return {
-        ...payload,
-        text: "",
-      };
-    }
-    return {
-      ...payload,
-      text: normalizedText,
-    };
-  };
-  const normalizedPayloads = normalizeReplyPayloadsForDelivery(payloads).flatMap((payload) => {
-    if (channel !== "whatsapp") {
-      return [payload];
-    }
-    const normalized = normalizeWhatsAppPayload(payload);
-    return normalized ? [normalized] : [];
-  });
+  const normalizedPayloads = normalizeReplyPayloadsForDelivery(payloads);
   const hookRunner = getGlobalHookRunner();
   const sessionKeyForInternalHooks = params.mirror?.sessionKey ?? params.session?.key;
   if (

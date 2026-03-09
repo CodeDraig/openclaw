@@ -9,8 +9,7 @@ import type {
   GroupToolPolicyBySenderConfig,
   GroupToolPolicyConfig,
 } from "../../config/types.tools.js";
-import { normalizeAtHashSlug, normalizeHyphenSlug } from "../../shared/string-normalization.js";
-import { resolveSlackAccount } from "../../slack/accounts.js";
+import { normalizeAtHashSlug } from "../../shared/string-normalization.js";
 import type { ChannelGroupContext } from "./types.js";
 
 type GroupMentionParams = ChannelGroupContext;
@@ -109,52 +108,12 @@ function resolveDiscordChannelEntry<TEntry>(
   );
 }
 
-type SlackChannelPolicyEntry = {
-  requireMention?: boolean;
-  tools?: GroupToolPolicyConfig;
-  toolsBySender?: GroupToolPolicyBySenderConfig;
-};
-
 type SenderScopedToolsEntry = {
   tools?: GroupToolPolicyConfig;
   toolsBySender?: GroupToolPolicyBySenderConfig;
 };
 
-type ChannelGroupPolicyChannel =
-  | "telegram"
-  | "whatsapp"
-  | "imessage"
-  | "googlechat"
-  | "bluebubbles";
-
-function resolveSlackChannelPolicyEntry(
-  params: GroupMentionParams,
-): SlackChannelPolicyEntry | undefined {
-  const account = resolveSlackAccount({
-    cfg: params.cfg,
-    accountId: params.accountId,
-  });
-  const channels = (account.channels ?? {}) as Record<string, SlackChannelPolicyEntry>;
-  if (Object.keys(channels).length === 0) {
-    return undefined;
-  }
-  const channelId = params.groupId?.trim();
-  const groupChannel = params.groupChannel;
-  const channelName = groupChannel?.replace(/^#/, "");
-  const normalizedName = normalizeHyphenSlug(channelName);
-  const candidates = [
-    channelId ?? "",
-    channelName ? `#${channelName}` : "",
-    channelName ?? "",
-    normalizedName,
-  ].filter(Boolean);
-  for (const candidate of candidates) {
-    if (candidate && channels[candidate]) {
-      return channels[candidate];
-    }
-  }
-  return channels["*"];
-}
+type ChannelGroupPolicyChannel = "telegram" | "googlechat" | "bluebubbles";
 
 function resolveChannelRequireMention(
   params: GroupMentionParams,
@@ -239,14 +198,6 @@ export function resolveTelegramGroupRequireMention(
   });
 }
 
-export function resolveWhatsAppGroupRequireMention(params: GroupMentionParams): boolean {
-  return resolveChannelRequireMention(params, "whatsapp");
-}
-
-export function resolveIMessageGroupRequireMention(params: GroupMentionParams): boolean {
-  return resolveChannelRequireMention(params, "imessage");
-}
-
 export function resolveDiscordGroupRequireMention(params: GroupMentionParams): boolean {
   const context = resolveDiscordPolicyContext(params);
   if (typeof context.channelEntry?.requireMention === "boolean") {
@@ -268,14 +219,6 @@ export function resolveGoogleChatGroupToolPolicy(
   return resolveChannelToolPolicyForSender(params, "googlechat");
 }
 
-export function resolveSlackGroupRequireMention(params: GroupMentionParams): boolean {
-  const resolved = resolveSlackChannelPolicyEntry(params);
-  if (typeof resolved?.requireMention === "boolean") {
-    return resolved.requireMention;
-  }
-  return true;
-}
-
 export function resolveBlueBubblesGroupRequireMention(params: GroupMentionParams): boolean {
   return resolveChannelRequireMention(params, "bluebubbles");
 }
@@ -287,18 +230,6 @@ export function resolveTelegramGroupToolPolicy(
   return resolveChannelToolPolicyForSender(params, "telegram", chatId ?? params.groupId);
 }
 
-export function resolveWhatsAppGroupToolPolicy(
-  params: GroupMentionParams,
-): GroupToolPolicyConfig | undefined {
-  return resolveChannelToolPolicyForSender(params, "whatsapp");
-}
-
-export function resolveIMessageGroupToolPolicy(
-  params: GroupMentionParams,
-): GroupToolPolicyConfig | undefined {
-  return resolveChannelToolPolicyForSender(params, "imessage");
-}
-
 export function resolveDiscordGroupToolPolicy(
   params: GroupMentionParams,
 ): GroupToolPolicyConfig | undefined {
@@ -308,13 +239,6 @@ export function resolveDiscordGroupToolPolicy(
     return channelPolicy;
   }
   return resolveSenderToolsEntry(context.guildEntry, params);
-}
-
-export function resolveSlackGroupToolPolicy(
-  params: GroupMentionParams,
-): GroupToolPolicyConfig | undefined {
-  const resolved = resolveSlackChannelPolicyEntry(params);
-  return resolveSenderToolsEntry(resolved, params);
 }
 
 export function resolveBlueBubblesGroupToolPolicy(

@@ -13,7 +13,6 @@ import type { CanvasHostHandler } from "../canvas-host/server.js";
 import { loadConfig } from "../config/config.js";
 import type { createSubsystemLogger } from "../logging/subsystem.js";
 import { safeEqualSecret } from "../security/secret-equal.js";
-import { handleSlackHttpRequest } from "../slack/http/index.js";
 import {
   AUTH_RATE_LIMIT_SCOPE_HOOK_AUTH,
   createAuthRateLimiter,
@@ -398,9 +397,6 @@ export function createGatewayHttpServer(opts: {
           rateLimiter,
         })
       ) {
-        return;
-      }
-      if (await handleSlackHttpRequest(req, res)) {
         return;
       }
       if (openResponsesEnabled) {

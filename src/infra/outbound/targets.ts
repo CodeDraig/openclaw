@@ -6,7 +6,6 @@ import type { SessionEntry } from "../../config/sessions.js";
 import type { AgentDefaultsConfig } from "../../config/types.agent-defaults.js";
 import { parseDiscordTarget } from "../../discord/targets.js";
 import { normalizeAccountId } from "../../routing/session-key.js";
-import { parseSlackTarget } from "../../slack/targets.js";
 import { parseTelegramTarget, resolveTelegramTargetChatType } from "../../telegram/targets.js";
 import { deliveryContextFromSession } from "../../utils/delivery-context.js";
 import type {
@@ -18,7 +17,6 @@ import {
   isDeliverableMessageChannel,
   normalizeMessageChannel,
 } from "../../utils/message-channel.js";
-import { isWhatsAppGroupJid, normalizeWhatsAppTarget } from "../../whatsapp/normalize.js";
 import {
   normalizeDeliverableOutboundChannel,
   resolveOutboundChannelPlugin,
@@ -395,25 +393,9 @@ function inferDiscordTargetChatType(to: string): ChatType | undefined {
   }
 }
 
-function inferSlackTargetChatType(to: string): ChatType | undefined {
-  const target = parseSlackTarget(to, { defaultKind: "channel" });
-  if (!target) {
-    return undefined;
-  }
-  return target.kind === "user" ? "direct" : "channel";
-}
-
 function inferTelegramTargetChatType(to: string): ChatType | undefined {
   const chatType = resolveTelegramTargetChatType(to);
   return chatType === "unknown" ? undefined : chatType;
-}
-
-function inferWhatsAppTargetChatType(to: string): ChatType | undefined {
-  const normalized = normalizeWhatsAppTarget(to);
-  if (!normalized) {
-    return undefined;
-  }
-  return isWhatsAppGroupJid(normalized) ? "group" : "direct";
 }
 
 function inferSignalTargetChatType(rawTo: string): ChatType | undefined {
@@ -441,9 +423,7 @@ const HEARTBEAT_TARGET_CHAT_TYPE_INFERERS: Partial<
   Record<DeliverableMessageChannel, (to: string) => ChatType | undefined>
 > = {
   discord: inferDiscordTargetChatType,
-  slack: inferSlackTargetChatType,
   telegram: inferTelegramTargetChatType,
-  whatsapp: inferWhatsAppTargetChatType,
   signal: inferSignalTargetChatType,
 };
 

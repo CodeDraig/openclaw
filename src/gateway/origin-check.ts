@@ -1,4 +1,9 @@
-import { isLoopbackHost, isPrivateOrLoopbackHost, normalizeHostHeader, resolveHostName } from "./net.js";
+import {
+  isLoopbackHost,
+  isPrivateOrLoopbackHost,
+  normalizeHostHeader,
+  resolveHostName,
+} from "./net.js";
 
 type OriginCheckResult = { ok: true } | { ok: false; reason: string };
 
